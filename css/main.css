@@ -13,8 +13,8 @@ body {
 
 header {
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 40%;
     z-index: 1;
 
     background-color: #000000;

@@ -1,7 +1,3 @@
-<script language="javascript" type="text/javascript">
-alert('This is what an alert message looks like.');
-</script>
-
 const images = [
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan_1.png",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan5.png",

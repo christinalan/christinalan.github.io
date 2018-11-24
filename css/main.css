@@ -17,4 +17,7 @@ header {
     left: 50%;
     z-index: 1;
 
+    background-color: #000000;
+    color: #00FF00;
+
 }

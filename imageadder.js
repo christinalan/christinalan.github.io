@@ -1,10 +1,10 @@
 const images = [
-        "laenz.github.io/Slantd_Issue02_LooseSkins_ChristinaLan_1.png", 
-        "laenz.github.io/Slantd_Issue02_LooseSkins_ChristinaLan2.png",
-        "laenz.github.io/Slantd_Issue02_LooseSkins_ChristinaLan3.png",
-        "laenz.github.io/Slantd_Issue02_LooseSkins_ChristinaLan4.png",
-        "laenz.github.io/Slantd_Issue02_LooseSkins_ChristinaLan5.png",
-        "laenz.github.io/Slantd_Issue02_LooseSkins_ChristinaLan6.png"
+        "/img/Slantd_Issue02_LooseSkins_ChristinaLan_1.png", 
+        "/img/Slantd_Issue02_LooseSkins_ChristinaLan5.png",
+        "/img/Slantd_Issue02_LooseSkins_ChristinaLan3.png",
+        "/img/Slantd_Issue02_LooseSkins_ChristinaLan4.png",
+        "/img/Slantd_Issue02_LooseSkins_ChristinaLan5.png",
+        "/img/Slantd_Issue02_LooseSkins_ChristinaLan6.png"
         ]
 
 let i = 0

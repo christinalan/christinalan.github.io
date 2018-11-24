@@ -1,3 +1,5 @@
+alert("Hi I'm trying!");
+
 const images = [
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan_1.png", 
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan5.png",

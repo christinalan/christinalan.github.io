@@ -14,9 +14,9 @@ function placeImage(x, y) {
         const nextImage = images[i]
 
         const img = document.createElement("img")
-        img attribute("src", nextImage)
-        img style.left = x + "px"
-        img style.top = y + "px"
+        img.setAttribute("src", nextImage)
+        img.style.left = x + "px"
+        img.style.top = y + "px"
 
         document.body.appendChild(img)
 
@@ -27,7 +27,7 @@ function placeImage(x, y) {
         }
 }
 
-document.addEventListener("click", function (event) {
+document.addEventListener("mouseover", function (event) {
         event.preventDefault()
         placeImage(event.pageX, event.pageY)
 })

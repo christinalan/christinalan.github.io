@@ -33,7 +33,7 @@ img {
   position: absolute;
   top: auto;
   left: auto;
-  transform: translate(-50%, -50%) scale(-0.5);
+  transform: translate(-50%, -50%) scale(0.25);
   animation: fadein 0.5s;
 }
 

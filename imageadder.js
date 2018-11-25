@@ -40,7 +40,7 @@ let mouse = 0
 document.addEventListener("mouseover", function (event) {
         event.preventDefault()
         mouse = mouse + 1
-        if (mouse % 10 == 0) {
+        if (mouse % 3 == 0) {
         placeImage(event.pageX, event.pageY)
         }
 })

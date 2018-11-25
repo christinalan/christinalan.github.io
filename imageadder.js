@@ -4,7 +4,8 @@ const images = [
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan3.png",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan4.png",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan5.png",
-        "/img/Slantd_Issue02_LooseSkins_ChristinaLan6.png"
+        "/img/Slantd_Issue02_LooseSkins_ChristinaLan6.png",
+        "https://www.hakaimagazine.com/wp-content/uploads/header-fish-formation.jpg"
         ]
 
 let i = 0

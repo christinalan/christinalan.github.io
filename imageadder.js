@@ -28,9 +28,14 @@ function placeImage(x, y) {
         }
 }
 
+let mouse = 0
+
 document.addEventListener("mouseover", function (event) {
         event.preventDefault()
+        mouse = mouse + 1
+        if (mouse % 20 == 0) {
         placeImage(event.pageX, event.pageY)
+        }
 })
 
 document.addEventListener("touchend", function (event) {

@@ -10,7 +10,6 @@ body {
     height: 100%;
     overflow: hidden;
 
-    background-image: "https://www.hakaimagazine.com/wp-content/uploads/header-fish-formation.jpg";
 }
 
 header {
@@ -23,4 +22,11 @@ header {
     background-color: #000000;
     color: #00FF00;
 
+}
+
+.my_image
+{
+    background:URL('https://www.hakaimagazine.com/wp-content/uploads/header-fish-formation.jpg');
+    width:100%;
+    height:100%;
 }

@@ -13,11 +13,12 @@ body {
 
     ul.navbar {
       position: absolute;
-      top: 55%;
-      left: 40%;
+      top: 65%;
+      left: 30%;
     }
 
     ul.navbar li {
+      margin: 0.5em 0;
       padding: 0.3em;
       border-right: 1em solid black
     }

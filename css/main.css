@@ -17,9 +17,8 @@ body {
       left: 50%;
     }
 
+
     ul.navbar li {
-      margin: 0.5em 0;
-      padding: 0.3em;
       border-right: 1em solid black
     }
 
@@ -36,7 +35,6 @@ body {
     a:hover {
       color: #FF1493;
     }
-
 
 header {
     position: fixed;

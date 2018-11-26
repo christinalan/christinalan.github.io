@@ -13,8 +13,9 @@ body {
 
     ul.navbar {
       position: absolute;
-      top: 55%;
-      left: 50%;
+      top: 2em;
+      left: 1em;
+      width: auto;
     }
 
     ul.navbar li {

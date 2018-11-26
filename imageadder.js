@@ -19,19 +19,13 @@ const images = [
         "/img/39_s.png",
         "/img/meltblackf_s.png",
         "/img/mm2_s.png"
-        "/img/IG_clip_1_s.mov",
-        "/img/IG_clip_2_s.mov",
-        "/img/IG_clip_3_s.mov",
-        "/img/preview1_s.mov",
-        "/img/preview2_s.mov",
-        "/img/preview3_s.mov"
         ]
 
 let i = 0
 
 function placeImage(x, y) {
 
-        const nextImage = images [i];
+        const nextImage = images [i]
 
         const img = document.createElement("img")
         img.setAttribute("src", nextImage)

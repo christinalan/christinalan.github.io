@@ -21,7 +21,7 @@ let i = 0
 
 function placeImage(x, y) {
 
-        const nextImage = images[i]
+        const nextImage = Math.floor(Math.random());
 
         const img = document.createElement("img")
         img.setAttribute("src", nextImage)

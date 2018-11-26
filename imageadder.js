@@ -1,20 +1,25 @@
 const images = [
-        "/img/Slantd_Issue02_LooseSkins_ChristinaLan_1.png",
-        "/Slantd_Issue02_LooseSkins_ChristinaLan5.png",
+        "/img/Slantd_Issue02_LooseSkins_ChristinaLan_1_s.png",
+        "/img/Slantd_Issue02_LooseSkins_ChristinaLan2_s.png",
+        "/img/Slantd_Issue02_LooseSkins_ChristinaLan3_s.png",
+        "/img/Slantd_Issue02_LooseSkins_ChristinaLan4_s.png",
+        "/img/Slantd_Issue02_LooseSkins_ChristinaLan5_s.png",
+        "/img/Slantd_Issue02_LooseSkins_ChristinaLan6_s.png",
         "/img/10s.png"
-        "/img/Slantd_Issue02_LooseSkins_ChristinaLan4.png",
-        "/img/Slantd_Issue02_LooseSkins_ChristinaLan5.png",
-        "/img/Slantd_Issue02_LooseSkins_ChristinaLan6.png",
-        "/img/lala.gif",
-        "/img/cutafter_foreverb&w.gif",
-        "/img/justhands.jpg",
-        "/img/mirrormirrorwhat.jpg",
-        "/img/mirrormirroroppo.png",
-        "/img/new2.png",
-        "/img/winter.jpg",
-        "/img/winter1.jpg",
-        "/img/39.png",
-        "/img/22.png"
+        "/img/lala_small.gif",
+        "/img/cutafter_small.gif",
+        "/img/justhands_s.jpg",
+        "/img/mirrormirrorwhat_s.jpg",
+        "/img/meltblackf_s.png",
+        "/img/mirrormirroroppo_s.png",
+        "/img/new2_s.png",
+        "/img/winter1_small.jpg",
+        "/img/39_s.png",
+        "/img/22_s.png",
+        "/img/39_s.png",
+        "/img/meltblackf_s.png",
+        "/img/mm2_s.png",
+
         ]
 
 let i = 0

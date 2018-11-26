@@ -1,7 +1,7 @@
 const images = [
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan_1.png",
-        "/img/Slantd_Issue02_LooseSkins_ChristinaLan5.png",
-        "/img/Slantd_Issue02_LooseSkins_ChristinaLan3.png",
+        "/Slantd_Issue02_LooseSkins_ChristinaLan5.png",
+        "/img/10s.png"
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan4.png",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan5.png",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan6.png",
@@ -21,7 +21,7 @@ let i = 0
 
 function placeImage(x, y) {
 
-        const nextImage = Math.floor(Math.random());
+        const nextImage = Math.floor(Math.random() * 15 + 1);
 
         const img = document.createElement("img")
         img.setAttribute("src", nextImage)

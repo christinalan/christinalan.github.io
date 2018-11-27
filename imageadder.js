@@ -25,7 +25,7 @@ let i = 0
 
 function placeImage(x, y) {
 
-        const nextImage = images [i]
+        const nextImage = images[i]
 
         const img = document.createElement("img")
         img.setAttribute("src", nextImage)
@@ -44,7 +44,7 @@ let mouse = 0
 document.addEventListener("mouseover", function (event) {
         event.preventDefault()
         mouse = mouse + 1
-        if (mouse % 3 == 0) {
+        if (mouse % 2 == 0) {
         placeImage(event.pageX, event.pageY)
         }
 })

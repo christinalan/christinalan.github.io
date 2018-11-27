@@ -37,6 +37,10 @@ function placeImage(x, y) {
 
         i = i + 1
 
+        if (i >= images.length) {
+          i = 0
+        }
+
 }
 
 let mouse = 0

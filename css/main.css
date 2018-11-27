@@ -12,10 +12,13 @@ body {
 }
 
     ul.navbar {
+      font-size: 16px;
       position: absolute;
       top: 5em;
       left: 0;
       width: auto;
+
+      background-color: #FFFF00;
     }
 
     ul.navbar li {
@@ -35,7 +38,7 @@ body {
     }
 
     a:hover {
-      color: #FFF000;
+      color: #0000CD;
     }
 
 header {

@@ -31,7 +31,7 @@ function preLoader() {
   images[20]="/img/weird_s.gif"
 
   //start preloading
-  for(i=0; i<=21; i++)
+  for(i=0; i<=22; i++)
   {
     imageObj.src=images[i];
   }

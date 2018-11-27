@@ -5,7 +5,7 @@ const images = [
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan4_s.png",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan5_s.png",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan6_s.png",
-        "/img/10s.png"
+        "/img/10s.png",
         "/img/lala_small.gif",
         "/img/cutafter_small.gif",
         "/img/justhands_s.jpg",

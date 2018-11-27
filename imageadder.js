@@ -7,19 +7,20 @@ const images = [
         "/img/10s.png",
         "/img/cutafter_forever_s.gif",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan4_s.png",
-        "/img/Slantd_Issue02_LooseSkins_ChristinaLan5_s.png",
         "/img/22_s.png",
+        "/img/Slantd_Issue02_LooseSkins_ChristinaLan5_s.png",
+        "/img/weird_s.gif",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan6_s.png",
         "/img/lala_s.gif",
+        "/img/34_s.png",
         "/img/winter1_small.jpg",
         "/img/cutafter_forever_s.gif",
         "/img/mirrormirrorwhat_s.jpg",
+        "/img/39_s.png",
         "/img/meltblackf_s.png",
         "/img/mirrormirroroppo_s.png",
         "/img/new2_s.png",
         "/img/mm2_s.png",
-        "/img/39_s.png",
-        "/img/39_s.png",
         ]
 
 let i = 0

@@ -15,15 +15,14 @@ body {
       font-size: 16px;
       position: absolute;
       top: 5em;
-      left: 0;
+      left: -1em;
       width: auto;
 
-      background-color: #FFFF00;
     }
 
     ul.navbar li {
       margin: 0.5em 0;
-      padding: 0.2em;
+      padding: 0;
       border-right: 1em solid black
     }
 
@@ -34,7 +33,7 @@ body {
       color: #FF1493;
     }
     a:visited {
-      color: white;
+      color: #FF1493;
     }
 
     a:hover {

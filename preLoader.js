@@ -25,9 +25,10 @@ function preLoader() {
   images[14]="/img/winter1_small.jpg"
   images[15]="/img/39_s.png"
   images[16]="/img/22_s.png"
-  images[17]="/img/39_s.png"
+  images[17]="/img/34_s.png"
   images[18]="/img/meltblackf_s.png"
   images[19]="/img/mm2_s.png"
+  images[20]="/img/weird_s.gif"
 
   //start preloading
   for(i=0; i<=21; i++)

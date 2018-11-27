@@ -9,6 +9,7 @@ const images = [
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan4_s.png",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan5_s.png",
         "/img/winter1_small.jpg",
+        "/img/22_s.png",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan6_s.png",
         "/img/lala_s.gif",
         "/img/cutafter_forever_s.gif",
@@ -18,7 +19,6 @@ const images = [
         "/img/new2_s.png",
         "/img/mm2_s.png",
         "/img/39_s.png",
-        "/img/22_s.png",
         "/img/39_s.png",
         ]
 

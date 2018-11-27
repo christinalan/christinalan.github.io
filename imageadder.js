@@ -6,19 +6,18 @@ const images = [
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan5_s.png",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan6_s.png",
         "/img/10s.png",
-        "/img/lala_small.gif",
-        "/img/cutafter_small.gif",
+        "/img/lala_s.gif",
+        "/img/cutafter_s.gif",
         "/img/justhands_s.jpg",
         "/img/mirrormirrorwhat_s.jpg",
         "/img/meltblackf_s.png",
         "/img/mirrormirroroppo_s.png",
         "/img/new2_s.png",
         "/img/winter1_small.jpg",
+        "/img/mm2_s.png"
         "/img/39_s.png",
         "/img/22_s.png",
         "/img/39_s.png",
-        "/img/meltblackf_s.png",
-        "/img/mm2_s.png"
         ]
 
 let i = 0

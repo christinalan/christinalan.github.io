@@ -28,14 +28,14 @@ body {
       text-decoration: none
     }
     a:link {
-      color: #FFFF00;
+      color: #FF1493;
     }
     a:visited {
       color: white;
     }
 
     a:hover {
-      color: #FF1493;
+      color: #FFF000;
     }
 
 header {

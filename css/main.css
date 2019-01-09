@@ -19,6 +19,7 @@ body {
       width: auto;
 
     }
+
     ul.navbar:hover {
       z-index: 1;
     }
@@ -43,6 +44,10 @@ body {
       color: #0000CD;
     }
 
+    ul.navbar a:hover {
+      z-index: 1;
+    }
+    
 header {
     position: fixed;
     top: 50%;

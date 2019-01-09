@@ -9,7 +9,7 @@ const images = [
         "/img/cutafter_forever_s.gif",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan4_s.png",
         "/img/22s.png",
-        "/img/honey.gif",
+        "/img/honey2.gif",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan5_s.png",
         "/img/weird_s.gif",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan6_s.png",

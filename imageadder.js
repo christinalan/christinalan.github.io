@@ -5,11 +5,11 @@ const images = [
         "/img/justhands_s.jpg",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan3_s.png",
         "/img/10s.png",
-        "/img/scarf.gif"
+        "/img/scarf.gif",
         "/img/cutafter_forever_s.gif",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan4_s.png",
         "/img/22s.png",
-        "/img/honey.gif"
+        "/img/honey.gif",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan5_s.png",
         "/img/weird_s.gif",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan6_s.png",

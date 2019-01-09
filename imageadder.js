@@ -19,9 +19,9 @@ const images = [
         "/img/mirrormirrorwhat_s.jpeg",
         "/img/39_s.png",
         "/img/meltblackf_s.png",
-        "/img/mirrormirroroppo_s.png",
         "/img/new2_s.png",
         "/img/mm2_s.png",
+        "/img/mirrormirroroppo_s.png",
         ]
 
 let i = 0

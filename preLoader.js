@@ -16,7 +16,7 @@ function preLoader() {
   images[5]="/img/Slantd_Issue02_LooseSkins_ChristinaLan6_s.png"
   images[6]="/img/10s.png"
   images[7]="/img/lala_s.gif"
-  images[8]="/img/scarf.gif"
+  images[8]="/img/scarf2.gif"
   images[9]="/img/honey.gif"
   images[10]="/img/cutafter_forever_s.gif"
   images[11]="/img/justhands_s.jpg"
@@ -31,9 +31,10 @@ function preLoader() {
   images[20]="/img/meltblackf_s.png"
   images[21]="/img/mm2_s.png"
   images[22]="/img/weird_s.gif"
+  images[23]="/img/DSC_2267_small.jpeg"
 
   //start preloading
-  for(i=0; i<=23; i++)
+  for(i=0; i<=24; i++)
   {
     imageObj.src=images[i];
   }

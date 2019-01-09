@@ -5,7 +5,7 @@ const images = [
         "/img/justhands_s.jpg",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan3_s.png",
         "/img/10s.png",
-        "/img/scarf.gif",
+        "/img/scarf2.gif",
         "/img/cutafter_forever_s.gif",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan4_s.png",
         "/img/22s.png",
@@ -13,7 +13,6 @@ const images = [
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan5_s.png",
         "/img/weird_s.gif",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan6_s.png",
-        "/img/lala_s.gif",
         "/img/34s.png",
         "/img/winter1_s.jpg",
         "/img/cutafter_forever_s.gif",
@@ -23,6 +22,7 @@ const images = [
         "/img/mirrormirroroppo_s.png",
         "/img/new2_s.png",
         "/img/mm2_s.png",
+        "/img/DSC_2267_small.jpeg",
         ]
 
 let i = 0

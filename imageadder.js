@@ -2,7 +2,7 @@ const images = [
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan_1_s.png",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan2_s.png",
         "/img/lala_s.gif",
-        "/img/justhands.jpeg",
+        "/img/justhands_s.jpeg",
         "/img/Slantd_Issue02_LooseSkins_ChristinaLan3_s.png",
         "/img/10s.png",
         "/img/scarf2.gif",

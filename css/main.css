@@ -19,6 +19,9 @@ body {
       width: auto;
 
     }
+    ul.navbar:hover {
+      z-index: 1;
+    }
 
     ul.navbar li {
       margin: 0.5em 0;
@@ -65,4 +68,8 @@ img {
   left: auto;
   transform: translate(-50%, -50%) scale(0.5);
   animation: fadein 0.5s;
+}
+
+img:hover {
+  z-index: 1;
 }

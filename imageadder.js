@@ -22,7 +22,6 @@ const images = [
         "/img/mirrormirroroppo_s.png",
         "/img/new2_s.png",
         "/img/mm2_s.png",
-        "/img/DSC_2267_small.jpeg",
         ]
 
 let i = 0

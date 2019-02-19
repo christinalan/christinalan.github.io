@@ -20,7 +20,6 @@ function preLoader() {
   images[9]="/img/honey2.gif"
   images[10]="/img/cutafter_forever_s.gif"
   images[11]="/img/justhands_s.jpeg"
-  images[12]="/img/mirrormirrorwhat_s.jpeg"
   images[13]="/img/meltblackf_s.png"
   images[14]="/img/mirrormirroroppo_s.png"
   images[15]="/img/new2_s.png"

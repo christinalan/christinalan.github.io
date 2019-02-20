@@ -29,7 +29,6 @@ function preLoader() {
   images[19]="/img/34_s.png"
   images[20]="/img/meltblackf_s.png"
   images[21]="/img/mm2_s.png"
-  images[22]="/img/weird_s.gif"
 
   //start preloading
   for(i=0; i<=23; i++)

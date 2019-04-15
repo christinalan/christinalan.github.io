@@ -27,11 +27,11 @@ function preLoader() {
   images[17]="/img/39_s.png"
   images[18]="/img/22_s.png"
   images[19]="/img/34_s.png"
-  images[20]="/img/meltblackf_s.png"
-  images[21]="/img/mm2_s.png"
+  //images[20]="/img/meltblackf_s.png"
+  //images[21]="/img/mm2_s.png"
 
   //start preloading
-  for(i=0; i<=23; i++)
+  for(i=0; i<=20; i++)
   {
     imageObj.src=images[i];
   }

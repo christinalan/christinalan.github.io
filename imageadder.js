@@ -16,9 +16,9 @@ const images = [
         "/img/winter1_s.jpeg",
         "/img/cutafter_forever_s.gif",
         "/img/39_s.png",
-        "/img/meltblackf_s.png",
+        //"/img/meltblackf_s.png",
         "/img/new2_s.png",
-        "/img/mm2_s.png",
+        //"/img/mm2_s.png",
         "/img/mirrormirroroppo_s.png",
         ]
 

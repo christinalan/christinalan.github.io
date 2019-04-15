@@ -32,7 +32,7 @@ function placeImage(x, y) {
         img.setAttribute("src", nextImage)
         img.style.left = x + "px"
         img.style.top = y + "px"
-        img.style.transform = "translate(-50%, -50%) scale(0.75) rotate(" + (Math.random() * 180 - 10) + "deg)"
+        img.style.transform = "translate(-50%, -50%) scale(0.6) rotate(" + (Math.random() * 180 - 10) + "deg)"
 
         document.body.appendChild(img)
 

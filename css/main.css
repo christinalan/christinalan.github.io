@@ -71,6 +71,8 @@ section.slideshow img {
   position: absolute;
   top: 50px;
   left: 50px;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
   width: 50%;
   height: 50%;
   z-index: 0;

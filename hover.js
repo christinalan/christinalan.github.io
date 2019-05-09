@@ -1,4 +1,5 @@
 const slideshow = document.querySelector("section.slideshow")
+<<<<<<< HEAD
 const images = slideshow.querySelectorAll("img");
 
 slideshow.addEventListener("mousemove", function(event) {
@@ -14,4 +15,10 @@ slideshow.addEventListener("mousemove", function(event) {
 
   images[imageNumber].style.zIndex = 1
 
+=======
+const images = slideshow.querySelectorAll("img")
+
+slideshow.addEventListener("mousemove", function(event) {
+  console.log(event)
+>>>>>>> ab84d3fc2b0efd75a2b4e3d57acfd9adfd78e89a
 })

@@ -32,6 +32,7 @@ function preLoader() {
   images[22]="/PA work/Eva_5.jpg"
   images[23]="/PA work/pussypower.jpg"
   images[24]="/PA work/chinaboard.jpg"
+  images[25]="/PA work/bitevideo.jpg"
   //images[20]="/img/meltblackf_s.png"
   //images[21]="/img/mm2_s.png"
 

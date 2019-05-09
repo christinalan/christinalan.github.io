@@ -76,9 +76,9 @@ section.slideshow img {
   z-index: 0;
 }
 
-section.slideshow img:first-child (
+section.slideshow img:first-child {
   z-index: 1;
-  )
+}
 
 /*
 @keyframes fadein {

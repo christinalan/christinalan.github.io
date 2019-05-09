@@ -61,8 +61,8 @@ header {
 }
 
 section.slideshow {
-  width: 900px;
-  height: 600px;
+  width: 50%;
+  height: 50%;
   cursor: default;
   position: relative;
 }
@@ -71,8 +71,8 @@ section.slideshow img {
   position: absolute;
   top: 50px;
   left: 50px;
-  width: 900px;
-  height: 600px;
+  width: 50%;
+  height: 50%;
   z-index: 0;
 }
 

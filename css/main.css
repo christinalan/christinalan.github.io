@@ -61,9 +61,9 @@ body {
 */
 
 section.slideshow {
-  width: 50%;
-  height: 50%;
-  cursor: default;
+  width: 900px;
+  height: 600px;
+  cursor: pointer;
   position: relative;
 }
 

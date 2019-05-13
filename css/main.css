@@ -1,3 +1,14 @@
+header {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate (-50%, -50%);
+    z-index: 1;
+    background-color: #000000;
+    color: #FFFFFF;
+
+}
+
 body {
     font-family: "DejaVu Sans", "Bitstream Vera Sans", "Segoe UI", "Lucida Grande", Verdana, Tahoma, Arial, sans-serif;
     font-size: 12px;
@@ -12,10 +23,11 @@ body {
 }
 
     ul.navbar {
+      float: left;
       font-size: 16px;
       position: absolute;
       top: 5em;
-      left: -1em;
+      left: -10em;
       width: auto;
 
     }
@@ -25,12 +37,15 @@ body {
     }
 
     ul.navbar li {
+      float: center;
       margin: 0.5em 0;
       padding: 0;
       border-right: 1em solid black
     }
 
     ul.navbar a {
+      float: center;
+      text-align: center;
       text-decoration: none
     }
     a:link {
@@ -48,16 +63,6 @@ body {
       z-index: 1;
     }
 
-header {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-
-    background-color: #000000;
-    color: #FFFFFF;
-
-}
 
 section.slideshow {
   width: 50%;
@@ -80,6 +85,7 @@ section.slideshow img {
 section.slideshow img:first-child {
   z-index: 1;
 }
+
 
 /*
 @keyframes fadein {

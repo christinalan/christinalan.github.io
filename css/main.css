@@ -72,8 +72,8 @@ section.slideshow img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 900px;
-  height: 600px;
+  width: auto;
+  height: auto;
   z-index: 0;
 }
 

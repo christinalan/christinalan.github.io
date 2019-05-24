@@ -37,7 +37,7 @@ function preLoader() {
   //images[21]="/img/mm2_s.png"
 
   //start preloading
-  for(i=0; i<=25; i++)
+  for(i=0; i<=26; i++)
   {
     imageObj.src=images[i];
   }

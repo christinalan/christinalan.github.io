@@ -1,4 +1,7 @@
 header {
+    font-family: "DejaVu Sans", "Bitstream Vera Sans", "Segoe UI", "Lucida Grande", Verdana, Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 2;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -8,6 +11,7 @@ header {
     color: #FFFFFF;
 
 }
+
 
 /*
 body {

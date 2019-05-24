@@ -1,3 +1,4 @@
+/*
 header {
     font-family: "DejaVu Sans", "Bitstream Vera Sans", "Segoe UI", "Lucida Grande", Verdana, Tahoma, Arial, sans-serif;
     font-size: 12px;
@@ -83,26 +84,3 @@ section.slideshow img {
 section.slideshow img:first-child {
   z-index: 1;
 }
-
-
-/*
-@keyframes fadein {
-  0% { opacity: 0;}
-  10% { opacity: 1;}
-}
-*/
-/*
-img {
-  max-width: 100%;
-  height: auto;
-  position: absolute;
-  top: auto;
-  left: auto;
-  transform: translate(-50%, -50%) scale(2);
-  animation: fadein 0.5s;
-}
-
-img:hover {
-  z-index: 1;
-}
-*/

@@ -1,0 +1,18 @@
+@keyframes fadein {
+  0% { opacity: 0;}
+  10% { opacity: 1;}
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: auto;
+  left: auto;
+  transform: translate(-50%, -50%) scale(2);
+  animation: fadein 0.5s;
+}
+
+img:hover {
+  z-index: 1;
+}

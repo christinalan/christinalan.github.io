@@ -73,7 +73,7 @@ section.slideshow {
 
 
 section.slideshow img {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   max-width: 100%;

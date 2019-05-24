@@ -27,8 +27,10 @@ section div.text {
   padding: 50px;
 }
 
-section div.images {
-  max-width: 100%
-  position: center;
+section div.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  margin: auto; 
 
 }

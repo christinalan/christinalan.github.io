@@ -2,8 +2,8 @@ header {
     font-family: "DejaVu Sans", "Bitstream Vera Sans", "Segoe UI", "Lucida Grande", Verdana, Tahoma, Arial, sans-serif;
     font-size: 12px;
     line-height: 2;
-    position: fixed;
-    top: 50%;
+    position: relative;
+    top: 100%;
     left: 50%;
     transform: translate (-50%, -50%);
     z-index: 1;

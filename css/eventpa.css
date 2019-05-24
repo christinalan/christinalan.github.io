@@ -28,7 +28,7 @@ section div.text {
 }
 
 section div.images {
-  height: 100vh;
+  max-width: 100%
   position: center;
 
 }

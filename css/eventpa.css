@@ -26,3 +26,9 @@ section div {
 section div.text {
   padding: 50px;
 }
+
+section div.images {
+  height: 100vh;
+  position: center;
+
+}

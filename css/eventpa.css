@@ -15,10 +15,6 @@ section {
   flex-direction: row;
 }
 
-section:nth-child(odd) {
-  flex-direction: row-reverse;
-}
-
 section div {
   width: 50%
 }
@@ -30,7 +26,6 @@ section div.text {
 section div.slideshow-container {
   max-width: 100%;
   position: relative;
-  transform: translate(-50%, -50%);
-  margin: auto; 
+  margin: auto;
 
 }

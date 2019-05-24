@@ -34,11 +34,17 @@ function preLoader() {
   images[24]="/PA work/chinaboard1.jpg"
   images[25]="/PA work/bitevideo.jpg"
   images[26]="/PA work/writing.png"
+  images[27]="/PA work/Eva_1.jpg"
+  images[28]="/PA work/Eva_2.jpg"
+  images[29]="/PA work/Eva_3.jpg"
+  images[30]="/PA work/Eva_4.jpg"
+  images[31]="/PA work/Eva_5.jpg"
+  images[32]="/PA work/Eva_6.jpg"
   //images[20]="/img/meltblackf_s.png"
   //images[21]="/img/mm2_s.png"
 
   //start preloading
-  for(i=0; i<=27; i++)
+  for(i=0; i<=33; i++)
   {
     imageObj.src=images[i];
   }

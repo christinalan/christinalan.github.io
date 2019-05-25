@@ -1,14 +1,15 @@
-var slideIndex = 0;
-showSlides();
+var ul;
+var liItems;
+var imageWidth;
+var imageNumber;
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+function init(){
+
+    ul = document.getElementById(‘image_slider’);
+    liItems = ul.children;
+    imageNumber = liItems.length;
+    imageWidth = liItems[0].children[0].offsetWidth;
+    // set ul’s width as the total width of all images in image slider.
+    ul.style.width = parseInt(imageWidth * imageNumber) + ‘px’;
+    slider(ul);
 }

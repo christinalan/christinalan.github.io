@@ -66,6 +66,6 @@ function animate(opts){
             clearInterval(id);
            opts.callback();
          }
-    }, opts.dalay || 17);
+    } opts.delay || 17);
 }
 window.onload = init;

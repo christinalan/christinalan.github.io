@@ -5,7 +5,7 @@ function showSlides()
 {
     var i;
     // get the array of divs' with classname image-sliderfade
-    var slides = document.getElementsByClassName("image-sliderfade");
+    var slides = document.getElementsByClassName("image-slider");
 
     // get the array of divs' with classname dot
     var dots = document.getElementsByClassName("dot");

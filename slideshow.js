@@ -49,7 +49,7 @@ function goBack(leftPosition){
         else{
             clearInterval(id);
         }
-    }, 17);
+    } 17);
 }
 
 function animate(opts){

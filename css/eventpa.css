@@ -22,18 +22,18 @@ section div {
   width: 50%
 }
 
-.text {
+section div.text {
   padding: 50px;
   color: #BDC3C7;
 }
 
-.container {
+section div.container {
     max-width: 1000px;
     position: relative;
     margin: auto;
 }
 
-.image-slider {
+section div.image-slider {
   display: none;
 }
 

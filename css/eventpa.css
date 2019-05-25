@@ -29,21 +29,19 @@ section div.container {
   height:400px;
   padding:20px;
   box-sizing:border-box;
-  position: relative;
-  margin: auto;
 }
 
 section div.image-slider-wrapper {
   overflow:hidden;
 }
 
-section #image_slider {
+#image_slider {
   position: relative;
   height: 280px;
   padding: 0;
 }
 
-section #image_slider li {
+#image_slider li {
   max-width: 100%;
   float: left;
   list-style: none;

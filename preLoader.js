@@ -8,10 +8,10 @@ function preLoader() {
 
   //set image list
   images = new Array();
-  images[0]="/img/Slantd_Issue02_LooseSkins_ChristinaLan_1_s.png"
-  images[1]="/img/Slantd_Issue02_LooseSkins_ChristinaLan2_s.png"
-  images[2]="/img/Slantd_Issue02_LooseSkins_ChristinaLan3_s.png"
-  images[3]="/img/Slantd_Issue02_LooseSkins_ChristinaLan4_s.png"
+  images[0]="/PA work/pussypower.jpg"
+  images[1]="/PA work/chinaboard1.jpg"
+  images[2]="/img/Slantd_Issue02_LooseSkins_ChristinaLan_1_s.png"
+  images[3]="/img/Slantd_Issue02_LooseSkins_ChristinaLan2_s.png"
   images[4]="/img/Slantd_Issue02_LooseSkins_ChristinaLan5_s.png"
   images[5]="/img/Slantd_Issue02_LooseSkins_ChristinaLan6_s.png"
   images[6]="/img/10s.png"
@@ -30,8 +30,8 @@ function preLoader() {
   images[20]="/img/scratching.jpg"
   images[21]="/img/justhands.jpg"
   images[22]="/PA work/Eva_4_new.jpg"
-  images[23]="/PA work/pussypower.jpg"
-  images[24]="/PA work/chinaboard1.jpg"
+  images[23]="/img/Slantd_Issue02_LooseSkins_ChristinaLan3_s.png"
+  images[24]="/img/Slantd_Issue02_LooseSkins_ChristinaLan4_s.png"
   images[25]="/PA work/bitevideo.jpg"
   images[26]="/PA work/writing.png"
   images[27]="/PA work/Eva_1.jpg"

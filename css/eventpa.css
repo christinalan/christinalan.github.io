@@ -22,7 +22,7 @@ section div.text {
 
 #slides {
     position: relative;
-    height: 300px;
+    height: auto;
     padding: 10px;
     margin: 0px;
     list-style-type: none;

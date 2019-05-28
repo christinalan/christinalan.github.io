@@ -20,7 +20,7 @@ section div.text {
   color: #BDC3C7;
 }
 
-#slides {
+.slides {
     position: relative;
     height: auto;
     padding: 10px;

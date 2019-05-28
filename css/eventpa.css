@@ -30,9 +30,9 @@ section div.container {
     margin: auto;
 }
 
-/* section div.image-slider {
+section div.image-slider {
   display: none;
-} */
+}
 
 img {
   vertical-align: middle;

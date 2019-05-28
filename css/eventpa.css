@@ -14,8 +14,11 @@ section {
   flex-direction: row;
 }
 
+section div {
+  width: 50%
+}
+
 section div.text {
-  width: 30%
   padding: 50px;
   color: #BDC3C7;
 }

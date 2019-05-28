@@ -50,7 +50,6 @@ section div.text {
 
 
 img {
-  max-width: auto;
+  max-width: 50%;
   height: auto;
-  vertical-align: middle;
 }

@@ -1,3 +1,4 @@
+/*
 body {
     font-family: "DejaVu Sans", "Bitstream Vera Sans", "Segoe UI", "Lucida Grande", Verdana, Tahoma, Arial, sans-serif;
     font-size: 12px;
@@ -19,8 +20,9 @@ section div.text {
   padding: 50px;
   color: #BDC3C7;
 }
+*/
 
-.slides {
+#slides {
     position: relative;
     height: auto;
     width: 50%
@@ -44,12 +46,13 @@ section div.text {
     transition: opacity 1s;
 }
 
-.slide-showing {
+.showing {
     opacity: 1;
     z-index: 2;
 }
 
 img {
-  max-width: 50%;
-  height: auto;
+  position: relative;
+  max-width: 100%;
+  height: 100%;
 }

@@ -52,7 +52,7 @@ section div.text {
 
 .bss-slides figure img{
   width:100%;
-  height:100vh;
+  height:100%;
   opacity: 0;
   -webkit-transition: opacity 1.2s;
   transition: opacity 1.2s;

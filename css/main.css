@@ -11,61 +11,11 @@ body {
     overflow: hidden;
 }
 
-<<<<<<< HEAD
-    ul.navbar {
-      font-size: 16px;
-      position: absolute;
-      top: 5em;
-      left: -1em;
-      width: auto;
-
-    }
-
-    ul.navbar:hover {
-      z-index: 1;
-    }
-
-    ul.navbar li {
-      margin: 0.5em 0;
-      padding: 0;
-      border-right: 1em solid black
-    }
-
-    ul.navbar a {
-      text-decoration: none
-    }
-    a:link {
-      color: #FF1493;
-    }
-    a:visited {
-      color: #FF1493;
-    }
-
-    a:hover {
-      color: #0000CD;
-    }
-
-    ul.navbar a:hover {
-      z-index: 1;
-    }
-
-header {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-    transform: translate(-50%, -50%);
-
-    background-color: #000000;
-    color: #00FF00;
-
-=======
   section.slideshow {
   width: auto;
   height: auto;
   cursor: pointer;
   position: relative;
->>>>>>> d3a8b5fc393fc4351eab958b62502840166cbe93
 }
 
 

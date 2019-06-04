@@ -29,7 +29,7 @@ section.slideshow img {
 
 img.animated-gif {
   width: 100%;
-  height: 100vh;
+  height: auto;
 }
 
 section.slideshow img:first-child {

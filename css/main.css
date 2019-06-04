@@ -3,7 +3,7 @@ body {
     font-size: 12px;
     line-height: 2;
 
-    background-color: #00FF00;
+    background-color: #FFFFFF;
     color: #000000;
 
     width: 100%;
@@ -11,6 +11,7 @@ body {
     overflow: hidden;
 }
 
+<<<<<<< HEAD
     ul.navbar {
       font-size: 16px;
       position: absolute;
@@ -58,23 +59,25 @@ header {
     background-color: #000000;
     color: #00FF00;
 
+=======
+  section.slideshow {
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  position: relative;
+>>>>>>> d3a8b5fc393fc4351eab958b62502840166cbe93
 }
 
-@keyframes fadein {
-  0% { opacity: 0;}
-  10% { opacity: 1;}
-}
 
-img {
+section.slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
   max-width: 100%;
   height: auto;
-  position: absolute;
-  top: auto;
-  left: auto;
-  transform: translate(-50%, -50%) scale(0.5);
-  animation: fadein 0.5s;
+  z-index: 0;
 }
 
-img:hover {
+section.slideshow img:first-child {
   z-index: 1;
 }

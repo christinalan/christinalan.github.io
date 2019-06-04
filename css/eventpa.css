@@ -131,39 +131,3 @@ section div.text {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-
-
-
-/*
-#slides {
-    position: relative;
-    width: 100%
-    height: 100vh;
-    padding: 10px;
-    margin: 0px;
-    list-style-type: none;
-}
-
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 1;
-    box-sizing: border-box;
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    transition: opacity 1s;
-}
-
-.showing {
-    opacity: 1;
-    z-index: 2;
-}
-
-img {
-  position: relative;
-  max-width: 100%;
-  height: 100%;
-} */

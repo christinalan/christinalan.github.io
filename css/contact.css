@@ -1,6 +1,18 @@
 ul {
-  font-family: "DejaVu Sans", "Bitstream Vera Sans", "Segoe UI", "Lucida Grande", Verdana, Tahoma, Arial, sans-serif;
-  font-size: 72px;
+  color: #BDC3C7;
+  font-family: "Oxygen Mono";
+  max-width: 100%;
   line-height: 2;
+}
 
+a:link {
+  color: #BDC3C7;
+}
+
+a:visited {
+  color: #BDC3C7;
+}
+
+a:hover {
+  color: #FFFF00;
 }

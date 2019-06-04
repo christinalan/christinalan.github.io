@@ -47,7 +47,7 @@ body {
     ul.navbar a:hover {
       z-index: 1;
     }
-    
+
 header {
     position: fixed;
     top: 50%;

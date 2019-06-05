@@ -15,3 +15,8 @@
     images[imageNumber].style.zIndex = 1
 
   })
+
+  document.addEventListener("touchend", function (event) {
+          event.preventDefault()
+          placeImage(event.pageX, event.pageY)
+  })

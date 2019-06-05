@@ -1,16 +1,14 @@
 div.box {
-  width=150px
-  height=100vh;
+  width: 640px;
+  height: 360px;
   border-radius: 5px;
 }
 div.wrapper {
-  width: 600px;
+  width: 640px;
+  height: 360px;
   display: grid;
   grid-gap: 0px;
   grid-template-columns: repeat (6, 100px);
-  grid-template-rows: 100px 100px 100px;
+  grid-template-rows: 360px 360px 360px;
   grid-auto-flow: column;
 }
-
-
-/*width="640" height="360"

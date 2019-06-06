@@ -1,8 +1,20 @@
-ul {
+.marquee {
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ -moz-animation: scroll 0.5s linear infinite;
+ -webkit-animation: scroll 0.1s linear infinite;
+ animation: scroll 0.1s linear infinite;
+}
+
+header {
   color: #BDC3C7;
   font-family: "Oxygen Mono";
-  max-width: 100%;
   line-height: 2;
+}
+
+.scroll-right {
+  font-size: 100px;
 }
 
 a:link {

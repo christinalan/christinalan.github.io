@@ -1,6 +1,5 @@
 .marquee {
  margin: 0;
- line-height: 50px;
  text-align: center;
  -moz-animation: scroll 0.5s linear infinite;
  -webkit-animation: scroll 0.1s linear infinite;
@@ -10,12 +9,8 @@
 header {
   color: #BDC3C7;
   font-family: "Oxygen Mono";
-  line-height: 2;
-  font-size: 72px
-}
-
-.scroll-right {
-  font-size: 100px;
+  line-height: 10px;
+  font-size: 200px
 }
 
 a:link {

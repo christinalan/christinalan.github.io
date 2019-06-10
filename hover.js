@@ -15,7 +15,3 @@
     images[imageNumber].style.zIndex = 1
 
   })
-
-  slideshow.addEventListener("touchend", function(event) {
-          event.preventDefault()
-  })

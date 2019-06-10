@@ -8,7 +8,7 @@ div.wrapper {
   height: 360px;
   display: grid;
   grid-gap: 0px;
-  grid-template-columns: repeat (6, 360px);
-  grid-template-rows: 360px 360px 360px;
+  grid-template-columns: repeat (6, 333px);
+  grid-template-rows: 333px 333px 333px;
   grid-auto-flow: column;
 }

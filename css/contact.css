@@ -10,7 +10,18 @@ header {
   color: #BDC3C7;
   font-family: "Oxygen Mono";
   line-height: 10px;
-  font-size: 200px
+}
+
+.scroll-right {
+  font-size: 72px;
+}
+
+.scroll-up {
+  font-size: 200px;
+}
+
+.scroll-down {
+  font-size: 100px;
 }
 
 a:link {

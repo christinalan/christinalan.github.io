@@ -16,7 +16,6 @@
 
   })
 
-  document.addEventListener("touchend", function (event) {
+  slideshow.addEventListener("touchend", function(event) {
           event.preventDefault()
-          placeImage(event.pageX, event.pageY)
   })

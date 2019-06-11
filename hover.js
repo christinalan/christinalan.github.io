@@ -15,3 +15,8 @@
     images[imageNumber].style.zIndex = 1
 
   })
+
+slideshow.addEventListener("click", function(event) {
+  event.preventDefault()
+
+})

@@ -6,6 +6,7 @@
   #navlist li {
     clear: both;
     position: relative;
+    display: block;
   }
 }
 
@@ -16,18 +17,17 @@
 
 #navlist li {
   font-family: "Oxygen Mono";
-  display: inline;
+  display: inline-block;
   list-style-type: none;
-  padding: 66px;
-  overflow: hidden;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  padding: 0px;
   z-index: 2;
+  position: relative;
 }
 
 li a {
   color: #BDC3C7;
+    z-index: 2;
+    padding: 10px;
 }
 
 li a:hover {

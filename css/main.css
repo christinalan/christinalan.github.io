@@ -4,13 +4,10 @@
 }
 
 @media screen and (min-width:320px) and (max-width:640px) {
-  #navlist li {
-    max-width: 100%;
-    display: inline-flex;
-    line-height: normal;
-    text-align: center;
+
+  #navlist li {clear: both;}
 }
-}
+
 
 *, *:before, *:after {
   box-sizing: border-box;

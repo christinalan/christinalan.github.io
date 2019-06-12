@@ -52,8 +52,6 @@ section div.text {
 }
 
 .bss-slides figure img{
-  max-width:100%;
-  height: auto;
   opacity: 0;
   -webkit-transition: opacity 1.2s;
   transition: opacity 1.2s;

@@ -18,7 +18,7 @@ div.wrapper {
   height: 360px;
   display: grid;
   grid-gap: 0px;
-  grid-template-rows: repeat (6, 333px);
+  grid-template-rows: repeat (6, 640px);
   grid-template-columns: 640px 640px;
   grid-auto-flow: row;
 }

@@ -1,3 +1,13 @@
+@viewport {
+  width: device-width;
+}
+
+@media screen and (min-width:320px) and (max-width:640px) {
+  div.wrapper {
+    transform: scale(0.3);
+    margin: -5em 0em 0em -10em;
+  }
+
 div.box {
   width: 100%;
   height: 360px;

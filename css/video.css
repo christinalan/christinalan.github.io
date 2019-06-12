@@ -5,7 +5,7 @@
 @media screen and (min-width:320px) and (max-width:640px) {
   div.wrapper {
     transform: scale(0.3);
-    margin: -5em 0em 0em -10em;
+    margin: -5em 0em 0em -14em;
   }
 
 div.box {

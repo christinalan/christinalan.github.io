@@ -2,12 +2,6 @@
   width: device-width;
 }
 
-@media screen and (min-width:320px) and (max-width:640px) {
-  div.wrapper {
-    transform: scale(0.3);
-    margin: -5em 0em 0em -14em;
-  }
-
 div.box {
   width: 100%;
   height: 360px;
@@ -18,7 +12,12 @@ div.wrapper {
   height: 360px;
   display: grid;
   grid-gap: 0px;
-  grid-template-rows: repeat (6, 640px);
   grid-template-columns: 640px 640px;
   grid-auto-flow: row;
 }
+
+@media screen and (min-width:320px) and (max-width:640px) {
+  div.wrapper {
+    transform: scale(0.3);
+    margin: -5em 0em 0em -14em;
+  }

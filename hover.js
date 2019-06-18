@@ -19,3 +19,24 @@
 slideshow.addEventListener("click", function(event) {
   event.preventDefault()
 })
+
+if (matchMedia) {
+const mq = window.matchMedia("(min-width: 640px)");
+mq.addListener(WidthChange);
+WidthChange(mq);
+}
+
+function WidthChange(mq) {
+  const msg = (mq.matches ? "more" : "less") + " than 640 pixels";
+const y = event.offsetY
+const width = this.offsetWidth
+
+const percentage = y / width;
+const imageNumber = Math.floor(percentage * images.length);
+
+images.forEach(image => {
+  image.style.zIndex = 0
+})
+images[imageNumber].style.zIndex = 1
+
+}

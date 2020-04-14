@@ -31,12 +31,12 @@ div.overlay {
   background: rgb(0,0,0);
   background: rgba(0,0,0,0.5);
   color: #f1f1f1;
-  width: 50%;
+  width: 100%;
   transition: .5s ease;
   opacity: 0;
   color: white;
   font-size: 20px;
-  padding: 50px;
+  padding: 10px;
   text-align: left;
   z-index: 1;
 }

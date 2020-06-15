@@ -26,7 +26,7 @@ div.wrapper {
 }
 
 div.overlay {
-  position: relative;
+  position: absolute;
   bottom: 50px;
   background: rgb(0,0,0);
   background: rgba(0,0,0,0.5);

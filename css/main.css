@@ -37,6 +37,11 @@ li a:hover {
   color: #FFFFFF;
 }
 
+li.blog {
+  float: left;
+}
+
+}
 section.slideshow {
   width: auto;
   height: auto;

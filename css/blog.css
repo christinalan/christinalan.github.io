@@ -1,3 +1,7 @@
+@viewport {
+  width: device-width;
+}
+
 body {
   font-family: "Jaldi", sans-serif;
 }

@@ -55,7 +55,6 @@ body {
 .video {
   width: 400px;
   height: 400px;
-  padding: 10px;
 }
 
 .lvideo {
@@ -68,7 +67,6 @@ body {
 }
 
 .description {
-  float: left;
   font-size: 15px;
   padding: 10px;
 }

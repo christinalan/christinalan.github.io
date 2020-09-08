@@ -19,6 +19,16 @@
   position: relative;
 }
 
+li a {
+  color: #bdc3c7;
+  z-index: 2;
+  padding: 10px;
+}
+
+li a:hover {
+  color: #ffffff;
+}
+
 body {
   font-family: "Jaldi", sans-serif;
 }

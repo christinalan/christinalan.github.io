@@ -1,3 +1,8 @@
+* {
+  font-size: 20 px;
+  font-family: "Jaldi", sans-serif;
+}
+
 @viewport {
   width: device-width;
 }
@@ -25,11 +30,6 @@ li a {
 
 li a:hover {
   color: #ffffff;
-}
-
-body {
-  font-size: 20 px;
-  font-family: "Jaldi", sans-serif;
 }
 
 .title {

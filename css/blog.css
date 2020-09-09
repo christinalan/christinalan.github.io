@@ -1,5 +1,4 @@
 * {
-  font-size: 20 px;
   font-family: "Jaldi", sans-serif;
 }
 
@@ -52,7 +51,7 @@ li a:hover {
   padding-bottom: 20px;
 }
 
-#image {
+#image img {
   width: 400px;
   height: 400px;
   display: inline-block;

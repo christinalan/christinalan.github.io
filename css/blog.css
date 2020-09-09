@@ -52,7 +52,7 @@ li a:hover {
   padding-bottom: 20px;
 }
 
-.image {
+#image {
   width: 400px;
   height: 400px;
   display: inline-block;
@@ -72,7 +72,7 @@ li a:hover {
   font-size: 25px;
 }
 
-.description {
+p.description {
   font-size: 15px;
   padding: 10px;
 }

@@ -83,5 +83,7 @@ p.description {
 
 #christina {
   font-size: 15px;
+  background-color: black;
+  color: white;
   font-style: italic;
 }

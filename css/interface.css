@@ -65,8 +65,8 @@ li a:hover {
 }
 
 .button {
-  float: right;
-  margin-right: 15px;
+  float: left;
+  margin-left: 15px;
   margin-top: 20px;
   border-radius: 8px;
   background-color: black;

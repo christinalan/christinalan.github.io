@@ -35,6 +35,7 @@ li a:hover {
 .title {
   margin-left: 15px;
   font-size: 30px;
+  font-weight: 700;
 }
 
 .button {

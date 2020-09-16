@@ -45,19 +45,23 @@ li a:hover {
   padding: 5px;
 }
 
-.topvideo {
-  /* min-width: 320px; */
-  z-index: 2;
-}
-
 .overlay {
-  font-size: 16px;
-  padding: 10px;
+  z-index: 2;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: left;
   align-items: center;
+}
+
+.descrip {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.topvideo {
+  min-width: 320px;
+  /* z-index: 2; */
 }
 
 section.slideshow {

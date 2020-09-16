@@ -37,7 +37,7 @@ li a:hover {
   font-size: 30px;
   font-weight: 700;
   display: flex;
-  z-index: 5px;
+  z-index: 2px;
 }
 
 .button {

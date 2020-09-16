@@ -31,13 +31,17 @@ li a:hover {
   color: #00ff00;
 }
 
+.left {
+    display: flex;
+    justify-content: left;
+    z-index: 2px;
+}
+
 .title {
   writing-mode: vertical-rl;
   text-orientation: upright;
   font-size: 30px;
   font-weight: 700;
-  display: flex;
-  z-index: 2px;
 }
 
 .button {

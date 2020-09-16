@@ -33,8 +33,11 @@ li a:hover {
 
 .left {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: left;
-    z-index: 2px;
+    align-items: left;
+    z-index: 2;
 }
 
 .title {

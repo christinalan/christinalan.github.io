@@ -46,7 +46,7 @@ li a:hover {
 }
 
 .topvideo {
-  min-width: 320px;
+  /* min-width: 320px; */
   z-index: 2;
 }
 

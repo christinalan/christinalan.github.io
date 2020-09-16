@@ -84,11 +84,6 @@ li a:hover {
 p.description {
   font-size: 16px;
   padding: 10px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: left;
-  align-items: center;
 }
 
 #christina {

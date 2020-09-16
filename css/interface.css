@@ -22,6 +22,11 @@
     transform: scale(0.3);
     margin: -5em 0em 0em -14em;
   }
+
+  .title {
+      writing-mode: horizontal-tb;
+      text-orientation: sideways;
+  }
 }
 
 #navlist li {

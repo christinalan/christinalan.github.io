@@ -19,8 +19,8 @@
   }
 
   .topvideo {
-    transform: scale(0.3);
-    margin: -5em 0em 0em -14em;
+    transform: scale(0.6);
+    /* margin: -5em 0em 0em -14em; */
   }
 
   .title {

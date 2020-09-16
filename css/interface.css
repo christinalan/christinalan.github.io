@@ -33,18 +33,19 @@ li a:hover {
 }
 
 .title {
-  margin-left: 15px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
   font-size: 30px;
   font-weight: 700;
+  display: table-caption;
 }
 
 .button {
-  float: right;
-  margin-top: 5px;
+  float: inline-end;
   margin-right: 15px;
   border-radius: 8px;
   background-color: black;
-  color: white;
+  color: white;s
   padding: 5px;
 }
 

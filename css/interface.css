@@ -17,6 +17,11 @@
     transform: rotate(270deg) scale(2,2);
     margin: 10em 2em 2em 0em;
   }
+
+  .topvideo {
+    transform: scale(0.3);
+    margin: -5em 0em 0em -14em;
+  }
 }
 
 #navlist li {

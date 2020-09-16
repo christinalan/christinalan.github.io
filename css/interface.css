@@ -52,7 +52,6 @@ li a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: left;
-    align-items: left;
     z-index: 2;
     background-color: transparent;
 }
@@ -62,6 +61,7 @@ li a:hover {
   text-orientation: upright;
   font-size: 30px;
   font-weight: 700;
+  background-color: transparent;
 }
 
 .button {

@@ -1,6 +1,5 @@
 * {
   font-family: "Jaldi", sans-serif;
-  background-color: black;
   color: white;
 }
 
@@ -37,7 +36,8 @@ li a:hover {
   text-orientation: upright;
   font-size: 30px;
   font-weight: 700;
-  display: contents;
+  display: flex;
+  z-index: 5px;
 }
 
 .button {
@@ -61,6 +61,7 @@ li a:hover {
 .descrip {
   z-index: 2;
   font-size: 16px;
+  background-color: black;
   padding: 10px;
   width: 50%;
   display: inline-block;

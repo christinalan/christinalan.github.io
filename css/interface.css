@@ -83,7 +83,7 @@ section.slideshow img {
   position: absolute;
   /* top: 10vh; */
   left: 0;
-  max-width: 800px;
+  max-width: 100%;
   height: auto;
   z-index: 0;
 }

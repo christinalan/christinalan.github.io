@@ -1,6 +1,5 @@
 * {
   font-family: "Jaldi", sans-serif;
-  padding: 10px;
 }
 
 @viewport {
@@ -71,6 +70,10 @@ li a:hover {
 .lvideo {
   width: 500px;
   height: 600px;
+}
+
+.topvideo {
+  z-index: 2;
 }
 
 .titlepost {

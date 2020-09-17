@@ -13,6 +13,10 @@
   }
 }
 
+.mainnav {
+  display: inline-block;
+}
+
 #navlist li {
   list-style-type: none;
   margin-left: 0px;

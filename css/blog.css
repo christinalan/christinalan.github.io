@@ -15,6 +15,11 @@
 
 .mainnav {
   display: inline-block;
+  padding-left: 0;
+}
+
+.mainnav li a {
+  padding: 10px;
 }
 
 #navlist li {

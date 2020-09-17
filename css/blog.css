@@ -14,7 +14,7 @@
 }
 
 .mainnav {
-  display: inline-block;
+  display: flex;
   padding-left: 0;
 }
 

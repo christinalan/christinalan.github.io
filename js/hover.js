@@ -24,7 +24,7 @@ slideshow.addEventListener("click", function (event) {
 
 if (matchMedia) {
   const mq = window.matchMedia("(min-width: 640px)");
-  mq.addEventListener(WidthChange);
+  mq.addListener(WidthChange);
   WidthChange(mq);
 }
 

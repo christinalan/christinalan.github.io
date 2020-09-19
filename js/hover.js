@@ -1,3 +1,4 @@
+// hover effect from SuperHi
 const slideshow = document.querySelector("section.slideshow");
 const images = slideshow.querySelectorAll("img");
 
@@ -21,16 +22,16 @@ slideshow.addEventListener("click", function (event) {
 
 if (matchMedia) {
   const mq = window.matchMedia("(min-width: 640px)");
-  mq.addListener(WidthChange);
+  mq.addEventListener(WidthChange);
   WidthChange(mq);
 }
 
 function WidthChange(mq) {
   const msg = (mq.matches ? "more" : "less") + " than 640 pixels";
-  const y = event.offsetY;
-  const width = this.offsetWidth;
+  const y = onclick.offsetY;
+  const newWidth = this.offsetWidth;
 
-  const percentage = y / width;
+  const percentage = y / newWidth;
   const imageNumber = Math.floor(percentage * images.length);
 
   images.forEach((image) => {

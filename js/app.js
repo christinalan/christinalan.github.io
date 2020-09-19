@@ -1,3 +1,4 @@
-let a = "hi";
+let a = "hi ";
 let b = "christina";
 alert(a + b);
+console.log(a + b);

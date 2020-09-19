@@ -20,6 +20,8 @@ slideshow.addEventListener("click", function (event) {
   event.preventDefault();
 });
 
+//this code is from https://www.sitepoint.com/javascript-media-queries/
+
 if (matchMedia) {
   const mq = window.matchMedia("(min-width: 640px)");
   mq.addEventListener(WidthChange);

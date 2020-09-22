@@ -22,9 +22,9 @@
   padding: 10px;
 }
 
-#navlist li {
+.navlist {
   list-style-type: none;
-  margin-left: 0px;
+  margin-left: 40px;
   padding: 0px;
   z-index: 2;
   position: relative;
@@ -118,4 +118,13 @@ section.slideshow img {
 
 section.slideshow img:first-child {
   z-index: 1;
+}
+
+.change {
+  margin: 25px 40px;
+  color: slateblue;
+  background-color: lavender;
+  font-size: large;
+  letter-spacing: 25px;
+  font-family: monospace;
 }

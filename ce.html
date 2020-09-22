@@ -790,7 +790,17 @@
       stakes that I was missing in my first diagram.
     </div>
     <div class="himg">
-      <img class="image" class="magnifier" src="Blog/map1.jpg" alt="Map 1" />
+      <img id="thumb" class="image" src="Blog/map1.jpg" alt="Map 1" />
+      <script>
+        m.attach({
+          thumb: "#thumb",
+          large:
+            "http://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Starry_Night_Over_the_Rhone.jpg/1200px-Starry_Night_Over_the_Rhone.jpg",
+          mode: "inside",
+          zoom: 3,
+          zoomable: true,
+        });
+      </script>
       <img class="image" src="Blog/map2.jpg" alt="Map 2" />
     </div>
     <div class="description">

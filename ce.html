@@ -789,18 +789,31 @@
       re-drew to expand the boundaries in order to reflect the stakeholders or
       stakes that I was missing in my first diagram.
     </div>
+    <script type="text/javascript" src="js/Event.js"></script>
+    <script type="text/javascript" src="js/Magnifier.js"></script>
+
     <div class="himg">
-      <img id="thumb" class="image" src="Blog/map1.jpg" alt="Map 1" />
-      <script>
-        m.attach({
-          thumb: "#thumb",
-          large:
-            "http://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Starry_Night_Over_the_Rhone.jpg/1200px-Starry_Night_Over_the_Rhone.jpg",
-          mode: "inside",
-          zoom: 3,
-          zoomable: true,
-        });
-      </script>
+      <a class="magnifier-thumb-wrapper" href="Blog/map1.jpg">
+        <img
+          id="thumb"
+          class="image"
+          src="Blog/map1.jpg"
+          alt="Map 1"
+        />
+      </a>
+      <div class="magnifier-preview" id="preview" style="width: 200px; height: 133px"></div>
+      <script type="text/javascript">
+        var evt = new Event();
+          var m = new Magnifier(evt);
+
+          m.attach({
+            thumb: '#thumb',
+    large: 'Blog/map1.jpg',
+    largeWrapper: 'preview',
+    zoom: 3
+          })
+      </script>  
+    </div>
       <img class="image" src="Blog/map2.jpg" alt="Map 2" />
     </div>
     <div class="description">
@@ -824,12 +837,6 @@
     <div class="himg">
       <img class="image" src="Blog/map3.jpg" />
     </div>
-    <script type="text/javascript" src="js/Event.js"></script>
-    <script type="text/javascript" src="js/Magnifier.js"></script>
-    <script type="text/javascript">
-      var evt = new Event(),
-        m = new Magnifier(evt);
-    </script>
   </div>
 
   <!-- begin wwww.htmlcommentbox.com -->

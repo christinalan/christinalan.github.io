@@ -794,29 +794,47 @@
 
     <div class="himg">
       <a class="magnifier-thumb-wrapper" href="Blog/map1.jpg">
-        <img
-          id="thumb"
-          class="image"
-          src="Blog/map1.jpg"
-          alt="Map 1"
-        />
+        <img id="thumb" class="image" src="Blog/map1.jpg" alt="Map 1" />
       </a>
-      <div class="magnifier-preview" id="preview" style="width: 200px; height: 133px"></div>
+      <div
+        class="magnifier-preview"
+        id="preview"
+        style="width: 200px; height: 133px"
+      ></div>
       <script type="text/javascript">
         var evt = new Event();
-          var m = new Magnifier(evt);
+        var m = new Magnifier(evt);
 
-          m.attach({
-            thumb: '#thumb',
-        large: 'https://www.xlaenz.com/Blog/map1.jpg',
-        mode:'inside',
-        // largeWrapper: 'preview',
-        zoom: 3
-          })
-      </script>  
+        m.attach({
+          thumb: "#thumb",
+          large: "https://www.xlaenz.com/Blog/map1.jpg",
+          mode: "inside",
+          // largeWrapper: 'preview',
+          zoom: 3,
+        });
+      </script>
+      <a class="magnifier-thumb-wrapper" href="Blog/map2.jpg">
+        <img id="thumb" class="image" src="Blog/map2.jpg" alt="Map 2" />
+      </a>
+      <div
+        class="magnifier-preview"
+        id="preview"
+        style="width: 200px; height: 133px"
+      ></div>
+      <script type="text/javascript">
+        var evt = new Event();
+        var m = new Magnifier(evt);
+
+        m.attach({
+          thumb: "#thumb",
+          large: "https://www.xlaenz.com/Blog/map2.jpg",
+          mode: "inside",
+          // largeWrapper: 'preview',
+          zoom: 3,
+        });
+      </script>
     </div>
-      <img class="image" src="Blog/map2.jpg" alt="Map 2" />
-    </div>
+
     <div class="description">
       In order to visualize and understand my connection between historical
       re-enactment and club simulations, I began making causal diagrams. These

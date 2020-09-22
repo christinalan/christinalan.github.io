@@ -16,6 +16,7 @@
 .mainnav {
   display: flex;
   padding-left: 0;
+  list-style-type: none;
 }
 
 .mainnav li a {
@@ -110,6 +111,8 @@ p.description {
 }
 
 .himg {
+  width: 640px;
+  height: 410px;
   display: flex;
   flex-direction: row;
 }

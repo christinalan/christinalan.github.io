@@ -111,8 +111,11 @@ p.description {
 }
 
 .himg {
-  width: 640px;
-  height: 410px;
   display: flex;
   flex-direction: row;
+}
+
+.image {
+  width: 640px;
+  height: 410px;
 }

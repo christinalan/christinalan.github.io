@@ -814,7 +814,7 @@
         });
       </script>
       <a class="magnifier-thumb-wrapper" href="Blog/map2.jpg">
-        <img id="thumb1" class="image" src="Blog/map2.jpg" alt="Map 2" />
+        <img id="thumb2" class="image" src="Blog/map2.jpg" alt="Map 2" />
       </a>
       <div
         class="magnifier-preview"
@@ -826,9 +826,10 @@
         var m = new Magnifier(evt);
 
         m.attach({
-          thumb: "#thumb1",
+          thumb: "#thumb2",
           large: "https://www.xlaenz.com/Blog/map2.jpg",
           mode: "inside",
+          zoomable: true,
           zoom: 3,
         });
       </script>
@@ -853,7 +854,26 @@
       if temporarily) the ways societal norms are hardcoded into our bodies?
     </div>
     <div class="himg">
-      <img class="image" src="Blog/map3.jpg" />
+      <a class="magnifier-thumb-wrapper" href="Blog/map3.jpg">
+        <img id="thumb3" class="image" src="Blog/map3.jpg" alt="Map 3" />
+      </a>
+      <div
+        class="magnifier-preview"
+        id="preview"
+        style="width: 200px; height: 133px"
+      ></div>
+      <script type="text/javascript">
+        var evt = new Event();
+        var m = new Magnifier(evt);
+
+        m.attach({
+          thumb: "#thumb3",
+          large: "https://www.xlaenz.com/Blog/map3.jpg",
+          mode: "inside",
+          zoomable: true,
+          zoom: 3,
+        });
+      </script>
     </div>
   </div>
 

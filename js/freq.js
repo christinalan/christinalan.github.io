@@ -16,8 +16,10 @@ window.addEventListener("scroll", function () {
   document.body.style.background = "hsl(241,  100%, " + currentH + ")";
 });
 
+//scroll interaction
 let hertz = 50;
 
+//listens for scroll and sets the hertz value based on the value of window.scrollTop()
 $(document).scroll(function () {
   var st = $(this).scrollTop();
 
@@ -38,6 +40,8 @@ $(document).scroll(function () {
   }
   hertz = st;
 });
+
+//determines which sound is played based on location of the scroll
 
 $("#button").click(function () {
   console.log("button clicked");

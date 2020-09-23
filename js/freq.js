@@ -41,12 +41,24 @@ $(document).scroll(function () {
 
 $("#button").click(function () {
   console.log("button clicked");
-  $("audio#tone50")[0].play();
+  if ($(window).scrollTop() < 350) {
+    $("audio#tone50")[0].play();
+  } else if ($(window).scrollTop() > 350 && $(window).scrollTop() < 1000) {
+    $("audio#tone150")[0].play();
+  } else if ($(window).scrollTop() > 1000 && $(window).scrollTop() < 1400) {
+    $("audio#tone500")[0].play();
+  }
 });
 
 $("#button1").click(function () {
   console.log("button clicked");
-  $("audio#tone50")[0].pause();
+  if ($(window).scrollTop() < 350) {
+    $("audio#tone50")[0].pause();
+  } else if ($(window).scrollTop() > 350 && $(window).scrollTop() < 1000) {
+    $("audio#tone150")[0].pause();
+  } else if ($(window).scrollTop() > 1000 && $(window).scrollTop() < 1400) {
+    $("audio#tone500")[0].pause();
+  }
 });
 
 // var t = document.getElementById("tone50");

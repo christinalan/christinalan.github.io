@@ -39,15 +39,15 @@ $(document).scroll(function () {
   hertz = st;
 });
 
-var t = document.getElementById("tone50");
+$("#button").click(function () {
+  console.log("button clicked");
+  $("audio#tone50")[0].play();
+});
 
-function playAudio() {
-  t.play();
-}
-
-function pauseAudio() {
-  t.pause();
-}
+$("#button1").click(function () {
+  console.log("button clicked");
+  $("audio#tone50")[0].pause();
+});
 
 // var t = document.getElementById("tone50");
 

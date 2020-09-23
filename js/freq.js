@@ -21,7 +21,7 @@ let hertz = 50;
 $(document).scroll(function () {
   var st = $(this).scrollTop();
 
-  console.log(hertz, st);
+  //   console.log(hertz, st);
 
   if (st > 0 && st < 350) {
     // hertz += 1;
@@ -38,6 +38,26 @@ $(document).scroll(function () {
   }
   hertz = st;
 });
+
+var t = document.getElementById("tone50");
+
+function playAudio() {
+  t.play();
+}
+
+function pauseAudio() {
+  t.pause();
+}
+
+// var t = document.getElementById("tone50");
+
+// function playAudio() {
+//   t.play();
+// }
+
+// function pauseAudio() {
+//   t.pause();
+// }
 
 // $(window).on("scroll touchmove", function () {
 //   if ($(document).scrollTop() >= $("#low").position().top) {

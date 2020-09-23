@@ -22,11 +22,16 @@ body {
   color: white;
   padding: 5px;
 }
-/* 
-section {
-  display: block;
-  height: 100vh;
-} */
+
+.button_audio {
+  height: 40px;
+  margin-top: 5px;
+  margin-right: 15px;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
 
 .hz_container {
   /* height: 100vh; */
@@ -36,6 +41,13 @@ section {
   margin-left: 45%;
   position: fixed;
   bottom: 0px;
+}
+
+.audio_button {
+  float: left;
+  margin-bottom: 20px;
+  margin-left: 46%;
+  padding: 10px;
 }
 
 .project_scroll {

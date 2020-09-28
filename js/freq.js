@@ -1,5 +1,14 @@
 //loads html
-// window.addEventListener("load");
+window.addEventListener("load", function () {
+  console.log("page is loaded");
+  fetch("genres.json")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+    });
+});
 
 // //check for scrolling
 window.addEventListener("scroll", function () {

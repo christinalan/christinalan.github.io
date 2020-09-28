@@ -64,3 +64,9 @@ $("#button1").click(function () {
     $("audio#tone500")[0].pause();
   }
 });
+
+//listen for click on the body of the document
+$(window).click(function () {
+  console.log("i clicked");
+  $("#text").append("<h2>This is the sound of </h2>");
+});

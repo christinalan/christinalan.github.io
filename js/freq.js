@@ -1,12 +1,14 @@
 //loads html
 window.addEventListener("load", function () {
   console.log("page is loaded");
-  fetch("genres.json")
-    .then(function (response) {
-      return response.json();
+  fetch("/json/genres.json")
+    .then((response) => response.json())
+    .then((data) => {
+      //use the data somehow
+      console.log(data.genres[0]);
     })
-    .then(function (data) {
-      console.log(data);
+    .catch((error) => {
+      console.log("Error: " + error);
     });
 });
 

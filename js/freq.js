@@ -4,7 +4,7 @@
 // //check for scrolling
 window.addEventListener("scroll", function () {
   //how far a user has scrolled from the top of the page
-  let currentY = window.scrollY + 50;
+  // let currentY = window.scrollY + 50;
   let currentY2 = window.scrollY + 150;
 
   //the height of the document, not the window

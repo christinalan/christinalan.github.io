@@ -1,3 +1,6 @@
+//loads html
+window.addEventListener("load");
+
 // //check for scrolling
 window.addEventListener("scroll", function () {
   //how far a user has scrolled from the top of the page

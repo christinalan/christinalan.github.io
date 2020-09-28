@@ -1,5 +1,5 @@
 //loads html
-window.addEventListener("load");
+// window.addEventListener("load");
 
 // //check for scrolling
 window.addEventListener("scroll", function () {
@@ -69,7 +69,7 @@ $("#button1").click(function () {
 });
 
 //listen for click on the body of the document
-$(window).click(function () {
-  console.log("i clicked");
-  $("#text").append("<h2>This is the sound of </h2>");
-});
+// $(window).click(function () {
+//   console.log("i clicked");
+//   $("#text").append("<h2>This is the sound of </h2>");
+// });

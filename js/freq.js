@@ -1,15 +1,25 @@
 //loads html
 window.addEventListener("load", function () {
   console.log("page is loaded");
-  fetch("/json/genres.json")
+  fetch("https://binaryjazz.us/wp-json/genrenator/v1/genre")
     .then((response) => response.json())
     .then((data) => {
       //use the data somehow
-      console.log(data.genres[0]);
+      console.log(data);
+      let nameElement = $("#genre");
+      nameElement.append(data);
     })
     .catch((error) => {
       console.log("Error: " + error);
     });
+
+  let button = $("#genre_button");
+  button.click(function () {
+    // let inputText = document.getElementById("genre_input").innerText;
+    let inputText = $("#genre_input").val();
+    console.log("the text is : " + inputText);
+    console.log("button was clicked");
+  });
 });
 
 // //check for scrolling
@@ -82,5 +92,5 @@ $("#button1").click(function () {
 //listen for click on the body of the document
 // $(window).click(function () {
 //   console.log("i clicked");
-//   $("#text").append("<h2>This is the sound of </h2>");
+//   $("#text").append("hello");
 // });

@@ -1,10 +1,14 @@
 body {
   font-family: "Jaldi", sans-serif;
   height: 2000px;
-  /* background-color: darkblue; */
   color: white;
   background-color: black;
   transition: background-color 1s ease;
+}
+
+h2 {
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -34,9 +38,7 @@ body {
 }
 
 .hz_container {
-  /* height: 100vh; */
   display: flex;
-
   flex-direction: column;
   align-items: center;
   margin-left: 45%;
@@ -49,7 +51,7 @@ body {
   flex-direction: row;
   float: left;
   margin-bottom: 20px;
-  margin-left: 47%;
+  margin-left: 46%;
   padding: 10px;
 }
 
@@ -57,6 +59,15 @@ body {
   font-size: 72px;
 }
 
-.project_text {
-  margin-left: 20px;
+.genre_container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30%;
+  margin-left: 45%;
+  position: fixed;
+}
+
+.genre_butt {
+  display: flex;
+  flex-direction: row;
 }

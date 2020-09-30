@@ -7,7 +7,8 @@ window.addEventListener("load", function () {
       //use the data somehow
       console.log(data);
       let nameElement = $("#genre");
-      nameElement.append(data);
+      // nameElement.append(data);
+      nameElement.html(data);
     })
     .catch((error) => {
       console.log("Error: " + error);

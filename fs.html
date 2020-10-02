@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="css/fs.css" />
+  </head>
+
+  <header class="title">
+    underwater bodies
+    <button class="button" onclick="window.location.href = '/blog.html';">
+      Back
+    </button>
+  </header>
+
+  <body>
+    <div class="soundfile_container">
+      <h2 id="musictext">You're listening to: <span id="soundfile"> </span></h2>
+      <button id="refresh_button" class="button_audio">Swap Sound</button>
+      <!-- <div class="genre_butt">
+      <input id="genre_input"></input>
+      <button id="genre_button">Search</button>
+    </div> -->
+    </div>
+
+    <div class="audio_button hz_container">
+      <audio id="mp3"></audio>
+      <button id="button" class="button_audio">Play</button>
+      <button id="button1" class="button_audio">Pause</button>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+    <script src="js/p5.sound.js"></script>
+    <script src="js/fs.js"></script>
+  </body>
+</html>

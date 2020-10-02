@@ -1,14 +1,20 @@
 //loads html
 window.addEventListener("load", function () {
   console.log("page is loaded");
-  fetch("https://binaryjazz.us/wp-json/genrenator/v1/genre")
+  fetch(
+    "https://freesound.org/apiv2/search/text/?query=underwater&token=LWGeaeOKwgA7MN4US8Vss8dwiNprOZnYiD78lTCL"
+  )
     .then((response) => response.json())
     .then((data) => {
       //use the data somehow
-      console.log(data);
-      let nameElement = $("#genre");
-      // nameElement.append(data);
-      nameElement.html(data);
+      console.log(data.results);
+      let generator = Math.floor(Math.random() * data.results.length);
+      console.log(generator);
+
+      $(genre).html(data.results[generator].name);
+      // let nameElement = $("#genre");
+      // // nameElement.append(data);
+      // nameElement.html(data);
     })
     .catch((error) => {
       console.log("Error: " + error);
@@ -23,7 +29,7 @@ window.addEventListener("load", function () {
   });
 });
 
-// //check for scrolling
+// change lightness based on scroll value
 window.addEventListener("scroll", function () {
   //how far a user has scrolled from the top of the page
   // let currentY = window.scrollY + 50;
@@ -41,15 +47,12 @@ window.addEventListener("scroll", function () {
   document.body.style.background = "hsl(241,  100%, " + currentH + ")";
 });
 
-//scroll interaction
+//scroll interaction and displaying specific frequency
 let hertz = 50;
-
 //listens for scroll and sets the hertz value based on the value of window.scrollTop()
 $(document).scroll(function () {
   var st = $(this).scrollTop();
-
   //   console.log(hertz, st);
-
   if (st > 0 && st < 350) {
     // hertz += 1;
     $("#hertz").html("50 HZ");
@@ -67,7 +70,7 @@ $(document).scroll(function () {
 });
 
 //determines which sound is played based on location of the scroll
-
+//play button
 $("#button").click(function () {
   console.log("button clicked");
   if ($(window).scrollTop() < 350) {
@@ -78,7 +81,7 @@ $("#button").click(function () {
     $("audio#tone500")[0].play();
   }
 });
-
+//pause button
 $("#button1").click(function () {
   console.log("button clicked");
   if ($(window).scrollTop() < 350) {

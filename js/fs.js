@@ -19,6 +19,8 @@ window.addEventListener("load", function () {
       $("#refresh_button").click(function () {
         console.log("swap button clicked");
 
+        generator = Math.floor(Math.random() * data.results.length);
+
         $("#soundfile").html(data.results[generator].name);
         console.log(generator);
       });
@@ -75,31 +77,29 @@ function preload() {
   });
 }
 
-let freesound;
 function setup() {
   createCanvas(400, 400);
-  freesound = loadSound(mp3URL, soundSuccess, soundError, soundWaiting);
 }
 
-let waitForSound = (timeoutms) =>
-  new Promise((r, j) => {
-    let check = () => {
-      console.warn("checking");
-      if (mp3URL) {
-        r();
-      } else if ((timoutms -= 100) < 0) {
-        j("timed out!");
-      } else {
-        setTimeout(check, 100);
-      }
-      setTimeout(check, 100);
-    };
-  });
+// let waitForSound = (timeoutms) =>
+//   new Promise((r, j) => {
+//     let check = () => {
+//       console.warn("checking");
+//       if (mp3URL) {
+//         r();
+//       } else if ((timoutms -= 100) < 0) {
+//         j("timed out!");
+//       } else {
+//         setTimeout(check, 100);
+//       }
+//       setTimeout(check, 100);
+//     };
+//   });
 
-(async () => {
-  freesound = mp3URL;
-  waitForSound(2000);
-})();
+// (async () => {
+//   freesound = mp3URL;
+//   waitForSound(2000);
+// })();
 
 function soundSuccess(resp) {
   console.log("Sound is ready!");
@@ -114,11 +114,14 @@ function soundWaiting() {
   console.log("Waiting for sound...");
 }
 
+let freesound;
 let x = 30;
 let y = 30;
 let r = 50;
 
 function draw() {
+  freesound = loadSound(mp3URL, soundSuccess, soundError, soundWaiting);
+
   background("lightblue");
 
   circle(x, y, r);

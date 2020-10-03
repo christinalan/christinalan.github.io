@@ -81,30 +81,9 @@ function setup() {
   createCanvas(400, 400);
 }
 
-// let waitForSound = (timeoutms) =>
-//   new Promise((r, j) => {
-//     let check = () => {
-//       console.warn("checking");
-//       if (mp3URL) {
-//         r();
-//       } else if ((timoutms -= 100) < 0) {
-//         j("timed out!");
-//       } else {
-//         setTimeout(check, 100);
-//       }
-//       setTimeout(check, 100);
-//     };
-//   });
-
-// (async () => {
-//   freesound = mp3URL;
-//   waitForSound(2000);
-// })();
-
 function soundSuccess(resp) {
   console.log("Sound is ready!");
   console.log(resp);
-  freesound.play();
 }
 function soundError(err) {
   console.log("sound is not working");
@@ -119,18 +98,23 @@ let x = 30;
 let y = 30;
 let r = 50;
 
-function draw() {
-  freesound = loadSound(mp3URL, soundSuccess, soundError, soundWaiting);
+function noop() {}
 
+function draw() {
+  // freesound = loadSound(mp3URL, soundSuccess, soundError, soundWaiting);
   background("lightblue");
 
   circle(x, y, r);
+
+  return freesound;
 }
 
 function mousePressed() {
   if (mouseX > x - r / 2 && mouseX < x + r / 2) {
     if (mouseY > y - r / 2 && mouseY < y + r / 2) {
-      // freesound.play();
+      freesound.play();
+      // loadSound = noop;
+      console.log("play is clicked");
     }
   }
 }

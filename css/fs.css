@@ -68,11 +68,6 @@ h2 {
   position: fixed;
 }
 
-/* .genre_butt {
-  display: flex;
-  flex-direction: row;
-} */
-
 canvas {
   display: flex;
   flex-direction: column;

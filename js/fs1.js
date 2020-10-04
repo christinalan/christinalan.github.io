@@ -27,19 +27,16 @@ window.addEventListener("load", function () {
       soundText.innerHTML = data.results[randomChoice].name;
 
       soundID = data.results[randomChoice].id;
-      console.log(soundID);
     })
     .catch((error) => {
       console.log("Error: " + error);
     });
 });
 
-//the load/search Button will handle the mp3URL fetch request
-
+//the load Button will handle the mp3URL fetch request
 let loadButton = document.getElementById("refresh_button");
 loadButton.addEventListener("click", function () {
   //this request handles first on load underwater soundID and loads first mp3
-
   fetch(
     "https://freesound.org/apiv2/sounds/" +
       soundID +
@@ -48,39 +45,40 @@ loadButton.addEventListener("click", function () {
     .then((response) => response.json())
     .then((data2) => {
       mp3URL = data2.previews["preview-hq-mp3"];
+
+      //This loads the mp3URL into the global mp3, which is used for the p5 sketch
+      function soundSuccess(resp) {
+        console.log("Sound is ready!");
+        alert(soundText.innerHTML + " Sound is loaded!");
+      }
+      function soundError(err) {
+        console.log("sound is not working");
+        console.log(err);
+      }
+      function soundWaiting() {
+        console.log("Waiting for sound...");
+      }
+      mp3 = loadSound(mp3URL, soundSuccess, soundError, soundWaiting);
+
+      //this will load new sound if input search has been clicked
+      if (searchClicked == true) {
+        console.log("new API can be fetched");
+
+        soundID = newSoundID;
+        console.log(soundID);
+        fetch(
+          "https://freesound.org/apiv2/sounds/" +
+            newSoundID +
+            "/?token=LWGeaeOKwgA7MN4US8Vss8dwiNprOZnYiD78lTCL"
+        )
+          .then((response) => response.json())
+          .then((data3) => {
+            mp3URL = data3.previews["preview-hq-mp3"];
+            console.log(mp3URL);
+          });
+      }
     });
-
-  function soundSuccess(resp) {
-    console.log("Sound is ready!");
-    alert(soundText.innerHTML + " Sound is loaded!");
-    // console.log(resp);
-  }
-  function soundError(err) {
-    console.log("sound is not working");
-    console.log(err);
-  }
-  function soundWaiting() {
-    console.log("Waiting for sound...");
-  }
-  mp3 = loadSound(mp3URL, soundSuccess, soundError, soundWaiting);
-  //this will load new sound if input search has been clicked
-
-  if (searchClicked == true) {
-    console.log("new API can be fetched");
-
-    soundID = newSoundID;
-    console.log(soundID);
-    fetch(
-      "https://freesound.org/apiv2/sounds/" +
-        newSoundID +
-        "/?token=LWGeaeOKwgA7MN4US8Vss8dwiNprOZnYiD78lTCL"
-    )
-      .then((response) => response.json())
-      .then((data3) => {
-        mp3URL = data3.previews["preview-hq-mp3"];
-        console.log(mp3URL);
-      });
-  }
+  //To enable double clicks, just take the load and the if statement outside of the first fetch
 });
 
 //Search button handles new text change and new mp3
@@ -98,14 +96,12 @@ inputButton.addEventListener("click", function () {
     .then((response) => response.json())
     .then((data1) => {
       searchResult = Math.floor(Math.random() * data1.results.length);
-      console.log(searchResult);
 
       soundText.innerHTML = data1.results[searchResult].name;
 
       newSoundID = data1.results[searchResult].id;
     });
   searchClicked = true;
-  console.log(searchClicked);
 });
 
 let playButton = document.getElementById("button");

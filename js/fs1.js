@@ -130,10 +130,19 @@ function draw() {
   level = amplitude.getLevel();
   //   console.log(level);
   volhistory.push(level);
+  stroke(0);
+  noFill();
+  beginShape();
+  for (let i = 0; i < volhistory.length; i++) {
+    let y = map(volhistory[i], 0, 1, height, 0);
+    vertex(i, y);
+  }
+  endShape();
 
   if (volhistory.length > width) {
-    volhistory.splice(0, 0.1);
+    volhistory.splice(0, 1);
   }
+
   let size = map(level, 0, 0.05, 0, 200);
   ellipse(width / 2, height / 2, size, size);
   //   circle(x, y, r);

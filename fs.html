@@ -19,10 +19,14 @@
   <body>
     <div class="soundfile_container">
       <h2 id="musictext">You're listening to: <span id="soundfile"> </span></h2>
-      <button id="refresh_button" class="button_audio">Load Sound</button>
+      <div>
+      Get a new sound:  <input id="search_input" class="input" value="underwater"></input>
+      <button id="search_button">Search</button>
+    </div>
+      <button id="refresh_button" class="button_audio">Click 2x to Load Sound</button>
     </div>
 
-    <div class="audio_button hz_container">
+    <div class="audio_buttons hz_container">
       <audio id="mp3"></audio>
       <button id="button" class="button_audio">Play</button>
       <button id="button1" class="button_audio">Pause</button>

@@ -37,22 +37,28 @@ h2 {
   padding: 5px;
 }
 
+.input {
+  padding-left: 10px;
+  margin-left: 10px;
+}
+
 .hz_container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
   margin-left: 45%;
   position: fixed;
-  bottom: 0px;
+  margin-top: 600px;
+  /* bottom: 10px; */
 }
 
-.audio_button {
+.audio_buttons {
   display: flex;
   flex-direction: row;
   float: left;
-  margin-bottom: 30px;
-  margin-left: 42%;
-  padding: 10px;
+  margin-left: 45%;
+  padding-top: 15px;
 }
 
 .project_scroll {
@@ -63,6 +69,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
   margin-top: 400px;
   margin-left: 40%;
   position: fixed;
@@ -71,6 +78,6 @@ h2 {
 canvas {
   display: flex;
   flex-direction: column;
-  margin-left: 35%;
+  margin-left: 38%;
   position: fixed;
 }

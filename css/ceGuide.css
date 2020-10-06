@@ -19,14 +19,12 @@ h2 {
   padding: 13px;
 }
 
-.hz_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
+.audio_container {
+  margin-left: 20px;
+  padding: 10px;
 }
 
-.audio_container {
+.roomButtons {
   display: flex;
   flex-direction: row;
   float: left;
@@ -34,14 +32,29 @@ h2 {
   padding: 10px;
 }
 
+.lightButtons {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  margin: 500px 20px;
+  padding: 10px;
+}
+
+.fogButtons {
+  display: flex;
+  flex-direction: row;
+  float: left;
+  margin: 1000px 20px;
+  padding: 10px;
+}
+
 .project_scroll {
   font-size: 72px;
 }
 
-.genre_container {
+canvas {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  margin-left: 45%;
+  margin: 10% 28%;
   position: fixed;
 }

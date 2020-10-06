@@ -114,36 +114,125 @@ pauseButton.addEventListener("click", function () {
   mp3.pause();
 });
 
+let ampButton = false;
+$("#amp_button").click(function () {
+  ampButton = !ampButton;
+});
+
+let freqButton = false;
+$("#freq_button").click(function () {
+  freqButton = !freqButton;
+});
+
+let amplitude;
+let fft;
+
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(500, 500);
   amplitude = new p5.Amplitude();
+  fft = new p5.FFT(0.8, 128);
+
+  angleMode(DEGREES);
 }
 
-let x = 30;
-let y = 30;
-let r = 50;
+let wave = [];
 let level;
-let volhistory = [];
+let spectrum;
+// let volhistory = [];
+
 function draw() {
   background("lightblue");
 
+  if (ampButton == true) {
+    console.log(ampButton);
+    ampAnalyzer();
+  }
+
+  // background("lightblue");
+  if (freqButton == true) {
+    console.log(freqButton);
+    fqAnalyzer();
+  }
+}
+
+function ampAnalyzer() {
   level = amplitude.getLevel();
   //   console.log(level);
-  volhistory.push(level);
-  stroke(0);
   noFill();
+  stroke(0);
+
+  // volhistory.push(level);
+  wave.push(level);
+  //wavy amplitude visualizer adapted from "Sound Wave" by Aditi Jain http://www.openprocessing.org/sketch/609848
+  push();
   beginShape();
-  for (let i = 0; i < volhistory.length; i++) {
-    let y = map(volhistory[i], 0, 1, height, 0);
-    vertex(i, y);
+  push();
+
+  translate(0, (2 * height) / 3 - map(level, 0, 1, height, 0));
+  for (let i = 0; i < wave.length; i++) {
+    vertex(i, map(wave[i], 0, 1, height, 0) + 0.5);
   }
   endShape();
+  pop();
 
-  if (volhistory.length > width) {
-    volhistory.splice(0, 1);
+  if (wave.length > width) {
+    wave.splice(0, 1);
   }
 
-  let size = map(level, 0, 0.05, 0, 200);
+  // blendMode(LIGHTEST);
+  colorMode(RGB);
+  let col = map(level, 0, 1, 0, 255);
+
+  stroke(100, (col + random(1000)) % 255, 255);
+  fill(col + (random(500) % 255), 0, 100, col + (random(500) % 255));
+  //ellipse amplitude visualizer
+  let size = map(level, 0, 0.5, 0, 200);
   ellipse(width / 2, height / 2, size, size);
-  //   circle(x, y, r);
+
+  //original amp visualizer
+  // stroke(0, 255, 0);
+  // beginShape();
+  // translate(0, (2 * height) / 3 - map(level, 0, 1, height, 0));
+  // for (let i = 0; i < volhistory.length; i++) {
+  //   let y = map(volhistory[i], 0, 1, height, 0);
+  //   vertex(i, y);
+  // }
+  // endShape();
+
+  // if (volhistory.length > width) {
+  //   volhistory.splice(0, 1);
+  // }
+}
+
+let amp;
+function fqAnalyzer() {
+  spectrum = fft.analyze();
+  // console.log(spectrum);
+
+  //easy spectrum analyzer
+  // for (let i = 0; i < spectrum.length; i++) {
+  //   amp = spectrum[i];
+  //   let y = map(amp, 0, 255, 2 * height, 0);
+  //   line(i, height, i, y);
+  // }
+
+  //circular spectrum analysis
+  colorMode(HSL);
+  noStroke();
+  push();
+  translate(width / 2, height / 2);
+  beginShape();
+  for (let i = 0; i < spectrum.length; i++) {
+    let angle = map(i, 0, spectrum.length, 0, 360);
+    amp = spectrum[i];
+    let r = map(amp, 0, 128, 0, 200);
+    let x = r * cos(angle);
+    let y = r * sin(angle);
+    // vertex(x, y);
+
+    stroke(200, 255, i);
+    line(0, 0, x, y);
+  }
+  endShape();
+  pop();
 }

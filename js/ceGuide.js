@@ -53,7 +53,7 @@ $("#buttonLight").click(function () {
 
 $("#buttonLight1").click(function () {
   // lightaudio[0].pause();
-  sound.stop();
+  sound.pause();
   lightAudioOn = false;
 });
 

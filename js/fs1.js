@@ -59,6 +59,7 @@ loadButton.addEventListener("click", function () {
         console.log("Waiting for sound...");
       }
       mp3 = loadSound(mp3URL, soundSuccess, soundError, soundWaiting);
+      // console.log(mp3);
 
       //this will load new sound if input search has been clicked
       if (searchClicked == true) {
@@ -74,7 +75,7 @@ loadButton.addEventListener("click", function () {
           .then((response) => response.json())
           .then((data3) => {
             mp3URL = data3.previews["preview-hq-mp3"];
-            console.log(mp3URL);
+            // console.log(mp3URL);
           });
       }
     });
@@ -144,13 +145,13 @@ function draw() {
   background("lightblue");
 
   if (ampButton == true) {
-    console.log(ampButton);
+    // console.log(ampButton);
     ampAnalyzer();
   }
 
   // background("lightblue");
   if (freqButton == true) {
-    console.log(freqButton);
+    // console.log(freqButton);
     fqAnalyzer();
   }
 }

@@ -79,7 +79,6 @@ loadButton.addEventListener("click", function () {
           });
       }
     });
-  //To enable double clicks, just take the load and the if statement outside of the first fetch
 });
 
 //Search button handles new text change and new mp3

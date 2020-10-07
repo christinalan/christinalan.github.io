@@ -124,6 +124,11 @@ $("#freq_button").click(function () {
   freqButton = !freqButton;
 });
 
+let waveButton = false;
+$("#wave_button").click(function () {
+  waveButton = !waveButton;
+});
+
 let amplitude;
 let fft;
 
@@ -152,6 +157,10 @@ function draw() {
   if (freqButton == true) {
     // console.log(freqButton);
     fqAnalyzer();
+  }
+
+  if (waveButton == true) {
+    drawWave();
   }
 }
 
@@ -235,4 +244,24 @@ function fqAnalyzer() {
   }
   endShape();
   pop();
+}
+
+let waveform;
+function drawWave() {
+  waveform = fft.waveform(); // numbers -1 to 1
+  noStroke();
+  beginShape();
+  for (let i = 0; i < waveform.length; i++) {
+    let x = map(i, 0, waveform.length - 1, 0, width);
+    var y = map(waveform[i], -1, 1, height, 0);
+
+    stroke(150, 100, i);
+    vertex(x, y);
+
+    fill(random(255), random(255), 255, 255);
+
+    ellipse(x, y, 2, 2);
+  }
+  endShape();
+  //console.log(spectrum);
 }

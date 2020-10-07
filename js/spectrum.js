@@ -4,8 +4,8 @@ window.addEventListener("load", function () {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-      randomEmoji = Math.floor(Math.random() * data.length);
+      console.log(data.data);
+      randomEmoji = Math.floor(Math.random() * data.data.length);
 
       console.log(randomEmoji);
     });

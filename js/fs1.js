@@ -3,23 +3,24 @@
 //data2 is data from the first mp3 URL (underwater)
 //data3 is data from user's search query MP3 URL fetch
 
-let freeSoundData;
 let randomChoice;
 let soundText;
+let durationText;
 let soundID;
 let inputText;
 let newSoundID;
 let searchResult;
+let searchSuccess = false;
 let mp3URL;
 let mp3;
 
+//window load listener will fetch the pre-populated underwater search query API for the first soundID
 window.addEventListener("load", function () {
   fetch(
     "https://freesound.org/apiv2/search/text/?query=underwater&token=LWGeaeOKwgA7MN4US8Vss8dwiNprOZnYiD78lTCL"
   )
     .then((response) => response.json())
     .then((data) => {
-      freeSoundData = data.results;
       randomChoice = Math.floor(Math.random() * data.results.length);
 
       //display the first randomChoice underwater sound
@@ -36,52 +37,70 @@ window.addEventListener("load", function () {
 //the load Button will handle the mp3URL fetch request
 let loadButton = document.getElementById("refresh_button");
 loadButton.addEventListener("click", function () {
-  //this request handles first on load underwater soundID and loads first mp3
-  fetch(
-    "https://freesound.org/apiv2/sounds/" +
-      soundID +
-      "/?token=LWGeaeOKwgA7MN4US8Vss8dwiNprOZnYiD78lTCL"
-  )
-    .then((response) => response.json())
-    .then((data2) => {
-      mp3URL = data2.previews["preview-hq-mp3"];
+  if (searchClicked == true) {
+    soundID = newSoundID;
+    console.log("new API can be fetched");
 
-      //This loads the mp3URL into the global mp3, which is used for the p5 sketch
-      function soundSuccess(resp) {
-        console.log("Sound is ready!");
-        alert(soundText.innerHTML + " Sound is loaded!");
-      }
-      function soundError(err) {
-        console.log("sound is not working");
-        console.log(err);
-      }
-      function soundWaiting() {
-        console.log("Waiting for sound...");
-      }
-      mp3 = loadSound(mp3URL, soundSuccess, soundError, soundWaiting);
-      // console.log(mp3);
+    fetch(
+      "https://freesound.org/apiv2/sounds/" +
+        newSoundID +
+        "/?token=LWGeaeOKwgA7MN4US8Vss8dwiNprOZnYiD78lTCL"
+    )
+      .then((response) => response.json())
+      .then((data3) => {
+        // console.log(mp3URL);
+        durationText = document.getElementById("duration_text");
+        durationText.innerHTML = data3.duration + " seconds";
 
-      //this will load new sound if input search has been clicked
-      if (searchClicked == true) {
-        console.log("new API can be fetched");
+        mp3URL = data3.previews["preview-hq-mp3"];
 
-        soundID = newSoundID;
-        console.log(soundID);
-        fetch(
-          "https://freesound.org/apiv2/sounds/" +
-            newSoundID +
-            "/?token=LWGeaeOKwgA7MN4US8Vss8dwiNprOZnYiD78lTCL"
-        )
-          .then((response) => response.json())
-          .then((data3) => {
-            mp3URL = data3.previews["preview-hq-mp3"];
-            // console.log(mp3URL);
-          });
-      }
-    });
+        function soundSuccess(resp) {
+          console.log("Sound is ready!");
+          alert(soundText.innerHTML + " Sound is loaded!");
+        }
+        function soundError(err) {
+          console.log("sound is not working");
+          console.log(err);
+        }
+        function soundWaiting() {
+          console.log("Waiting for sound...");
+        }
+        mp3 = loadSound(mp3URL, soundSuccess, soundError, soundWaiting);
+        // console.log(mp3);
+      });
+  } else if (searchClicked == false) {
+    fetch(
+      "https://freesound.org/apiv2/sounds/" +
+        soundID +
+        "/?token=LWGeaeOKwgA7MN4US8Vss8dwiNprOZnYiD78lTCL"
+    )
+      .then((response) => response.json())
+      .then((data2) => {
+        console.log(data2.duration + " seconds");
+
+        durationText = document.getElementById("duration_text");
+        durationText.innerHTML = data2.duration + " seconds";
+
+        mp3URL = data2.previews["preview-hq-mp3"];
+
+        function soundSuccess(resp) {
+          console.log("Sound is ready!");
+          alert(soundText.innerHTML + " Sound is loaded!");
+        }
+        function soundError(err) {
+          console.log("sound is not working");
+          console.log(err);
+        }
+        function soundWaiting() {
+          console.log("Waiting for sound...");
+        }
+        mp3 = loadSound(mp3URL, soundSuccess, soundError, soundWaiting);
+        // console.log(mp3);
+      });
+  }
 });
 
-//Search button handles new text change and new mp3
+//Search button handles new text change and new mp3 soundID
 let searchClicked = false;
 let inputButton = document.getElementById("search_button");
 inputButton.addEventListener("click", function () {
@@ -100,12 +119,16 @@ inputButton.addEventListener("click", function () {
       soundText.innerHTML = data1.results[searchResult].name;
 
       newSoundID = data1.results[searchResult].id;
+    })
+    .catch((error) => {
+      soundText.innerHTML = "No results for that search term";
     });
   searchClicked = true;
 });
 
 let playButton = document.getElementById("button");
 playButton.addEventListener("click", function () {
+  userStartAudio();
   mp3.play();
 });
 
@@ -115,17 +138,17 @@ pauseButton.addEventListener("click", function () {
 });
 
 let ampButton = false;
-$("#amp_button").click(function () {
+$("#amp_button").on("click", function () {
   ampButton = !ampButton;
 });
 
 let freqButton = false;
-$("#freq_button").click(function () {
+$("#freq_button").on("click", function () {
   freqButton = !freqButton;
 });
 
 let waveButton = false;
-$("#wave_button").click(function () {
+$("#wave_button").on("click", function () {
   waveButton = !waveButton;
 });
 
@@ -134,6 +157,7 @@ let fft;
 
 function setup() {
   createCanvas(500, 500);
+  getAudioContext().suspend();
   amplitude = new p5.Amplitude();
   fft = new p5.FFT(0.8, 128);
 
@@ -175,7 +199,7 @@ function ampAnalyzer() {
   //wavy amplitude visualizer adapted from "Sound Wave" by Aditi Jain http://www.openprocessing.org/sketch/609848
   push();
   beginShape();
-  push();
+  // push();
 
   translate(0, (2 * height) / 3 - map(level, 0, 1, height, 0));
   for (let i = 0; i < wave.length; i++) {
@@ -184,6 +208,7 @@ function ampAnalyzer() {
   endShape();
   pop();
 
+  //once the wave reaches width, it'll reset and show the most recent wave
   if (wave.length > width) {
     wave.splice(0, 1);
   }
@@ -226,9 +251,9 @@ function fqAnalyzer() {
   // }
 
   //circular spectrum analysis
+  push();
   colorMode(HSL);
   noStroke();
-  push();
   translate(width / 2, height / 2);
   beginShape();
   for (let i = 0; i < spectrum.length; i++) {
@@ -263,5 +288,4 @@ function drawWave() {
     ellipse(x, y, 2, 2);
   }
   endShape();
-  //console.log(spectrum);
 }

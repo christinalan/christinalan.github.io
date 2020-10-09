@@ -6,6 +6,37 @@ body {
   transition: background-color 1s ease;
 }
 
+.title {
+  margin-left: 15px;
+  margin-top: 0px;
+  font-size: 30px;
+}
+
+.header {
+  font-size: 30px;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: absolute;
+}
+
+.links {
+  float: right;
+  display: inline-flex;
+  flex-direction: row;
+  width: 200px;
+  justify-content: space-evenly;
+  font-size: 20px;
+  margin-top: -20px;
+}
+
+.about_para {
+  margin-top: 50px;
+  margin-right: 200px;
+  float: right;
+}
+
 h2 {
   display: flex;
   flex-direction: column;
@@ -16,11 +47,6 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   flex-grow: 2;
-}
-
-.title {
-  margin-left: 15px;
-  font-size: 30px;
 }
 
 .button {
@@ -54,7 +80,7 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   margin-left: 5%;
-  margin-top: 22%;
+  margin-top: 20%;
   padding-top: 15px;
   position: fixed;
 }
@@ -64,10 +90,11 @@ h2 {
 }
 
 .soundfile_container {
+  width: 450px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-top: 450px;
+  margin-top: 500px;
   margin-left: 30%;
   position: fixed;
 }
@@ -90,7 +117,7 @@ h2 {
 canvas {
   display: flex;
   flex-direction: column;
-  margin-top: -35px;
+  margin-top: 20px;
   margin-left: 30%;
   position: fixed;
 }

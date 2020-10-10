@@ -281,16 +281,3 @@ function drawWave() {
   endShape();
 }
 
-let aboutLink = document.getElementById("about");
-let aboutContent = document.getElementById("aboutPara");
-let aboutClicked = false;
-aboutLink.addEventListener("click", () => {
-  console.log("link clicked");
-
-  aboutClicked = !aboutClicked;
-  if (aboutClicked == true) {
-    aboutContent.style.display = "block";
-  } else {
-    aboutContent.style.display = "none";
-  }
-});

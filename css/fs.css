@@ -31,13 +31,6 @@ body {
   margin-top: -20px;
 }
 
-.about_para {
-  margin-top: 50px;
-  margin-left: 50px;
-  width: 80%;
-  text-align: left;
-}
-
 h2 {
   display: flex;
   flex-direction: column;
@@ -121,4 +114,16 @@ canvas {
   margin-top: 20px;
   margin-left: 30%;
   position: fixed;
+}
+
+.about_para {
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 80%;
+  text-align: left;
+}
+
+.video {
+  margin-top: 20px;
+  margin-left: 50px;
 }

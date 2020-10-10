@@ -20,7 +20,8 @@ body {
 }
 
 .main_container {
-  margin-top: 20%;
+  margin-top: 5%;
+  text-align: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -28,7 +29,8 @@ body {
 }
 
 .main_t {
-  margin-bottom: 30px;
+  margin-bottom: 5px;
+  width: 50%;
 }
 
 h3 {
@@ -38,16 +40,22 @@ h3 {
   font-family: monospace;
   font-size: 40px;
 }
+h5 {
+  font-size: 15px;
+  font-weight: 100;
+  text-align: center;
+}
 
 p {
-  /* margin: 30% 42%; */
+  width: 80%;
+  font-family: monospace;
+  line-height: 30px;
   padding: 5px;
   text-align: center;
   justify-content: center;
 }
 
 .change {
-  /* margin: 30% 42%; */
   color: aqua;
   padding-left: 10px;
   padding-right: 0px;

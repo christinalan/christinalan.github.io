@@ -149,7 +149,7 @@ function setup() {
   // slider("rate", 0.001, 0.05, 0.015, 0.0001);
 
   //metablobs
-  for (i = 0; i < 10; i++) {
+  for (i = 0; i < 5; i++) {
     dancers.push(new Dancer(random(0, width), random(0, height)))
   };
 
@@ -250,7 +250,7 @@ function draw() {
         let xdif = x - dancers[i].x;
         let ydif = y - dancers[i].y;
         let d = sqrt((xdif * xdif) + (ydif * ydif));
-        sum += 20 * dancers[i].r / d;
+        sum += 10 * dancers[i].r / d;
       }
       set(x, y, color(sum));
     }
@@ -305,7 +305,7 @@ class Tile {
 }
 
 //functions to make light
-// Slider heplers
+// Slider helpers
 let vars = {};
 function slider(name, min, max, val, step = 1) {
   vars[name] = {
@@ -370,8 +370,8 @@ class Dancer {
 
   show() {
     noFill();
-    stroke(0);
-    strokeWeight(2);
+    // stroke(0);
+    // strokeWeight(2);
     ellipse(this.x, this.y, this.r * 5, this.r * 3);
   }
 }

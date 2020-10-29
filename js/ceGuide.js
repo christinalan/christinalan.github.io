@@ -71,6 +71,16 @@ $("#buttonFog1").click(function () {
   fogAudioOn = false;
 });
 
+//blob audio functions
+let blobAudioOn = false;
+$("#buttonBlob").click(function () {
+  blobAudioOn = true;
+})
+
+$("#buttonBlob1").click(function () {
+  blobAudioOn = false;
+})
+
 let micOn = false;
 $("#buttonMic").click(function () {
   micOn = true;
@@ -108,6 +118,10 @@ let state = 0;
 function preload() {
   sound = loadSound("Audio/lightM.mp3");
 }
+
+//stuff for blobs
+let dancers = [];
+
 function setup() {
   createCanvas(windowWidth * 2, windowHeight * 2);
   // pixelDensity(1);
@@ -133,6 +147,12 @@ function setup() {
   slider("radiusNoise", 0.0001, 3, 1.0733, 0.0001);
   slider("alphaNoise", 0.0001, 3, 1.0733, 0.0001);
   // slider("rate", 0.001, 0.05, 0.015, 0.0001);
+
+  //metablobs
+  for (i = 0; i < 10; i++) {
+    dancers.push(new Dancer(random(0, width), random(0, height)))
+  };
+
 }
 
 function draw() {
@@ -217,8 +237,33 @@ function draw() {
     // } else if (playMic == false) {
     // }
   }
+
+  //blob Draw functions
+  if (blobAudioOn == true) {
+    console.log("blob go!")
+
+    loadPixels();
+  for (x = 0; x < width; x++) {
+    for (y = 0; y < height; y++) {
+      let sum = 0;
+      for (i = 0; i < dancers.length; i++) {
+        let xdif = x - dancers[i].x;
+        let ydif = y - dancers[i].y;
+        let d = sqrt((xdif * xdif) + (ydif * ydif));
+        sum += 20 * dancers[i].r / d;
+      }
+      set(x, y, color(sum));
+    }
+  }
+  updatePixels();
+
+  for (i = 0; i < dancers.length; i++) {
+    dancers[i].update();
+  }
+  }
 }
 
+//end of draw
 // functions to make fog
 function createGrid() {
   grid = [];
@@ -302,5 +347,31 @@ function p5light() {
     background(colorS.r, 0, colorS.b, size);
   } else {
     background(0, colorS.g, colorS.b, size);
+  }
+}
+
+class Dancer {
+
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    let angle = random(0, 2 * PI);
+    this.xspeed = random(0, 3) * Math.cos(angle);
+    this.yspeed = random(0, 3) * Math.sin(angle);
+    this.r = random(0, 100);
+  }
+
+  update() {
+    this.x += this.xspeed;
+    this.y += this.yspeed;
+    if (this.x > width || this.x < 0) this.xspeed *= -1;
+    if (this.y > height || this.y < 0) this.yspeed *= -1;
+  }
+
+  show() {
+    noFill();
+    stroke(0);
+    strokeWeight(2);
+    ellipse(this.x, this.y, this.r * 5, this.r * 3);
   }
 }

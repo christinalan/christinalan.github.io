@@ -20,6 +20,7 @@ h2 {
   margin-right: 15px;
   border-radius: 20px;
   padding: 13px;
+  z-index: 2;
 }
 
 /* .button_micplay {
@@ -101,9 +102,17 @@ span {
   margin-left: 1150px;
   padding-left: 100px;
   font-size: 10px;
+  z-index: 2;
 }
 
 input {
   appearance: none;
   background: hsl(214, 2%, 34%);
+}
+
+.blob_video {
+  /* width: 100vw;
+  height: 100vh; */
+  position: absolute;
+  z-index: 0;
 }

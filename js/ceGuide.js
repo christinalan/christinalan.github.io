@@ -73,12 +73,23 @@ $("#buttonFog1").click(function () {
 
 //blob audio functions
 let blobAudioOn = false;
+let vid = document.getElementById("blob_video");
+vid.muted = true;
+vid.style.visibility = "hidden";
 $("#buttonBlob").click(function () {
   blobAudioOn = true;
+  // vid.style.visibility = "visible"
+  // vid.play();
+  // vid.loop = true;
+  for(var i = 0; i < 8; i++) {
+    balls.push(new Ball());
+    }
 })
 
 $("#buttonBlob1").click(function () {
   blobAudioOn = false;
+  // vid.pause();
+  // vid.style.visibility = "hidden";
 })
 
 let micOn = false;
@@ -120,10 +131,15 @@ function preload() {
 }
 
 //stuff for blobs
-let dancers = [];
+// let dancers = [];
+// let pg;
+// let pgWidth = 200;
+// let pgHeight = 200;
+let balls = [];
 
 function setup() {
   createCanvas(windowWidth * 2, windowHeight * 2);
+  // pg = createGraphics(pgWidth, pgHeight);
   // pixelDensity(1);
   frameRate(30);
   z_off = 0;
@@ -142,18 +158,16 @@ function setup() {
   amplitude = new p5.Amplitude();
   amplitude.setInput(sound);
 
+
   // slider("radius", 10, width * 2, 750);
   slider("points", 1, 1000, 500);
   slider("radiusNoise", 0.0001, 3, 1.0733, 0.0001);
   slider("alphaNoise", 0.0001, 3, 1.0733, 0.0001);
   // slider("rate", 0.001, 0.05, 0.015, 0.0001);
 
-  //metablobs
-  for (i = 0; i < 5; i++) {
-    dancers.push(new Dancer(random(0, width), random(0, height)))
-  };
 
 }
+//end sketch
 
 function draw() {
   if (roomAudioOn == true) {
@@ -238,28 +252,13 @@ function draw() {
     // }
   }
 
-  //blob Draw functions
+
   if (blobAudioOn == true) {
-    console.log("blob go!")
-
-    loadPixels();
-  for (x = 0; x < width; x++) {
-    for (y = 0; y < height; y++) {
-      let sum = 0;
-      for (i = 0; i < dancers.length; i++) {
-        let xdif = x - dancers[i].x;
-        let ydif = y - dancers[i].y;
-        let d = sqrt((xdif * xdif) + (ydif * ydif));
-        sum += 10 * dancers[i].r / d;
-      }
-      set(x, y, color(sum));
-    }
-  }
-  updatePixels();
-
-  for (i = 0; i < dancers.length; i++) {
-    dancers[i].update();
-  }
+    // background(0);
+    console.log("blob go!");
+    blobDraw();
+  } else if (blobAudioOn == false) {
+    // background(0);
   }
 }
 
@@ -350,28 +349,58 @@ function p5light() {
   }
 }
 
-class Dancer {
-
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-    let angle = random(0, 2 * PI);
-    this.xspeed = random(0, 3) * Math.cos(angle);
-    this.yspeed = random(0, 3) * Math.sin(angle);
-    this.r = random(0, 100);
+function blobDraw() {
+  for (var i = 0; i < balls.length; i++) {
+        balls[i].run();
   }
+}
 
-  update() {
-    this.x += this.xspeed;
-    this.y += this.yspeed;
-    if (this.x > width || this.x < 0) this.xspeed *= -1;
-    if (this.y > height || this.y < 0) this.yspeed *= -1;
-  }
-
-  show() {
-    noFill();
-    // stroke(0);
-    // strokeWeight(2);
-    ellipse(this.x, this.y, this.r * 5, this.r * 3);
-  }
+//class Blob from https://www.openprocessing.org/sketch/564229
+class Ball {
+	constructor() {
+		this.pos = createVector(random(width), random(height));
+		this.vel = createVector(random(-8, 8), random(-8, 8));
+	}
+	
+	run() {
+		this.anew();
+		this.float();
+	}
+	
+	anew() {
+		this.pos.add(this.vel);
+		this.r = random(50, 200);
+		if (this.pos.y > height + this.r) {
+			this.pos.y = -this.r;
+		}
+		
+		if (this.pos.y < -this.r) {
+			this.pos.y = height + this.r;
+		}
+		
+		if (this.pos.x > width + this.r) {
+			this.pos.x = -this.r;
+		}
+		
+		if (this.pos.x < -this.r) {
+			this.pos.x = width + this.r;
+		}
+	}
+	
+	float() {
+    let col = {
+      r: 255,
+      g: 170, 
+      b: 120
+    }
+		// blendMode(SCREEN);
+		for (var i = 0; i < 300; i++) {
+      push();
+			stroke(random(col.r), constrain(col.g, 50, 200), random(col.b, 150), (100 / 1) / i);
+			strokeWeight(i * 1.5);
+      point(this.pos.x, this.pos.y);
+      pop();
+		}
+		// blendMode(BLEND);
+	}
 }

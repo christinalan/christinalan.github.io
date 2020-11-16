@@ -1,5 +1,6 @@
 let freqText = document.getElementById("freq");
 let spectrum, osc;
+let cnv;
 let clicked;
 let i = 0;
 let f = 50;
@@ -8,7 +9,7 @@ let freqs = [];
 let freq;
 
 function setup() {
-  createCanvas(500, 500);
+  cnv = createCanvas(500, 500);
   background(0);
   osc = new p5.Oscillator('sine');
   fft = new p5.FFT(0.8);
@@ -18,21 +19,34 @@ function setup() {
     for (f = 50; f < 1500; f+=5) {
     freqs.push(f);
   }
+
+  cnv.mouseClicked(startAudio)
+    
 }
 
-function mouseClicked() {
-  clicked = !clicked
-  
-  if (clicked) {
+function startAudio() {
+    clicked = !clicked;
+
+    if (clicked) {
     osc.start();
     clear();
   } else {
     osc.stop();
     freqText.innerHTML = freq + "Hz"
   }
-  
-
 }
+
+// function mouseClicked() {
+//   clicked = !clicked
+  
+//   if (clicked) {
+//     osc.start();
+//     clear();
+//   } else {
+//     osc.stop();
+//     freqText.innerHTML = freq + "Hz"
+//   }
+// }
 
 function draw() {
 

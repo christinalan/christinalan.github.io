@@ -1,0 +1,43 @@
+body {
+  background-color: black;
+  z-index: 0;
+  font-family: "VT323", monospace;
+  font-weight: 300;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  /* font-family: "Xanh Mono", monospace; */
+  text-align: center;
+  margin-top: 4%;
+  width: 100%;
+  position: fixed;
+}
+
+h3 {
+  position: fixed;
+  padding: 5px;
+  margin: 5% 35%;
+  width: 30%;
+  bottom: 10%;
+  font-size: 20px;
+  background-color: white;
+  color: black;
+}
+
+#enter {
+  position: fixed;
+  bottom: 8%;
+  margin: 0% 46%;
+  font-family: "VT323", monospace;
+  font-size: 40px;
+}
+canvas {
+  margin: 5% 30%;
+  position: fixed;
+  z-index: -1;
+}

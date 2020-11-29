@@ -21,6 +21,7 @@ let qAsked = false;
 let promptPlay;
 
 window.addEventListener("load", () => {
+  alert("Please wait until loading finishes");
   hereButton.style.display = "none";
 });
 

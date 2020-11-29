@@ -179,8 +179,6 @@ hereButton.addEventListener("click", () => {
 
   setTimeout(function () {
     beat.play();
-    beatAudioOn = true;
-    console.log(beatAudioOn);
   }, 3000);
 
   setTimeout(function () {

@@ -52,8 +52,7 @@ window.addEventListener("scroll", () => {
     prompt1 = true;
     promptPlay = setTimeout(function () {
       buzzAudio.play();
-      buzzAudio.loop = false;
-      buzzAudio.volume = 0.7;
+      buzzAudio.volume = 0.6;
       p1.innerHTML = "";
       p1.style.opacity = 0;
 
@@ -76,8 +75,6 @@ window.addEventListener("scroll", () => {
     scrollprompt2.innerHTML = "";
     scrollprompt2.style.opacity = 0;
     p1.innerHTML = "";
-    buzzAudio.pause();
-    buzzAudio.volume = 0;
 
     question.innerHTML = "Imagine yourself";
     document.getElementById("fog_q").appendChild(question);

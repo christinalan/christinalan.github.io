@@ -37,6 +37,14 @@ h3 {
   font-size: 40px;
 }
 
+.info-button {
+  font-family: "VT323", monospace;
+  margin-left: 47%;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 10px;
+}
+
 .modal {
   display: block; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -53,19 +61,20 @@ h3 {
 /* Modal Content/Box */
 .modal-content {
   font-family: monospace;
+  font-size: 15px;
   background-color: black;
   color: white;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 60%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
 .close {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
 }
 

@@ -140,16 +140,15 @@ window.addEventListener("scroll", () => {
     }
   }
 
-    //blob animation??
+  //blob animation??
 
-    if (currentScroll >= 2000 && lastScroll <= currentScroll) {
-      console.log(blobA);
-      blobA = true;
-      for (let i = 0; i < 6; i++) {
-        balls.push(new Ball());
-      }
+  if (currentScroll >= 2000 && lastScroll <= currentScroll) {
+    console.log(blobA);
+    blobA = true;
+    for (let i = 0; i < 6; i++) {
+      balls.push(new Ball());
     }
-  });
+  }
 });
 
 slider.addEventListener("click", () => {
@@ -161,7 +160,6 @@ slider.addEventListener("click", () => {
     document.getElementById("room_q").appendChild(fQ);
     roomAudio.play();
     background(0);
-
 
     setTimeout(function () {
       qAsked = true;
@@ -906,7 +904,6 @@ class Osc {
     pop();
   }
 }
-
 
 //blobs !!
 function blobDraw() {

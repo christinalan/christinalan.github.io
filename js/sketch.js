@@ -468,7 +468,7 @@ function draw() {
         pop();
       }
       text(
-        "continue to move your mouse to the edges of the screen until the end",
+        "Move your mouse back and forth between the edges of the screen",
         windowWidth / 2,
         windowHeight - 100
       );
@@ -507,6 +507,18 @@ function draw() {
     console.log("go blob go!");
     blobDraw();
   } else {
+  }
+
+  if (oscs.length >= 15 && oscs.length <= 18) {
+    push();
+    noStroke();
+    fill(255, barAlpha);
+    text(
+      "Keep colliding into the walls with your mouse",
+      windowWidth / 2,
+      windowHeight - 100
+    );
+    pop();
   }
 
   if (oscs.length === 21) {
@@ -953,7 +965,9 @@ class Ball {
     // blendMode(SCREEN);
     for (let i = 0; i < 300; i++) {
       push();
-      stroke(255, constrain(col.g, 50, 200), random(col.b, 150), 100 / 1 / i);
+      let varS = map(mouseY, 0, height, 80, 150);
+      let varC = map(level, 0.5, 0, 100, 200);
+      stroke(varC, constrain(col.g, 50, 200), random(col.b, 250), varS / 1 / i);
       strokeWeight(i * 1.5);
       point(this.pos.x, this.pos.y);
       pop();

@@ -70,10 +70,10 @@ window.addEventListener("scroll", () => {
     }, 4000);
 
     setTimeout(function () {
-      // buzzAudio.pause();
+      buzzAudio.pause();
       buzzAudio.volume = 0;
       p1.innerHTML = "";
-    }, 4500);
+    }, 5000);
   }
   if (currentScroll >= 450 && lastScroll <= currentScroll) {
     lastScroll = currentScroll;

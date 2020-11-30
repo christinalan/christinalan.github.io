@@ -2,7 +2,13 @@ let roomAudio = document.getElementById("room");
 let fogAudio = document.getElementById("fog");
 let buzzAudio = document.getElementById("buzz");
 let beat = document.getElementById("beat");
-// let lightAudio = document.getElementById("light");
+let O1 = document.getElementById("O1");
+let O2 = document.getElementById("O2");
+let O3 = document.getElementById("O3");
+let O4 = document.getElementById("O4");
+let O5 = document.getElementById("O5");
+let O6 = document.getElementById("O6");
+let O7 = document.getElementById("O7");
 
 let roomAudioOn = false;
 let fogAudioOn = false;
@@ -46,7 +52,7 @@ window.addEventListener("scroll", () => {
 
   if (currentScroll >= 150 && lastScroll <= currentScroll) {
     p1.innerHTML = "close your eyes";
-    // $("prompt").one(append(p1));
+
     document.getElementById("prompt").appendChild(p1);
     background(0);
     fQ.innerHTML = "";
@@ -71,7 +77,6 @@ window.addEventListener("scroll", () => {
     lastScroll = currentScroll;
 
     clearTimeout(promptPlay);
-    // fQ.innerHTML = "";
 
     scrollprompt2.innerHTML = "";
     scrollprompt2.style.opacity = 0;
@@ -134,6 +139,17 @@ window.addEventListener("scroll", () => {
       sound.play();
     }
   }
+
+    //blob animation??
+
+    if (currentScroll >= 2000 && lastScroll <= currentScroll) {
+      console.log(blobA);
+      blobA = true;
+      for (let i = 0; i < 6; i++) {
+        balls.push(new Ball());
+      }
+    }
+  });
 });
 
 slider.addEventListener("click", () => {
@@ -146,9 +162,6 @@ slider.addEventListener("click", () => {
     roomAudio.play();
     background(0);
 
-    // setTimeout(function () {
-    //   roomAudioOn = true;
-    // }, 700);
 
     setTimeout(function () {
       qAsked = true;
@@ -190,7 +203,7 @@ hereButton.addEventListener("click", () => {
   setTimeout(function () {
     sp3.innerHTML = "scroll down";
     document.getElementById("sp3").appendChild(sp3);
-  }, 6000);
+  }, 7000);
 });
 
 //global variables for fog
@@ -263,9 +276,11 @@ let cX, cY, cR;
 
 let p5Font;
 
+//stuff for blobs
+let balls = [];
+
 function preload() {
   sound = loadSound("Audio/lightM.mp3");
-  // roomsound = loadSound("Audio/emptyroomM.mp3");
   p5Font = loadFont("text/VT323-Regular.ttf");
 }
 
@@ -316,8 +331,9 @@ function setup() {
   // textSize(25);
   cX = windowWidth / 2;
   cY = windowHeight / 2;
-  cR = 75;
+  cR = 50;
 }
+//end setup
 
 function draw() {
   //text shows up after room audio
@@ -375,7 +391,7 @@ function draw() {
       setTimeout(function () {
         sp4.innerHTML = "scroll down";
         document.getElementById("sp4").appendChild(sp4);
-      }, 4000);
+      }, 6500);
 
       startStrobe = true;
     }
@@ -454,7 +470,7 @@ function draw() {
         pop();
       }
       text(
-        "move your mouse to the edges of the screen",
+        "continue to move your mouse to the edges of the screen until the end",
         windowWidth / 2,
         windowHeight - 100
       );
@@ -488,9 +504,71 @@ function draw() {
     }
   }
 
+  //blob stuff
+  if (oscs.length > 15) {
+    console.log("go blob go!");
+    blobDraw();
+  } else {
+  }
+
+  if (oscs.length === 21) {
+    O1.play();
+  }
+
+  if (oscs.length === 23) {
+    O2.play();
+  }
+
+  if (oscs.length === 27) {
+    O3.play();
+  }
+
+  if (oscs.length === 31) {
+    O4.play();
+  }
+
+  if (oscs.length === 33) {
+    O5.play();
+  }
+
+  if (oscs.length === 34) {
+    O6.play();
+  }
+
+  if (oscs.length === 36) {
+    O7.play();
+  }
+
+  //white end background
   if (oscs.length >= 20) {
     let backgroundAlpha = map(oscs.length, 20, 50, 0, 255);
     background(255, backgroundAlpha);
+  }
+
+  //stopping audio
+  if (oscs.length >= 55) {
+    roomAudio.pause();
+    fogAudio.pause();
+    beat.pause();
+    sound.stop();
+    O1.pause();
+    O2.pause();
+    O3.pause();
+    O4.pause();
+    O5.pause();
+    O6.pause();
+    O7.pause();
+    masterVolume(0, 0.5);
+    // for (let osc of oscs) {
+    //   osc.stop();
+    // }
+
+    fill(0, 100);
+    text(
+      "Thank you for coming. Send this to a friend",
+      windowWidth / 2,
+      windowHeight / 2
+    );
   }
 
   if (fQAsked == true) {
@@ -826,6 +904,64 @@ class Osc {
     }
     endShape();
     pop();
+  }
+}
+
+
+//blobs !!
+function blobDraw() {
+  for (let i = 0; i < balls.length; i++) {
+    balls[i].run();
+  }
+}
+
+//class Blob from https://www.openprocessing.org/sketch/564229
+class Ball {
+  constructor() {
+    this.pos = createVector(random(width), random(height));
+    this.vel = createVector(random(-7, 7), random(-6, 6));
+  }
+
+  run() {
+    this.anew();
+    this.float();
+  }
+
+  anew() {
+    this.pos.add(this.vel);
+    this.r = random(50, 200);
+    if (this.pos.y > height + this.r) {
+      this.pos.y = -this.r;
+    }
+
+    if (this.pos.y < -this.r) {
+      this.pos.y = height + this.r;
+    }
+
+    if (this.pos.x > width + this.r) {
+      this.pos.x = -this.r;
+    }
+
+    if (this.pos.x < -this.r) {
+      this.pos.x = width + this.r;
+    }
+  }
+
+  float() {
+    let col = {
+      r: 255,
+      g: 170,
+      b: 120,
+    };
+    // blendMode(SCREEN);
+    for (let i = 0; i < 300; i++) {
+      push();
+      stroke(255, constrain(col.g, 50, 200), random(col.b, 150), 100 / 1 / i);
+      strokeWeight(i * 1.5);
+      point(this.pos.x, this.pos.y);
+      pop();
+    }
+    // blendMode(BLEND);
   }
 }
 

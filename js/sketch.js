@@ -70,7 +70,7 @@ window.addEventListener("scroll", () => {
     }, 4000);
 
     setTimeout(function () {
-      buzzAudio.pause();
+      // buzzAudio.pause();
       buzzAudio.volume = 0;
       p1.innerHTML = "";
     }, 4500);

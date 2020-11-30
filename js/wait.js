@@ -1,23 +1,29 @@
 //variables for the Instructions window
-let modal = document.getElementById("info-modal");
-let infoButton = document.getElementById("info-button");
+let aboutModal = document.getElementById("about-modal");
+let instModal = document.getElementById("instructions-modal");
+let about = document.getElementById("about");
+let instructions = document.getElementById("instructions");
 //span that closes the window
-let span = document.getElementsByClassName("close")[0];
+// let span = document.getElementsByClassName("close")[0];
+let aboutSpan = document.getElementById("about-span");
+let instSpan = document.getElementById("inst-span");
 
 window.addEventListener("load", () => {
   //instructions window
-  infoButton.onclick = function () {
-    modal.style.display = "block";
+  instructions.onclick = function () {
+    instModal.style.display = "block";
   };
 
-  span.onclick = function () {
-    modal.style.display = "none";
+  instSpan.onclick = function () {
+    instModal.style.display = "none";
   };
 
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "block";
-    }
+  about.onclick = function () {
+    aboutModal.style.display = "block";
+  };
+
+  aboutSpan.onclick = function () {
+    aboutModal.style.display = "none";
   };
 });
 

@@ -108,7 +108,7 @@ window.addEventListener("scroll", () => {
         p2.innerHTML = "";
         p2.style.opacity = 0;
         lightScroll = true;
-        catchlight.innerHTML = "catch the light";
+        catchlight.innerHTML = "hover over the light";
         document.getElementById("prompt").appendChild(catchlight);
       }, 1500);
     }

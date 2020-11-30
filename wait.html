@@ -22,41 +22,60 @@
   <body>
     <div>
       <h1>club MEM</h1>
-      <button id="info-button" class="info-button">Instructions</button>
+      <div class="navBar">
+        <a id="about" class="navlink">About</a>
+        <a id="instructions" class="navlink">Instructions</a>
+      </div>
     </div>
-    <!-- the modal itself -->
-    <div id="info-modal" class="modal">
+
+    <div id="instructions-modal" class="modal">
       <!-- modal content -->
-      <div class="modal-content">
-        <span class="close">&times;</span>
+      <div class="modal-content-right">
+        <span id="inst-span" class="close">&times;</span>
         <p>
-          This website can be a solo or group experience, done on your own time
-          or live with others. You are testing the standalone version, which
-          simulates what could happen during a live session. In response to
-          Space 10's call for pieces that prioritize mental health, this website
-          is a stand-in for channels of release and connection many of us have
-          lost, as well as an interruption to increased, habitual digital
-          consumption. It pulls from underground club spaces in its attempts to
-          emulate a realm of temporality and liminality. It is a journey hinged
-          on anticipation, stillness, and auditory and tactile exploration.
-          Before you enter, you are given an avatar in the shape of a sonic
-          waveform. While this simulated version will not carry the frequency
-          you choose in the following website, you will be given a frequency
-          that acts as your avatar. As you move through the experience, other
-          bodies (avatars) will emerge, mimicking the experience of a communal,
-          live event.
+          Instructions <br />
+          <br />
+          The version you are testing simulates the live version, where your
+          presence becomes interwoven with others who have joined the room. Your
+          presence takes the form of an audio frequency. In the live version,
+          you are given the chance to choose your frequency avatar by picking
+          from this page's audio clock. However, in this solo version, you will
+          be given a random frequency to represent your presence. It will look
+          like a squiggly line. As you journey through, other frequencies will
+          enter the room, mimicking our eventual awareness of others who inhabit
+          a shared space despite our initial solitude.
           <br /><br />
-          This experience is best with headphones and fully utilizes the
-          affordances of a touchpad or mouse. The journey continues as one
-          scrolls downwards and layers are revealed through visual prompts.
-          Please 1) Click buttons as they appear 2) Hover your mouse over new
-          visual stimuli. Audio and visual cues will guide you throughout.
-          Lastly, please scroll SLOWLY and take your time.
+          1. Please use headphones. <br /><br />2. Click buttons as they appear.
+          <br /><br />3. Hover your mouse over new visual stimuli. Audio and
+          visual cues will guide you throughout. <br /><br />
+          4. PLEASE SCROLL SLOWLY & TAKE YOUR TIME!
         </p>
       </div>
     </div>
+
+    <!-- the modal itself -->
+    <div id="about-modal" class="modal">
+      <div class="modal-content-left">
+        <span id="about-span" class="close">&times;</span>
+        <p>
+          About <br /><br />
+          Welcome to Club Mem. It is a room in passing, created in part due to
+          the pandemic's impact on spaces that have been essential to the mental
+          health of many. The loss of underground clubs, those that evoke a
+          realm of temporal and liminal possibility, has reduced critical ways
+          many of us undergo release and transformative experimentation. <br />
+          <br />This piece has two versions: solo and live, but currently only
+          works as a solo experience. Neither attempt to replicate the
+          experience of going to an underground club but instead, serve as
+          respites that have the potential to exist beyond the pandemic. This
+          piece is an interruption, a break from the increased ubiquity of
+          digital interactions and an alternative to forming new connections.
+        </p>
+      </div>
+    </div>
+
     <div>
-      <h2>WELCOME <br />CLICK BELOW TO BEGIN AUDIO CLOCK.</h2>
+      <h2>WELCOME. <br />CLICK BELOW TO BEGIN THE AUDIO CLOCK.</h2>
     </div>
     <div>
       <h3>CLICK AGAIN TO DETERMINE USER FREQUENCY: <span id="freq"></span></h3>

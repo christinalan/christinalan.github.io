@@ -20,6 +20,9 @@ let bodySonic = false;
 let roomsound, fogsound;
 let black = false;
 
+let muteB;
+let audioOn;
+let audio;
 let slider = document.getElementById("room_slider");
 let slider_input;
 let hereButton = document.getElementById("here_button");

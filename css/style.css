@@ -2,6 +2,15 @@ body {
   height: 3000px;
   font-family: "VT323", monospace;
 }
+
+.mute {
+  float: right;
+  font-size: 18px;
+  color: white;
+  background: darkgray;
+  font-family: "VT323", monospace;
+}
+
 .slide_container {
   margin-top: 25px;
   margin-left: 40%;

@@ -27,7 +27,9 @@ let qAsked = false;
 let promptPlay;
 
 window.addEventListener("load", () => {
-  alert("Please wait until loading finishes");
+  alert(
+    "Please wait until loading finishes. If you need to start over, scroll to the top before refreshing"
+  );
   hereButton.style.display = "none";
 });
 

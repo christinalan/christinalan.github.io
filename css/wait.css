@@ -6,6 +6,14 @@ body {
   color: white;
 }
 
+a {
+  color: yellowgreen;
+}
+
+a:hover {
+  color: white:
+}
+
 h1 {
   text-align: center;
 }
@@ -46,6 +54,7 @@ h3 {
 .navlink {
   text-decoration: underline;
   font-family: "VT323", monospace;
+  font-size: 20px;
   cursor: pointer;
   border-radius: 20px;
   padding: 10px;
@@ -106,4 +115,35 @@ canvas {
   margin: 5% 30%;
   position: fixed;
   z-index: -1;
+}
+
+@media all and (max-width: 600px) {
+  canvas {
+    scale: 0.5;
+    margin: 10% -16%;
+  }
+
+  h3 {
+    margin: 5% 15%;
+    bottom: 14%;
+    width: 60%;
+  }
+
+  #enter {
+    margin: 0% 35%;
+  }
+   
+  .modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .modal-content-left {
+    width: 75%;
+  }
+
+  .modal-content-right {
+    margin-left: 6%;
+    width: 80%;
+  }
 }

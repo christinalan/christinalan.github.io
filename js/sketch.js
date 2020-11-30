@@ -145,8 +145,6 @@ window.addEventListener("scroll", () => {
   //blob animation??
 
   if (currentScroll >= 2000 && lastScroll <= currentScroll) {
-    console.log(blobA);
-    blobA = true;
     for (let i = 0; i < 6; i++) {
       balls.push(new Ball());
     }

@@ -1,30 +1,60 @@
-//variables for the Instructions window
-let aboutModal = document.getElementById("about-modal");
-let instModal = document.getElementById("instructions-modal");
+//links to open modals
 let about = document.getElementById("about");
 let instructions = document.getElementById("instructions");
-//span that closes the window
+
+//actual modal boxes
+let aboutModal = document.getElementById("about-modal");
+let instModal = document.getElementById("instructions-modal");
+
 // let span = document.getElementsByClassName("close")[0];
+//span that closes about window
 let aboutSpan = document.getElementById("about-span");
+//span that moves to the next instructions window
+let nextSpan = document.getElementById("next-span");
+//span that moves back to the about window
+let backSpan = document.getElementById("back-span");
+
 let instSpan = document.getElementById("inst-span");
 
 window.addEventListener("load", () => {
-  //instructions window
+  // aboutContent.innerHTML
+  //about window from clicking about link
+  about.onclick = function () {
+    aboutModal.style.display = "block";
+  };
+
+  //instructions window from clicking instructions link
   instructions.onclick = function () {
     instModal.style.display = "block";
   };
 
-  instSpan.onclick = function () {
-    instModal.style.display = "none";
+  nextSpan.onclick = function () {
+    instModal.style.display = "block";
+    aboutModal.style.display = "none";
   };
 
-  about.onclick = function () {
+  backSpan.onclick = function () {
+    instModal.style.display = "none";
     aboutModal.style.display = "block";
+  };
+
+  //clicking on closing x's for both modals
+  instSpan.onclick = function () {
+    instModal.style.display = "none";
   };
 
   aboutSpan.onclick = function () {
     aboutModal.style.display = "none";
   };
+
+  // window.onclick = function (event) {
+  //   if (event.target !== aboutModal) {
+  //     aboutModal.style.display = "none";
+  //   }
+  //   if (event.target !== instModal) {
+  //     instModal.style.display = "none";
+  //   }
+  // };
 });
 
 let freqText = document.getElementById("freq");

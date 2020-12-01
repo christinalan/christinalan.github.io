@@ -147,8 +147,8 @@ window.addEventListener("scroll", () => {
 
   //blob animation??
 
-  if (currentScroll >= 2000 && lastScroll <= currentScroll) {
-    for (let i = 0; i < 6; i++) {
+  if (currentScroll >= 1600 && lastScroll <= currentScroll) {
+    for (let i = 0; i < 4; i++) {
       balls.push(new Ball());
     }
   }
@@ -266,6 +266,7 @@ let colorsAll = [];
 let colorAll, colorAll2;
 let barAlpha;
 let sonicHover = false;
+let textHover = false;
 
 //g variables for yes text
 let content = "YES"; //variable for text string
@@ -276,6 +277,8 @@ let xSpeed;
 let cX, cY, cR;
 
 let p5Font;
+let noiseAudio;
+let noiseEnv;
 
 //stuff for blobs
 let balls = [];
@@ -296,6 +299,9 @@ function setup() {
   oscP = new p5.Oscillator("sine");
   baseFreq = random(70, 800);
   oscP.freq(baseFreq);
+
+  noiseAudio = new p5.Noise();
+  noiseEnv = new p5.Env();
 
   modMaxFreq = baseFreq - 100;
   modMinFreq = 0;
@@ -461,6 +467,20 @@ function draw() {
     if (sonicHover == true) {
       fill(0);
     } else {
+      barAlpha = map(level, 0, 1, 100, 255);
+      push();
+      fill(255, barAlpha);
+      textSize(30);
+      text(
+        "Move your mouse back and forth to the edges of the screen",
+        windowWidth / 2,
+        windowHeight - 100
+      );
+      pop();
+    }
+    if (textHover == true) {
+      fill(0);
+    } else {
       if (frameCount % 11 == 0) {
         push();
         barAlpha = map(level, 0, 1, 100, 255);
@@ -470,11 +490,6 @@ function draw() {
         rect(windowWidth - 25, 0, 50, windowHeight + 100);
         pop();
       }
-      text(
-        "Move your mouse back and forth between the edges of the screen",
-        windowWidth / 2,
-        windowHeight - 100
-      );
     }
 
     if (mouseX >= windowWidth - 100) {
@@ -505,6 +520,33 @@ function draw() {
     }
   }
 
+  if (oscs.length >= 5 && oscs.length <= 6) {
+    push();
+    noStroke();
+    fill(255, barAlpha);
+    textSize(25);
+    text(
+      "Scroll all the way down, then up and down as you choose",
+      windowWidth / 2,
+      windowHeight - 100
+    );
+    pop();
+  }
+
+  if (oscs.length >= 8 && oscs.length <= 15) {
+    push();
+    noStroke();
+    fill(255, barAlpha);
+    textSize(30);
+    text(
+      "Keep colliding into the walls with your mouse UNTIL THE END",
+      windowWidth / 2,
+      windowHeight - 100
+    );
+    pop();
+    textHover = true;
+  }
+
   //blob stuff
   if (oscs.length > 15) {
     console.log("go blob go!");
@@ -512,44 +554,75 @@ function draw() {
   } else {
   }
 
-  if (oscs.length >= 15 && oscs.length <= 18) {
-    push();
-    noStroke();
-    fill(255, barAlpha);
-    text(
-      "Keep colliding into the walls with your mouse",
-      windowWidth / 2,
-      windowHeight - 100
-    );
-    pop();
-  }
-
   if (oscs.length === 21) {
     O1.play();
+    O1.loop = true;
   }
 
   if (oscs.length === 23) {
+    scaleX = 0.05;
+    console.log(scaleX);
+    scaleY = 0.03;
     O2.play();
+    O2.loop = true;
   }
 
   if (oscs.length === 27) {
     O3.play();
+    O3.loop = true;
   }
 
-  if (oscs.length === 31) {
+  if (oscs.length === 32) {
+    scaleX = 0.03;
+    console.log(scaleX);
+    scaleY = 0.07;
     O4.play();
+    O4.loop = true;
   }
 
-  if (oscs.length === 33) {
+  if (oscs.length === 35) {
+    scaleX = 0.1;
+    console.log(scaleX);
+    scaleY = 0.09;
     O5.play();
+    O5.loop = true;
   }
 
-  if (oscs.length === 34) {
+  if (oscs.length === 38) {
     O6.play();
+    O6.loop = true;
   }
 
-  if (oscs.length === 36) {
+  if (oscs.length === 41) {
+    scaleX = 0.3;
+    console.log(scaleX);
+    scaleY = 0.5;
     O7.play();
+    O7.loop = true;
+  }
+
+  if (oscs.length >= 40 && oscs.length <= 43) {
+    scaleX = 0.5;
+    console.log(scaleX);
+    scaleY = 0.8;
+    push();
+    noStroke();
+    fill(255, barAlpha);
+    textSize(30);
+    text("You are approaching the end", windowWidth / 2, windowHeight - 100);
+    pop();
+  }
+
+  if (oscs.length === 43) {
+    scaleX = 0.8;
+    console.log(scaleX);
+    scaleY = 0.7;
+    console.log("noise starts");
+    noiseAudio.start();
+    noiseEnv.setADSR(20, 0.2, 0.1, 25);
+    noiseEnv.setRange(0.2, 0);
+
+    noiseEnv.play(noiseAudio);
   }
 
   //white end background
@@ -559,7 +632,7 @@ function draw() {
   }
 
   //stopping audio
-  if (oscs.length >= 55) {
+  if (oscs.length >= 50) {
     roomAudio.pause();
     fogAudio.pause();
     beat.pause();
@@ -578,7 +651,7 @@ function draw() {
 
     fill(0, 100);
     text(
-      "Thank you for coming. Send this to a friend",
+      "Thank you for coming. Send this to a friend :)",
       windowWidth / 2,
       windowHeight / 2
     );
@@ -931,7 +1004,7 @@ function blobDraw() {
 class Ball {
   constructor() {
     this.pos = createVector(random(width), random(height));
-    this.vel = createVector(random(-7, 7), random(-6, 6));
+    this.vel = createVector(random(-7, 7), random(-8, 8));
   }
 
   run() {
@@ -1070,7 +1143,7 @@ let rotateX = 0.01;
 let rotateY = 0.5;
 let rotateZ = 0.01;
 let rotateL = Math.PI / 30;
-let scaleX = 0.0001;
+let scaleX = 0.001;
 let scaleY = 0.001;
 let pageX, pageY;
 

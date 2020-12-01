@@ -11,7 +11,7 @@ a {
 }
 
 a:hover {
-  color: white:
+  color: white;
 }
 
 h1 {
@@ -61,24 +61,25 @@ h3 {
 }
 
 .modal {
-  display: block;
+  /* display: none; */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
+  left: 31%;
+  top: 15%;
   width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  /* height: 100%; */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 .modal-content-left {
+  display: block;
   font-family: monospace;
   font-size: 15px;
   background-color: black;
   color: white;
-  margin: 12% 10%;
+  /* margin: 12% auto; */
   padding: 20px;
   border: 1px solid #888;
   width: 35%; /* Could be more or less, depending on screen size */
@@ -86,14 +87,15 @@ h3 {
 
 /* Modal Content/Box */
 .modal-content-right {
+  display: none;
   font-family: monospace;
   font-size: 15px;
   background-color: black;
   color: white;
-  margin: 12% 50%;
-  padding: 20px;
+  margin-left: -4%;
+  padding: 20px 20px 5px 20px;
   border: 1px solid #888;
-  width: 35%;
+  width: 45%;
 }
 
 /* The Close Button */
@@ -102,6 +104,27 @@ h3 {
   float: right;
   font-size: 40px;
   font-weight: bold;
+}
+
+.back {
+  color: #aaa;
+  margin-left: 43%;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.next {
+  color: #aaa;
+  margin-left: 45%;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.next:hover,
+.next:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .close:hover,
@@ -132,18 +155,23 @@ canvas {
   #enter {
     margin: 0% 35%;
   }
-   
+
   .modal {
-    display: flex;
+    left: 30px;
+    top: 70px;
+    /* display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-around; */
   }
+
   .modal-content-left {
+    padding-bottom: 10px;
     width: 75%;
   }
 
   .modal-content-right {
-    margin-left: 6%;
     width: 80%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
   }
 }

@@ -13,7 +13,7 @@ body {
 
 .slide_container {
   margin-top: 25px;
-  margin-left: 40%;
+  margin-left: 38%;
 }
 .slider {
   -webkit-appearance: none; /* Override default CSS styles */
@@ -39,6 +39,16 @@ body {
   height: 24px;
   background: url("https://i.redd.it/9bq2xdtei6j11.jpg");
   cursor: pointer;
+}
+
+.first {
+  font-size: 20px;
+  text-align: center;
+  /* position: fixed; */
+  /* top: 200px; */
+  /* left: 30%; */
+  color: black;
+  opacity: 0.7;
 }
 
 .question {

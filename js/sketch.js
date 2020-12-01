@@ -29,11 +29,16 @@ let hereButton = document.getElementById("here_button");
 let qAsked = false;
 let promptPlay;
 
+let first = document.createElement("p");
+
 window.addEventListener("load", () => {
   alert(
     "Please wait until loading finishes. If you need to start over, scroll to the top before refreshing"
   );
   hereButton.style.display = "none";
+
+  first.innerHTML = "Slide the bar from left to right. Don't scroll just yet.";
+  document.getElementById("first_p").appendChild(first);
 });
 
 let lastScroll = 0;
@@ -53,6 +58,7 @@ let prompt1 = false;
 let hereClicked = false;
 
 window.addEventListener("scroll", () => {
+  first.innerHTML = "";
   let currentScroll = window.scrollY;
 
   if (currentScroll >= 150 && lastScroll <= currentScroll) {

@@ -545,7 +545,7 @@ function draw() {
     fill(255, barAlpha);
     textSize(30);
     text(
-      "Keep colliding into the walls with your mouse UNTIL THE END",
+      "Keep colliding into the walls with your mouse until the end",
       windowWidth / 2,
       windowHeight - 100
     );
@@ -579,9 +579,9 @@ function draw() {
   }
 
   if (oscs.length === 32) {
-    scaleX = 0.03;
+    scaleX = 0.02;
     console.log(scaleX);
-    scaleY = 0.07;
+    scaleY = 0.08;
     O4.play();
     O4.loop = true;
   }
@@ -589,7 +589,7 @@ function draw() {
   if (oscs.length === 35) {
     scaleX = 0.1;
     console.log(scaleX);
-    scaleY = 0.09;
+    scaleY = 0.07;
     O5.play();
     O5.loop = true;
   }
@@ -602,15 +602,15 @@ function draw() {
   if (oscs.length === 41) {
     scaleX = 0.3;
     console.log(scaleX);
-    scaleY = 0.5;
+    scaleY = 0.6;
     O7.play();
     O7.loop = true;
   }
 
   if (oscs.length >= 40 && oscs.length <= 43) {
-    scaleX = 0.5;
+    scaleX = 0.8;
     console.log(scaleX);
-    scaleY = 0.8;
+    scaleY = 0.1;
     push();
     noStroke();
     fill(255, barAlpha);
@@ -625,7 +625,7 @@ function draw() {
     scaleY = 0.7;
     console.log("noise starts");
     noiseAudio.start();
-    noiseEnv.setADSR(20, 0.2, 0.1, 25);
+    noiseEnv.setADSR(25, 0.2, 0.1, 30);
     noiseEnv.setRange(0.2, 0);
 
     noiseEnv.play(noiseAudio);

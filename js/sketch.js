@@ -148,7 +148,7 @@ window.addEventListener("scroll", () => {
   //blob animation??
 
   if (currentScroll >= 1600 && lastScroll <= currentScroll) {
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 2; i++) {
       balls.push(new Ball());
     }
   }
@@ -1014,7 +1014,7 @@ class Ball {
 
   anew() {
     this.pos.add(this.vel);
-    this.r = random(50, 200);
+    this.r = random(50, 100);
     if (this.pos.y > height + this.r) {
       this.pos.y = -this.r;
     }
@@ -1039,7 +1039,7 @@ class Ball {
       b: 120,
     };
     // blendMode(SCREEN);
-    for (let i = 0; i < 300; i++) {
+    for (let i = 0; i < 200; i++) {
       push();
       let varS = map(mouseY, 0, height, 80, 150);
       let varC = map(level, 0.5, 0, 100, 200);

@@ -478,7 +478,7 @@ function draw() {
       fill(255, barAlpha);
       textSize(30);
       text(
-        "Move your mouse back and forth to the edges of the screen",
+        "Move your mouse back and forth to the edges of the screen. You will do this around 50 times.",
         windowWidth / 2,
         windowHeight - 100
       );
@@ -545,7 +545,7 @@ function draw() {
     fill(255, barAlpha);
     textSize(30);
     text(
-      "Keep colliding into the walls with your mouse UNTIL THE END (~50x)",
+      "Keep colliding into the walls with your mouse UNTIL THE END",
       windowWidth / 2,
       windowHeight - 100
     );

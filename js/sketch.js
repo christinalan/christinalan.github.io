@@ -545,7 +545,7 @@ function draw() {
     fill(255, barAlpha);
     textSize(30);
     text(
-      "Keep colliding into the walls with your mouse UNTIL THE END",
+      "Keep colliding into the walls with your mouse UNTIL THE END (~50x)",
       windowWidth / 2,
       windowHeight - 100
     );

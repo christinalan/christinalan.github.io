@@ -289,6 +289,8 @@ let noiseEnv;
 //stuff for blobs
 let balls = [];
 
+let torusRotate = false;
+
 function preload() {
   sound = loadSound("Audio/lightM.mp3");
   p5Font = loadFont("text/VT323-Regular.ttf");
@@ -567,7 +569,6 @@ function draw() {
 
   if (oscs.length === 23) {
     scaleX = 0.05;
-    console.log(scaleX);
     scaleY = 0.03;
     O2.play();
     O2.loop = true;
@@ -584,6 +585,10 @@ function draw() {
     scaleY = 0.08;
     O4.play();
     O4.loop = true;
+
+    // torusRotate = true;
+    // torus.visible = true;
+    // torus.opacity = 0.1;
   }
 
   if (oscs.length === 35) {
@@ -620,7 +625,7 @@ function draw() {
   }
 
   if (oscs.length === 43) {
-    scaleX = 0.8;
+    scaleX = 0.6;
     console.log(scaleX);
     scaleY = 0.7;
     console.log("noise starts");
@@ -1142,6 +1147,24 @@ var light = new THREE.DirectionalLight(0xffffff);
 light.position.set(0, 1, 1).normalize();
 scene.add(light);
 
+//torus ??
+// let geometryT = new THREE.TorusGeometry(20, 7, 10, 100);
+
+// let materialT = new THREE.MeshBasicMaterial({
+//   color: "white",
+//   wireframe: true,
+//   transparent: true,
+//   opacity: 0.03,
+// });
+
+// let torus = new THREE.Mesh(geometryT, materialT);
+
+// torus.rotation.set(1, 1, 0);
+// torus.position.set(2, 5, 1);
+// torus.visible = false;
+
+// scene.add(torus);
+
 //some animation
 let rotate = false;
 let scale = true;
@@ -1152,6 +1175,10 @@ let rotateL = Math.PI / 30;
 let scaleX = 0.001;
 let scaleY = 0.001;
 let pageX, pageY;
+
+// let rotateTX = 1;
+// let rotateTY = 0.001;
+// let rotateTZ = 0.1;
 
 //https://stackoverflow.com/questions/63713635/how-to-make-textgeometry-in-three-js-follow-mouse
 document.body.addEventListener("mousemove", (event) => {
@@ -1170,9 +1197,8 @@ function animate() {
   room.scale.x = room.scale.x + scaleX;
   room.scale.y = room.scale.y + scaleY;
 
-  // if (rotate) {
-  //   room.rotation.y += rotateY;
-  // }
+  // torus.rotation.y += rotateTY;
+  // torus.rotation.z += rotateTZ;
 
   if (scale) {
     if (room.scale.x > 1.03 || room.scale.x < 1) {

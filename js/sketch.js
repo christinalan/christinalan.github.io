@@ -154,7 +154,7 @@ window.addEventListener("scroll", () => {
   //blob animation??
 
   if (currentScroll >= 1600 && lastScroll <= currentScroll) {
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 3; i++) {
       balls.push(new Ball());
     }
   }
@@ -630,7 +630,7 @@ function draw() {
     scaleY = 0.7;
     console.log("noise starts");
     noiseAudio.start();
-    noiseEnv.setADSR(25, 0.2, 0.1, 30);
+    noiseEnv.setADSR(30, 0.2, 0.1, 35);
     noiseEnv.setRange(0.2, 0);
 
     noiseEnv.play(noiseAudio);

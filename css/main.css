@@ -67,3 +67,7 @@ img.animated-gif {
 section.slideshow img:first-child {
   z-index: 1;
 }
+
+.embed {
+  margin-top: 60%;
+}

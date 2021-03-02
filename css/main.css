@@ -37,6 +37,11 @@ li a:hover {
   color: #FFFFFF;
 }
 
+li.sound {
+  float: right;
+  margin-right: 30px;
+}
+
 li.blog {
   float: right;
   margin-right: 50px;

@@ -60,3 +60,7 @@ p {
 .description {
   width: 70%;
 }
+
+.note {
+  font-size: 10px;
+}

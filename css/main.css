@@ -2,77 +2,109 @@
   width: device-width;
 }
 
-@media screen and (min-width:320px) and (max-width:640px) {
+@media screen and (min-width: 320px) and (max-width: 640px) and (orientation: portrait) {
   #navlist li {
     clear: both;
     display: block;
   }
- section.slideshow img {
-   transform: rotate(270deg) scale(2,2);
-   margin: 10em 2em 2em 0em;
- }
+  section.slideshow img {
+    transform: rotate(270deg) scale(2, 2);
+    margin: 10em 2em 2em 0em;
+  }
 }
 
-*, *:before, *:after {
-  box-sizing: border-box;
+* {
+  color: white;
+  /* font-family: "Hammersmith One", sans-serif; */
+  font-family: "Forum", cursive;
 }
 
-#navlist li {
-  font-family: "Oxygen Mono";
-  display: inline-block;
-  list-style-type: none;
-  margin-left: 0px;
-  padding: 0px;
-  z-index: 2;
-  position: relative;
-}
-
-li a {
-  color: #BDC3C7;
-    z-index: 2;
-    padding: 10px;
-}
-
-li a:hover {
-  color: #FFFFFF;
-}
-
-li.sound {
-  float: right;
-  margin-right: 30px;
-}
-
-li.blog {
-  float: right;
-  margin-right: 50px;
-}
-
-}
-section.slideshow {
-  width: auto;
-  height: auto;
-  cursor: pointer;
-  position: relative;
-}
-
-section.slideshow img {
-  position: absolute;
-  top: 10vh;
+body {
+  background-color: rgba(0, 0, 0);
+  top: 0;
   left: 0;
-  max-width: 100%;
-  height: auto;
-  z-index: 0;
+  position: absolute;
+  z-index: 99;
 }
 
-img.animated-gif {
-  width: 100%;
-  height: auto;
+/* canvas {
+  position: fixed;
+  pointer-events: none;
+  z-index: -2;
+  display: block;
+} */
+
+#container {
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: -2;
+  display: block;
 }
 
-section.slideshow img:first-child {
-  z-index: 1;
+.sidetext {
+  color: white;
+  background-color: transparent;
+  font-size: 2.5em;
+  float: right;
+  width: 40%;
+  text-align: right;
+  margin: 3% 0% 3% 2%;
 }
 
-.embed {
-  margin-top: 60%;
+.sidetext a {
+  background-color: transparent;
+  display: inline-block;
+}
+
+.sidetext a:hover {
+  color: rgba(177, 177, 177, 0);
+  cursor: cell;
+}
+
+.sidetext span:hover {
+  color: rgba(177, 177, 177, 0);
+  cursor: cell;
+}
+
+#button {
+  display: none;
+  margin: 20% 25%;
+  background-color: black;
+  padding: 10px;
+}
+
+.folders {
+  margin: 1.5% 1%;
+  background-color: transparent;
+  color: white;
+  text-transform: uppercase;
+  position: fixed;
+  font-size: 2em;
+}
+
+.folders a {
+  font-size: 1em;
+}
+
+.sideNavText {
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 0.6em;
+}
+
+.navlink {
+  display: none;
+}
+
+#sideNav:hover {
+  cursor: cell;
+  display: inline;
+  color: white;
+}
+
+#radio {
+  z-index: 10;
+  text-decoration: none;
+  cursor: cell;
 }

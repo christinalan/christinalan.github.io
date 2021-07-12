@@ -15,100 +15,85 @@
       href="https://fonts.googleapis.com/css?family=Oxygen Mono"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
-
-    <div class="top col-lg-4 col-md-4 clearfix">
-      <ul id="navlist">
-        <li><a href="/zzz/contact.html">CONTACT</a></li>
-        <!-- <li><a href="/eventPA.html" target="_blank">PRODUCTION</a></li> -->
-        <li><a href="/zzz/writing.html">WORDS</a></li>
-        <li><a href="/zzz/visualart.html">VISUAL SANDBOX</a></li>
-        <li><a href="/zzz/video.html">VIDEO</a></li>
-        <li>
-          <a href="/zzz/web.html">WEB DESIGN & DEVELOPMENT</a>
-        </li>
-
-        <li class="blog"><a href="/zzz/blog.html">BLOG</a></li>
-        <li class="sound">
-          <a href="https://soundcloud.com/laenzzz">SOUNDCLOUD</a>
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <section class="slideshow">
-        <a href="/zzz/production.html" target="_blank">
-          <img src="https://i.ibb.co/QK09KcY/pussypower.jpg" alt="pussypower"
-        /></a>
-
-        <a href="/zzz/eventPA.html" target="_blank">
-          <img src="img/nonShort.gif" alt="club" />
-          <!-- <img src="https://i.ibb.co/XJHQgdG/Eva-4-new.jpg" alt="Eva-4-new"/> -->
-        </a>
-
-        <a href="/zzz/writing.html" target="_blank">
-          <img src="https://i.ibb.co/jGQWz8v/writing.png" alt="writing"
-        /></a>
-
-        <a href="/zzz/visualart.html" target="_blank">
-          <img class="animated-gif" src="/img/maplibsShort.gif" alt="animation"
-        /></a>
-
-        <a href="/zzz/video.html" target="_blank">
-          <img
-            src="https://i.ibb.co/0jVJgn4/sluicefront.png"
-            alt="sluicefront"
-          />
-          <!-- <img src="https://i.ibb.co/3sLHs7K/bitevideo.jpg" alt="bitevideo" -->
-        </a>
-
-        <a href="/zzz/contact.html" target="_blank">
-          <img src="https://i.ibb.co/4fc9KpJ/chinaboard1.jpg" alt="chinaboard1"
-        /></a>
-      </section>
-
-      <div class="embed">
-        <iframe
-          width="100%"
-          height="20"
-          scrolling="no"
-          frameborder="no"
-          allow="autoplay"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/918143324&color=%23dcdca4&inverse=false&auto_play=true&show_user=true"
-        ></iframe>
-        <div
-          style="
-            font-size: 10px;
-            color: #cccccc;
-            line-break: anywhere;
-            word-break: normal;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
-              Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-            font-weight: 100;
-          "
-        >
-          <!-- <a
-            href="https://soundcloud.com/clubnightclub"
-            title="Club Night Club"
-            target="_blank"
-            style="color: #cccccc; text-decoration: none"
-            >Club Night Club</a
-          >
-          ·
-          <a
-            href="https://soundcloud.com/clubnightclub/laenz"
-            title="CNCMIX015 - LAENZ"
-            target="_blank"
-            style="color: #cccccc; text-decoration: none"
-            >CNCMIX015 - LAENZ</a
-          > -->
-        </div>
-      </div>
-      <script src="../js/preLoader.js" defer></script>
-      <script src="../js/hover.js"></script>
-    </div>
   </header>
+  <body>
+    <div class="sidetext">
+      Christina Lan is an <a id="ie">Interface Experimentalist,</a> Working with
+      <a id="threeD">3D Web Design,</a>
+      <a id="sa"><span id="audiocxt">Spatial</span> Audio,</a> and Multi-Sensory
+      Encounters Between the Spaces of the Web. <br /><br />
+      Currently Interested in Navigating and Re-wiring the Internet through a
+      <a href="https://www.xlaenz.com/zzz/sigidplay.html" id="radio"
+        >Sonic Exploration of Radio Waves.</a
+      >
+    </div>
+    <div id="sideNav" class="folders">
+      <span id="leftside">//</span>
+      <a href="zzz/web.html" target="_blank" class="navlink"
+        ><span id="web" class="sideNavText"> WEB DESIGN + DEVELOPMENT</span></a
+      >
+      <br />
+      <a href="https://soundcloud.com/laenzzz" class="navlink"
+        ><span class="leftside">\\\ </span
+        ><span id="music" class="sideNavText"> DJ + SOUND PRODUCTION</span></a
+      >
+      <br />
+      <a href="zzz/video.html" class="navlink"
+        ><span class="leftside">//// </span
+        ><span id="video" class="sideNavText">VIDEO</span></a
+      >
+      <br />
+      <a href="zzz/blog.html" class="navlink"
+        ><span class="leftside">\\\\\ </span
+        ><span id="archive" class="sideNavText">ARCHIVE</span></a
+      ><br />
+      <!-- <a href="#" id="archive" class="navlink">//////</a> -->
+    </div>
+    <button id="button">Start Audio</button>
+
+    <audio
+      loop
+      id="track1"
+      src="Audio/index/unnatural.mp3"
+      type="audio/mpeg"
+      preload="auto"
+      style="display: none"
+    ></audio>
+
+    <audio
+      loop
+      id="track2"
+      src="Audio/index/elk5.mp3"
+      type="audio/mpeg"
+      preload="auto"
+      style="display: none"
+    ></audio>
+
+    <audio
+      loop
+      id="track3"
+      src="Audio/index/natural.mp3"
+      type="audio/mpeg"
+      preload="auto"
+      style="display: none"
+    ></audio>
+
+    <div id="container"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script src="../js/preLoader.js" defer></script>
+    <script type="module" src="js/anim.js"></script>
+    <!-- <script src="../js/hover.js"></script> -->
+  </body>
 </html>

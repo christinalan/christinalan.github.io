@@ -2,14 +2,18 @@
   width: device-width;
 }
 
-header {
-  color:white;
-  font-family: monospace;
+* {
+  background-color: black;
+  font-family: "Forum", cursive;
+}
+
+h4 {
+  margin: 0.8%;
+  color: white;
   line-height: 30px;
   width: 100%;
-font-size: 20px;
+  font-size: 20px;
   top: auto;
-  background-color: lightblue;
 }
 
 div.box {
@@ -28,16 +32,15 @@ div.wrapper {
 }
 
 .description {
-  font-family: monospace;
-  color: rgb(37, 134, 167);
+  color: rgb(255, 255, 255);
   font-size: 25px;
 }
 div.overlay {
   position: absolute;
   top: 1200px;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   width: 48%;
-  transition: .5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   color: white;
   font-size: 20px;
@@ -50,8 +53,9 @@ div.overlay {
   opacity: 1;
 }
 
-@media screen and (min-width:320px) and (max-width:640px) {
+@media screen and (min-width: 320px) and (max-width: 640px) {
   div.wrapper {
     transform: scale(0.3);
     margin: -5em 0em 0em -14em;
   }
+}

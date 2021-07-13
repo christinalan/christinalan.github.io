@@ -7,6 +7,7 @@ let ie = document.getElementById("ie");
 let threeD = document.getElementById("threeD");
 let sa = document.getElementById("sa");
 let radio = document.getElementById("radio");
+let cl = document.getElementById("chris");
 
 let button = document.getElementById("button");
 
@@ -35,6 +36,7 @@ let sound1, sound2, sound3;
 let ieHover = false;
 let threeDHover = false;
 let saHover = false;
+let radioHover = false;
 
 const mouse = new THREE.Vector2(),
   raycaster = new THREE.Raycaster();
@@ -149,7 +151,164 @@ window.addEventListener("load", () => {
 
   sidetrigger.onmouseleave = () => {};
 
+  ie.addEventListener("mouseover", () => {
+    ieHover = !ieHover;
+
+    images1 = [];
+    images2 = [];
+    images3 = [];
+
+    const textureLoader = new THREE.TextureLoader();
+    const texture = textureLoader.load("img/port/interface/int1.png");
+    const texture1 = textureLoader.load("img/port/interface/int2.png");
+    const texture2 = textureLoader.load("img/port/interface/int4.png");
+
+    const geometry = new THREE.BoxGeometry(20, 25, 5);
+    geometry.translate(-30, -20, 0);
+    const material = new THREE.MeshLambertMaterial({
+      color: 0xffffff,
+      side: THREE.DoubleSide,
+      map: texture,
+    });
+    const material1 = new THREE.MeshLambertMaterial({
+      color: 0xffffff,
+      side: THREE.DoubleSide,
+      map: texture1,
+    });
+    const material2 = new THREE.MeshLambertMaterial({
+      color: 0xffffff,
+      side: THREE.DoubleSide,
+      map: texture2,
+    });
+    const image = new THREE.Mesh(geometry, material);
+    images.push(image);
+    const image1 = new THREE.Mesh(geometry, material1);
+    images.push(image1);
+    const image2 = new THREE.Mesh(geometry, material2);
+    images.push(image2);
+
+    while (images.length > 3) {
+      images.splice(0, 1);
+      images.forEach((image) => {
+        image.geometry.dispose();
+        image.material.dispose();
+        scene.remove(image);
+      });
+    }
+
+    images.forEach(function (image) {
+      image.position.set(
+        Math.random() * 30,
+        Math.random() * 50,
+        Math.random() * 25
+      );
+      scene.add(image);
+      imggroup.add(image);
+    });
+
+    // something here
+
+    // if (!threeDHover || !saHover || !radioHover) {
+    //   while (images.length > 3) {
+    //     images.splice(0, 1);
+    //     images.forEach((image) => {
+    //       image.geometry.dispose();
+    //       image.material.dispose();
+    //       scene.remove(image);
+    //     });
+    //   }
+
+    //   while (scene.children.length > 3) {
+    //     scene.children.splice(3, 1);
+    //     scene.children.forEach((i) => {
+    //       i.geometry.dispose();
+    //       i.material.dispose();
+    //       scene.remove(i);
+    //     });
+    //   }
+    // }
+  });
+
+  ie.addEventListener("click", () => {
+    while (images.length > 3) {
+      images.splice(0, 1);
+    }
+    images.forEach((image) => {
+      image.geometry.dispose();
+      image.material.dispose();
+      scene.remove(image);
+    });
+  });
+
+  threeD.addEventListener("mouseover", () => {
+    threeDHover = !threeDHover;
+
+    images = [];
+    images2 = [];
+    images3 = [];
+
+    const textureLoader = new THREE.TextureLoader();
+    const texture = textureLoader.load("img/port/vw/vw1.png");
+    const texture1 = textureLoader.load("img/port/vw/vw2.png");
+    const texture2 = textureLoader.load("img/port/vw/vw3.png");
+
+    const geometry = new THREE.BoxGeometry(20, 25, 5);
+    geometry.translate(-30, -20, 0);
+    const material = new THREE.MeshLambertMaterial({
+      color: 0xffffff,
+      side: THREE.DoubleSide,
+      map: texture,
+    });
+    const material1 = new THREE.MeshLambertMaterial({
+      color: 0xffffff,
+      side: THREE.DoubleSide,
+      map: texture1,
+    });
+    const material2 = new THREE.MeshLambertMaterial({
+      color: 0xffffff,
+      side: THREE.DoubleSide,
+      map: texture2,
+    });
+
+    const image = new THREE.Mesh(geometry, material);
+    images1.push(image);
+    const image1 = new THREE.Mesh(geometry, material1);
+    images1.push(image1);
+    const image2 = new THREE.Mesh(geometry, material2);
+    images1.push(image2);
+
+    while (images1.length > 3) {
+      images1.splice(0, 1);
+      images1.forEach((image) => {
+        image.geometry.dispose();
+        image.material.dispose();
+        scene.remove(image);
+      });
+    }
+
+    images1.forEach(function (image) {
+      image.position.set(
+        Math.random() * 30,
+        Math.random() * 30,
+        Math.random() * 10
+      );
+      scene.add(image);
+    });
+  });
+
+  threeD.addEventListener("click", () => {
+    while (images1.length > 3) {
+      images1.splice(0, 1);
+    }
+    images1.forEach((image) => {
+      image.geometry.dispose();
+      image.material.dispose();
+      scene.remove(image);
+    });
+  });
+
   sa.addEventListener("mouseover", () => {
+    saHover = !saHover;
     images = [];
     images1 = [];
 
@@ -296,6 +455,7 @@ window.addEventListener("load", () => {
   });
 
   radio.addEventListener("mouseover", () => {
+    radioHover = !radioHover;
     images = [];
     images1 = [];
     images2 = [];
@@ -363,185 +523,11 @@ window.addEventListener("load", () => {
     });
   });
 
-  ie.addEventListener("mouseover", () => {
-    ieHover = !ieHover;
-
-    images1 = [];
-    images2 = [];
-
-    const textureLoader = new THREE.TextureLoader();
-    const texture = textureLoader.load("img/port/interface/int1.png");
-    const texture1 = textureLoader.load("img/port/interface/int2.png");
-    const texture2 = textureLoader.load("img/port/interface/int4.png");
-
-    const geometry = new THREE.BoxGeometry(20, 25, 5);
-    geometry.translate(-30, -20, 0);
-    const material = new THREE.MeshLambertMaterial({
-      color: 0xffffff,
-      side: THREE.DoubleSide,
-      map: texture,
-    });
-    const material1 = new THREE.MeshLambertMaterial({
-      color: 0xffffff,
-      side: THREE.DoubleSide,
-      map: texture1,
-    });
-    const material2 = new THREE.MeshLambertMaterial({
-      color: 0xffffff,
-      side: THREE.DoubleSide,
-      map: texture2,
-    });
-    const image = new THREE.Mesh(geometry, material);
-    images.push(image);
-    const image1 = new THREE.Mesh(geometry, material1);
-    images.push(image1);
-    const image2 = new THREE.Mesh(geometry, material2);
-    images.push(image2);
-
-    while (images.length > 3) {
-      images.splice(0, 1);
-      images.forEach((image) => {
-        image.geometry.dispose();
-        image.material.dispose();
-        scene.remove(image);
-      });
-    }
-
-    images.forEach(function (image) {
-      image.position.set(
-        Math.random() * 30,
-        Math.random() * 50,
-        Math.random() * 25
-      );
-      scene.add(image);
-      imggroup.add(image);
-    });
-
-    // something here
-
-    if (!threeDHover) {
-      while (images.length > 3) {
-        images.splice(0, 1);
-        images.forEach((image) => {
-          image.geometry.dispose();
-          image.material.dispose();
-          scene.remove(image);
-        });
-      }
-      // while (scene.children.length > 3) {
-      //   scene.children.splice(3, 1);
-      //   scene.children.forEach((i) => {
-      //     i.geometry.dispose();
-      //     i.material.dispose();
-      //     scene.remove(i);
-      //   });
-      // }
-    }
-  });
-
-  ie.addEventListener("click", () => {
-    while (images.length > 3) {
-      images.splice(0, 1);
-    }
-    images.forEach((image) => {
-      image.geometry.dispose();
-      image.material.dispose();
-      scene.remove(image);
-    });
-  });
-
-  threeD.addEventListener("mouseover", () => {
-    threeDHover = !threeDHover;
-
-    // while (images.length > 3) {
-    //   images.splice(0, 1);
-    //   images.forEach((image) => {
-    //     image.geometry.dispose();
-    //     image.material.dispose();
-    //     scene.remove(image);
-    //   });
-    // }
-
-    images = [];
-    images2 = [];
-
-    const textureLoader = new THREE.TextureLoader();
-    const texture = textureLoader.load("img/port/vw/vw1.png");
-    const texture1 = textureLoader.load("img/port/vw/vw2.png");
-    const texture2 = textureLoader.load("img/port/vw/vw3.png");
-
-    const geometry = new THREE.BoxGeometry(20, 25, 5);
-    geometry.translate(-30, -20, 0);
-    const material = new THREE.MeshLambertMaterial({
-      color: 0xffffff,
-      side: THREE.DoubleSide,
-      map: texture,
-    });
-    const material1 = new THREE.MeshLambertMaterial({
-      color: 0xffffff,
-      side: THREE.DoubleSide,
-      map: texture1,
-    });
-    const material2 = new THREE.MeshLambertMaterial({
-      color: 0xffffff,
-      side: THREE.DoubleSide,
-      map: texture2,
-    });
-
-    const image = new THREE.Mesh(geometry, material);
-    images1.push(image);
-    const image1 = new THREE.Mesh(geometry, material1);
-    images1.push(image1);
-    const image2 = new THREE.Mesh(geometry, material2);
-    images1.push(image2);
-
-    while (images.length > 3) {
-      images.splice(0, 1);
-      images.forEach((image) => {
-        image.geometry.dispose();
-        image.material.dispose();
-        scene.remove(image);
-      });
-    }
-
-    while (images1.length > 3) {
-      images1.splice(0, 1);
-      images1.forEach((image) => {
-        image.geometry.dispose();
-        image.material.dispose();
-        scene.remove(image);
-      });
-    }
-
-    while (images2.length > 3) {
-      images2.splice(0, 1);
-      images2.forEach((image) => {
-        image.geometry.dispose();
-        image.material.dispose();
-        scene.remove(image);
-      });
-    }
-
-    images1.forEach(function (image) {
-      image.position.set(
-        Math.random() * 30,
-        Math.random() * 30,
-        Math.random() * 10
-      );
-      scene.add(image);
-    });
-  });
-
-  threeD.addEventListener("click", () => {
-    while (images1.length > 3) {
-      images1.splice(0, 1);
-    }
-    images1.forEach((image) => {
-      image.geometry.dispose();
-      image.material.dispose();
-      scene.remove(image);
-    });
-  });
+  // cl.addEventListener("click", () => {
+  //   while (scene.children.length > 4) {
+  //     scene.children.splice(4, 1);
+  //   }
+  // });
 
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setSize(window.innerWidth, window.innerHeight);

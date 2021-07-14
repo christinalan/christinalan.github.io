@@ -151,6 +151,55 @@ window.addEventListener("load", () => {
 
   sidetrigger.onmouseleave = () => {};
 
+  sidetrigger.addEventListener("touchstart", () => {
+    clicked = !clicked;
+
+    if (clicked) {
+      links.forEach((link) => {
+        link.style.display = "inline";
+        link.style.flexDirection = "row";
+        link.style.lineHeight = "250%";
+        link.style.textTransform = "lowercase";
+        link.style.textDecoration = "none";
+      });
+
+      var loader = new THREE.FontLoader();
+      loader.load("text/Exo2.json", function (font) {
+        var mT = new THREE.MeshPhongMaterial({
+          color: "white",
+          specular: 0x555555,
+          shininess: 30,
+          transparent: true,
+        });
+        for (let i = 0; i < alinks.length; i++) {
+          gTs[i] = new THREE.TextGeometry(alinks[i].innerHTML, {
+            font: font,
+            size: 8,
+            height: 3,
+            curveSegments: 6,
+            bevelEnabled: false,
+            bevelThickness: 1,
+            bevelSize: 0.5,
+            bevelSegments: 2,
+          });
+          navTexts[i] = new THREE.Mesh(gTs[i], mT);
+
+          navTexts[i].position.set(-48, 7 + 10 * i, -8);
+          navTexts[i].scale.set(0.2, 0.2, 0.2);
+
+          //   scene.add(navTexts[i]);
+        }
+      });
+    } else {
+      links.forEach((link) => {
+        link.style.display = "none";
+      });
+      navTexts.forEach((e) => {
+        scene.remove(e);
+      });
+    }
+  });
+
   ie.addEventListener("mouseover", () => {
     ieHover = !ieHover;
 

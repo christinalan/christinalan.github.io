@@ -342,6 +342,7 @@ window.addEventListener("load", () => {
         Math.random() * 10
       );
       scene.add(image);
+      imggroup.add(image);
     });
   });
 

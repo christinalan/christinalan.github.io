@@ -137,4 +137,11 @@ body {
   .navlink {
     background-color: rgb(101, 199, 4);
   }
+
+  #button {
+    position: fixed;
+    display: none;
+    margin-top: 55%;
+    margin-left: -1px;
+  }
 }

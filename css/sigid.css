@@ -19,8 +19,13 @@ body {
 }
 
 .top {
+  margin-top: -1%;
   display: flex;
   flex-direction: row;
+}
+
+#video_tag {
+  font-size: 0.5em;
 }
 
 button {
@@ -54,7 +59,7 @@ h1 {
 }
 
 p {
-  margin-top: -1%;
+  margin-top: -3%;
   margin-left: 10%;
 }
 
@@ -63,9 +68,21 @@ p {
 }
 
 .note {
+  margin-top: -2%;
   font-size: 10px;
 }
 
 #wiki {
   z-index: 9999;
+}
+
+@media all and (orientation: portrait) {
+  p {
+    margin-top: 10%;
+  }
+
+  button {
+    margin-right: 10%;
+    margin-left: -15%;
+  }
 }

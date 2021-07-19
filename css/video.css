@@ -101,16 +101,18 @@ iframe {
 @media all and (orientation: portrait) {
   .directory {
     width: 100%;
+    margin-bottom: 10%;
   }
 
   .videos {
-    position: relative;
-    top: 0%;
-    left: 0%;
-    overflow: visible;
+    /* position: fixed; */
+    /* overflow: visible; */
+    top: 40%;
+    left: 35%;
   }
 
   iframe {
-    width: 100%;
+    width: 224px;
+    height: 126px;
   }
 }

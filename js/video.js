@@ -68,8 +68,8 @@ unity.addEventListener("mouseover", () => {
 
   for (let i = 0; i < unityVids.length; i++) {
     unityVids[i].style.display = "block";
-    unityVids[i].style.width = "426px";
-    unityVids[i].style.height = "240px";
+    // unityVids[i].style.width = "426px";
+    // unityVids[i].style.height = "240px";
     unityVids[i].style.marginTop = i * 20;
   }
 });
@@ -101,8 +101,8 @@ threeJS.addEventListener("mouseover", () => {
 
   for (let i = 0; i < threeJSVids.length; i++) {
     threeJSVids[i].style.display = "block";
-    threeJSVids[i].style.width = "426px";
-    threeJSVids[i].style.height = "240px";
+    // threeJSVids[i].style.width = "426px";
+    // threeJSVids[i].style.height = "240px";
     threeJSVids[i].style.marginTop = i * 10;
   }
 });
@@ -134,8 +134,8 @@ odddot.addEventListener("mouseover", () => {
 
   for (let i = 0; i < odddotVids.length; i++) {
     odddotVids[i].style.display = "block";
-    odddotVids[i].style.width = "426px";
-    odddotVids[i].style.height = "240px";
+    // odddotVids[i].style.width = "426px";
+    // odddotVids[i].style.height = "240px";
     odddotVids[i].style.marginTop = i * 10;
   }
 });
@@ -166,8 +166,8 @@ wildMint.addEventListener("mouseover", () => {
   }
   for (let i = 0; i < wildMintVids.length; i++) {
     wildMintVids[i].style.display = "block";
-    wildMintVids[i].style.width = "426px";
-    wildMintVids[i].style.height = "240px";
+    // wildMintVids[i].style.width = "426px";
+    // wildMintVids[i].style.height = "240px";
     wildMintVids[i].style.marginTop = i * 10;
   }
 });
@@ -199,8 +199,8 @@ bf.addEventListener("mouseover", () => {
 
   for (let i = 0; i < bfVids.length; i++) {
     bfVids[i].style.display = "block";
-    bfVids[i].style.width = "426px";
-    bfVids[i].style.height = "240px";
+    // bfVids[i].style.width = "426px";
+    // bfVids[i].style.height = "240px";
     bfVids[i].style.marginTop = i * 10;
   }
 });
@@ -232,8 +232,8 @@ vice.addEventListener("mouseover", () => {
 
   for (let i = 0; i < viceVids.length; i++) {
     viceVids[i].style.display = "block";
-    viceVids[i].style.width = "426px";
-    viceVids[i].style.height = "240px";
+    // viceVids[i].style.width = "426px";
+    // viceVids[i].style.height = "240px";
     viceVids[i].style.marginTop = i * 10;
   }
 });
@@ -263,13 +263,17 @@ sfx.addEventListener("mouseover", () => {
   }
 
   sfxVids[0].style.display = "block";
-  sfxVids[0].style.width = "426px";
-  sfxVids[0].style.height = "240px";
+  //   sfxVids[0].style.width = "426px";
+  //   sfxVids[0].style.height = "240px";
 });
 
 color.addEventListener("mouseover", () => {
   for (let i = 0; i < odddotVids.length; i++) {
     odddotVids[i].style.display = "none";
+  }
+
+  for (let i = 0; i < wildMintVids.length; i++) {
+    wildMintVids[i].style.display = "none";
   }
   for (let i = 0; i < unityVids.length; i++) {
     unityVids[i].style.display = "none";
@@ -292,13 +296,16 @@ color.addEventListener("mouseover", () => {
   }
 
   colorVids[0].style.display = "block";
-  colorVids[0].style.width = "426px";
-  colorVids[0].style.height = "240px";
+  //   colorVids[0].style.width = "426px";
+  //   colorVids[0].style.height = "240px";
 });
 
 laenz.addEventListener("mouseover", () => {
   for (let i = 0; i < odddotVids.length; i++) {
     odddotVids[i].style.display = "none";
+  }
+  for (let i = 0; i < wildMintVids.length; i++) {
+    wildMintVids[i].style.display = "none";
   }
   for (let i = 0; i < unityVids.length; i++) {
     unityVids[i].style.display = "none";
@@ -320,8 +327,8 @@ laenz.addEventListener("mouseover", () => {
 
   for (let i = 0; i < laenzVids.length; i++) {
     laenzVids[i].style.display = "block";
-    laenzVids[i].style.width = "426px";
-    laenzVids[i].style.height = "240px";
+    // laenzVids[i].style.width = "426px";
+    // laenzVids[i].style.height = "240px";
     laenzVids[i].style.marginTop = i * 10;
   }
 });
@@ -329,6 +336,9 @@ laenz.addEventListener("mouseover", () => {
 nate.addEventListener("mouseover", () => {
   for (let i = 0; i < odddotVids.length; i++) {
     odddotVids[i].style.display = "none";
+  }
+  for (let i = 0; i < wildMintVids.length; i++) {
+    wildMintVids[i].style.display = "none";
   }
   for (let i = 0; i < unityVids.length; i++) {
     unityVids[i].style.display = "none";
@@ -352,13 +362,16 @@ nate.addEventListener("mouseover", () => {
   }
 
   colorVids[0].style.display = "block";
-  colorVids[0].style.width = "426px";
-  colorVids[0].style.height = "240px";
+  //   colorVids[0].style.width = "426px";
+  //   colorVids[0].style.height = "240px";
 });
 
 an.addEventListener("mouseover", () => {
   for (let i = 0; i < odddotVids.length; i++) {
     odddotVids[i].style.display = "none";
+  }
+  for (let i = 0; i < wildMintVids.length; i++) {
+    wildMintVids[i].style.display = "none";
   }
   for (let i = 0; i < unityVids.length; i++) {
     unityVids[i].style.display = "none";
@@ -380,8 +393,8 @@ an.addEventListener("mouseover", () => {
 
   for (let i = 0; i < anVids.length; i++) {
     anVids[i].style.display = "block";
-    anVids[i].style.width = "426px";
-    anVids[i].style.height = "240px";
+    // anVids[i].style.width = "426px";
+    // anVids[i].style.height = "240px";
     anVids[i].style.marginTop = i * 10;
   }
 });

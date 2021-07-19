@@ -1,5 +1,6 @@
 @viewport {
   width: device-width;
+  height: device-height;
 }
 
 #container {
@@ -93,6 +94,8 @@ h4 {
 iframe {
   border: none;
   display: none;
+  width: 426px;
+  height: 240px;
 }
 
 @media all and (orientation: portrait) {
@@ -101,8 +104,13 @@ iframe {
   }
 
   .videos {
-    position: fixed;
+    position: relative;
     top: 0%;
     left: 0%;
+    overflow: visible;
+  }
+
+  iframe {
+    width: 100%;
   }
 }

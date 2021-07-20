@@ -138,7 +138,10 @@ body {
   }
 
   .navlink {
-    background-color: rgb(101, 199, 4);
+    background-color: rgb(84, 165, 4);
+    padding: 0px 15px 10px 0px;
+    border-radius: 0.1em;
+    width: 50%;
   }
 
   #button {

@@ -47,6 +47,9 @@ body {
 .sidetext a {
   background-color: transparent;
   display: inline-block;
+  transform: skewX(-8deg);
+  /* font-style: oblique; */
+  /* text-shadow: 2px 3px 5px rgb(153, 153, 153); */
 }
 
 .sidetext a:hover {

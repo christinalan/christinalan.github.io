@@ -1,7 +1,16 @@
 * {
   font-family: "Forum", cursive;
-  background-color: black;
   color: rgb(194, 194, 194);
+}
+
+body {
+  background-color: black;
+}
+
+.links {
+  margin-left: 2%;
+  width: 15%;
+  cursor: cell;
 }
 
 h4 {
@@ -10,4 +19,108 @@ h4 {
   margin-left: 2%;
   z-index: 2;
   text-transform: uppercase;
+}
+
+h4:hover {
+  color: rgb(103, 167, 0);
+}
+
+#drag {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+}
+
+.notesBox {
+  display: none;
+  z-index: 2; /* Sit on top */
+  background-color: rgb(202, 202, 202);
+  width: 80%;
+  height: 35%;
+
+  margin-top: -100%;
+  margin-left: 100%;
+}
+
+.upperBox {
+  background-color: rgb(184, 184, 184);
+  width: 100%;
+  height: 12%;
+}
+
+/* The Close Button */
+.close {
+  background-color: rgba(184, 184, 184, 0);
+  color: rgb(121, 120, 120);
+  float: right;
+  margin-right: 1%;
+  font-size: 3em;
+  margin-top: -4%;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: cell;
+}
+
+.avLinks {
+  position: fixed;
+  display: none;
+  margin-top: 2%;
+}
+
+.releasesLinks {
+  position: fixed;
+  display: none;
+  margin-top: -24%;
+}
+
+.mixesLinks {
+  position: fixed;
+  display: none;
+  margin-top: -12%;
+}
+
+.liveLinks {
+  position: fixed;
+  display: none;
+  margin-top: -26%;
+}
+
+.notesBox a {
+  display: flex;
+  position: fixed;
+  margin-left: 1.5%;
+  display: none;
+  font-family: monospace;
+  text-transform: lowercase;
+  color: black;
+  font-size: 1.2em;
+  z-index: 3;
+}
+
+.notesBox a:hover {
+  color: rgb(211, 255, 140);
+}
+
+.bottom {
+  margin-left: 2%;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 1%;
+  font-size: 1.5em;
+  float: right;
+  color: rgba(175, 174, 174, 0.6);
+}
+
+.bottom a {
+  text-transform: lowercase;
+  text-decoration: none;
+  color: rgba(175, 174, 174, 0.6);
+}
+
+.bottom a:hover {
+  color: white;
 }

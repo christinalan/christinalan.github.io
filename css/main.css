@@ -122,6 +122,11 @@ body {
   color: rgba(177, 177, 177, 0.6);
 }
 
+.contact a {
+  color: rgba(177, 177, 177, 0.6);
+  text-decoration: none;
+}
+
 @media all and (orientation: portrait) {
   .sidetext {
     margin: 3% 0% 5% 20%;

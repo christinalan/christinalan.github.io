@@ -138,5 +138,5 @@ window.addEventListener("load", () => {
       avLinks[i].style.display = "none";
     }
   };
-  dragElement(document.getElementById("drag"));
+  dragElement(document.getElementById("notesBox"));
 });

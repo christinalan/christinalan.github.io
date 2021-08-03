@@ -18,6 +18,7 @@
       <h4 id="mixes">Select Mixes</h4>
       <h4 id="live">Live</h4>
     </div>
+
     <div id="drag">
       <div class="notesBox" id="notesBox">
         <div class="upperBox" id="upperBox">
@@ -82,8 +83,36 @@
     <div class="bottom">
       <a href="https://soundcloud.com/laenzzz">SOUNDCLOUD</a> ||
       <a href="https://laenz.bandcamp.com/">BANDCAMP</a>
-      <!-- <a href="https://easternmargins.bandcamp.com/album/unsleep">UNSLEEP</a> -->
     </div>
+
+    <div id="overlay">
+      <button id="startButton">Play</button>
+    </div>
+
+    <div id="container"></div>
+
+    <audio
+      src="/Audio/soundpage/natural.mp3"
+      loop
+      style="display: none"
+      id="track1"
+      type="audio/mpeg"
+      preload="auto"
+    ></audio>
+
+    <audio
+      src="/Audio/soundpage/unnatural.mp3"
+      loop
+      style="display: none"
+      id="track2"
+      type="audio/mpeg"
+      preload="auto"
+    ></audio>
+
+    <button id="mute">Mute</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
     <script type="module" src="/js/sound.js"></script>
+    <script type="module" src="/js/sound3.js"></script>
   </body>
 </html>

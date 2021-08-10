@@ -38,7 +38,7 @@ h4:hover {
   margin-left: 1%;
   position: absolute;
   display: none;
-  z-index: 2; /* Sit on top */
+  z-index: 2;
   background-color: rgb(202, 202, 202);
   width: 15%;
   height: 30%;
@@ -67,30 +67,6 @@ h4:hover {
   cursor: cell;
 }
 
-.avLinks {
-  position: fixed;
-  display: none;
-  margin-top: 1%;
-}
-
-.releasesLinks {
-  position: fixed;
-  display: none;
-  margin-top: 10%;
-}
-
-.mixesLinks {
-  position: fixed;
-  display: none;
-  margin-top: -11%;
-}
-
-.liveLinks {
-  position: fixed;
-  display: none;
-  margin-top: -26%;
-}
-
 .notesBox a {
   display: flex;
   margin-left: 1.5%;
@@ -103,6 +79,30 @@ h4:hover {
 
 .notesBox a:hover {
   color: rgb(211, 255, 140);
+}
+
+.avLinks {
+  position: fixed;
+  display: none;
+  margin-top: 1%;
+}
+
+.releasesLinks {
+  position: fixed;
+  display: none;
+  margin-top: -10%;
+}
+
+.mixesLinks {
+  position: fixed;
+  display: none;
+  margin-top: -13%;
+}
+
+.liveLinks {
+  position: fixed;
+  display: none;
+  margin-top: -24%;
 }
 
 .bottom {
@@ -158,30 +158,25 @@ h4:hover {
   }
 
   .notesBox {
-    clear: both;
-    height: 25%;
-    width: 200%;
-    margin-top: 20%;
-    z-index: 100;
+    height: 40%;
+    margin-left: 50%;
+    margin-top: -45%;
   }
 
   .avLinks {
-    z-index: 99;
+    margin-top: 3%;
   }
 
   .releasesLinks {
-    margin-top: -70%;
-    z-index: 99;
+    margin-top: -30%;
   }
 
   .mixesLinks {
-    margin-top: -55%;
-    z-index: 99;
+    margin-top: -85%;
   }
 
   .liveLinks {
     margin-top: -80%;
-    z-index: 99;
   }
 }
 

@@ -75,7 +75,7 @@ h4:hover {
 }
 
 .avLinks {
-  position: sticky;
+  position: fixed;
   display: none;
   margin-top: 1%;
 }
@@ -89,7 +89,7 @@ h4:hover {
 .mixesLinks {
   position: fixed;
   display: none;
-  margin-top: -13%;
+  margin-top: -11%;
 }
 
 .liveLinks {
@@ -100,7 +100,6 @@ h4:hover {
 
 .notesBox a {
   display: flex;
-  position: fixed;
   margin-left: 1.5%;
   display: none;
   font-family: monospace;
@@ -154,14 +153,26 @@ h4:hover {
 }
 
 @media all and (orientation: portrait) {
+  .container {
+    z-index: -99;
+  }
   .links {
     width: 80%;
   }
 
+  .upperBox {
+    height: 21%;
+  }
+
   .notesBox {
-    width: 200%;
-    height: 27%;
-    margin-top: 10%;
+    position: absolute;
+    height: 37%;
+    margin-left: 40%;
+    margin-top: -20%;
+  }
+
+  .notesBox a {
+    z-index: 1000%;
   }
 
   .releasesLinks {
@@ -169,7 +180,7 @@ h4:hover {
   }
 
   .mixesLinks {
-    margin-top: -35%;
+    margin-top: -55%;
   }
 
   .liveLinks {

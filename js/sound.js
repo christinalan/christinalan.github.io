@@ -138,5 +138,12 @@ window.addEventListener("load", () => {
       avLinks[i].style.display = "none";
     }
   };
-  dragElement(document.getElementById("notesBox"));
+
+  var x = window.matchMedia("(min-width: 375px)");
+  if (x.matches) {
+    dragElement(document.getElementById("notesBox"));
+  } else {
+  }
+
+  // dragElement(document.getElementById("notesBox"));
 });

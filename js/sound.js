@@ -141,7 +141,7 @@ window.addEventListener("load", () => {
 
   var x = window.matchMedia("(min-width: 375px)");
   if (x.matches) {
-    dragElement(document.getElementById("notesBox"));
+    // dragElement(document.getElementById("notesBox"));
   } else {
   }
 

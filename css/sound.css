@@ -34,6 +34,8 @@ h4:hover {
 }
 
 .notesBox {
+  margin-top: 5%;
+  margin-left: 1%;
   position: absolute;
   display: none;
   z-index: 2; /* Sit on top */
@@ -74,7 +76,7 @@ h4:hover {
 .releasesLinks {
   position: fixed;
   display: none;
-  margin-top: -30%;
+  margin-top: 10%;
 }
 
 .mixesLinks {

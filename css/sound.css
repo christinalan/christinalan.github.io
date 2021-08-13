@@ -14,13 +14,14 @@
 .button {
   display: flex;
   position: fixed;
-  margin-top: 3%;
+  margin-top: 2.5%;
   margin-left: 87%;
   font-size: 1.3em;
   background-color: black;
   color: white;
-  height: 5%;
-  width: 5%;
+  padding: 7px;
+  /* height: 5%;
+  width: 5%; */
 }
 
 body {

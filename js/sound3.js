@@ -4,10 +4,10 @@ import { PositionalAudioHelper } from "https://threejsfundamentals.org/threejs/r
 
 let scene, camera, renderer;
 
-let startButton = document.getElementById("startButton");
+let startButton = document.getElementById("button_play");
 startButton.addEventListener("click", init);
 
-let muteButton = document.getElementById("mute");
+let muteButton = document.getElementById("button_mute");
 let isPlaying = false;
 
 function init() {

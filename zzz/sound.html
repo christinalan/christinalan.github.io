@@ -16,6 +16,12 @@
       <button class="button" onclick="window.location.href = '../index.html';">
         Back
       </button>
+
+      <div id="overlay">
+        <button class="button" id="button_play">Play</button>
+      </div>
+
+      <button class="button" id="button_mute">Mute</button>
     </div>
 
     <div class="links">
@@ -31,6 +37,7 @@
           <span id="close" class="close">&times;</span>
         </div>
         <div>
+          <a class="avLinks" href="p8.html">P8 Residency</a><br /><br />
           <a class="avLinks" href="sigidplay.html">Sigid Play</a><br /><br />
           <a class="avLinks" href="wait.html">nonclub</a><br /><br />
           <a class="avLinks" href="https://chatnimal.herokuapp.com/"
@@ -92,9 +99,9 @@
       <a href="https://laenz.bandcamp.com/">BANDCAMP</a>
     </div>
 
-    <div id="overlay">
+    <!-- <div id="overlay">
       <button id="startButton">Play</button>
-    </div>
+    </div> -->
 
     <div id="container"></div>
 
@@ -116,7 +123,7 @@
       preload="auto"
     ></audio>
 
-    <button id="mute">Mute</button>
+    <!-- <button class="button" id="button_mute">Mute</button> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
     <script type="module" src="/js/sound.js"></script>

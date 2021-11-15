@@ -24,6 +24,19 @@
   width: 5%; */
 }
 
+#button_play {
+  position: fixed;
+  margin-top: 8%;
+  width: 4%;
+}
+
+#button_mute {
+  position: fixed;
+  margin-top: 8%;
+  width: 4%;
+  display: none;
+}
+
 body {
   background-color: black;
 }
@@ -47,14 +60,12 @@ h4:hover {
 }
 
 .notesBox {
-  margin-top: 5%;
-  margin-left: 1%;
   position: absolute;
   display: none;
   z-index: 2;
-  background-color: rgb(202, 202, 202);
+  background-color: rgba(202, 202, 202, 0.5);
   width: 15%;
-  height: 30%;
+  height: 35%;
 }
 
 .upperBox {
@@ -103,13 +114,13 @@ h4:hover {
 .releasesLinks {
   position: fixed;
   display: none;
-  margin-top: -10%;
+  margin-top: -12%;
 }
 
 .mixesLinks {
   position: fixed;
   display: none;
-  margin-top: -13%;
+  margin-top: -14%;
 }
 
 .liveLinks {

@@ -1,13 +1,56 @@
+header {
+    font-weight: 300;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
 body {
     font-family: 'Jost', sans-serif;
-    text-align: center;
+    color: black;
+    text-align:center;   
 }
 
-h1 {
-    font-weight: 700;
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+    line-height: 40px;
 }
 
-h3 {
+section {
+    width: 1000px;
+    display: table-cell;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 10px;
+}
+
+.title {
+    font-size: 1.5rem;
     font-weight: 400;
+    /* transition: transform 0.2s;
+    transform: scale(0.5) */
+
+}
+
+p {
+    font-size: 0.8em;
+    letter-spacing: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: limegreen;
 }
 

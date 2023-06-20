@@ -1,5 +1,6 @@
+
 window.addEventListener('load', (e) => {
-    document.querySelectorAll('a').forEach((link)=>{
+    document.getElementById("links").querySelectorAll('a').forEach((link)=>{
         const letters = link.innerHTML.split('');
         link.innerHTML = '';
 

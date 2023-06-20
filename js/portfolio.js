@@ -25,7 +25,7 @@ document.addEventListener('mousemove', (event) => {
         const dist = Math.sqrt(dx * dx + dy * dy)
         const score = Math.exp(dist * -0.005)
         
-        document.body.style.backgroundColor = "red"
+
         // letter.innerHTML = score.toFixed(1)
 
         letter.style.transform = "scale(" + 1.5 * score +")"

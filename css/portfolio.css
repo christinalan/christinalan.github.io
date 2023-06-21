@@ -111,3 +111,33 @@ a:hover {
     color: #CCCC00
 }
 
+
+@media all and (orientation: portrait) {
+    header {
+        margin-left: 5px;
+        padding-left: 5px;
+
+    }
+
+    .container-left {
+        margin-top: 10px;
+        margin-left: 5px;
+        padding-left: 5px;
+        display: flex;
+        flex-direction: row;
+        line-height: 10px;
+        height: 800px;
+    }
+
+    .project-link {
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+    }
+
+    p {
+        font-size: 0.7rem;
+    }
+}

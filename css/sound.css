@@ -27,13 +27,13 @@
 #button_play {
   position: fixed;
   margin-top: 8%;
-  width: 4%;
+  min-width: 4%;
 }
 
 #button_mute {
   position: fixed;
   margin-top: 8%;
-  width: 4%;
+  min-width: 4%;
   display: none;
 }
 
@@ -64,8 +64,9 @@ h4:hover {
   display: none;
   z-index: 2;
   background-color: rgba(202, 202, 202, 0.5);
-  width: 15%;
+  width: 18%;
   height: 35%;
+  margin-left: 2em;
 }
 
 .upperBox {
@@ -182,9 +183,10 @@ h4:hover {
   }
 
   .notesBox {
+    width: 30%;
     height: 40%;
-    margin-left: 50%;
-    margin-top: -45%;
+    margin-left: 40%;
+    margin-top: -40%;
   }
 
   .avLinks {
@@ -209,7 +211,7 @@ h4:hover {
     width: 100%;
   }
   .notesBox {
-    width: 30%;
+    width: 70%;
   }
   #startButton {
     margin-left: 3%;

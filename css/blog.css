@@ -33,7 +33,11 @@ h2 {
   flex-direction: row;
   column-gap: 10%;
   width: 100%;
+  align-items: center;
+  margin-left: 25px;
+  font-size: 20px;
 }
+
 
 .mainnav {
   display: flex;
@@ -47,10 +51,9 @@ h2 {
 
 .button {
   position: relative;
-  margin-top: 4%;
   margin-left: 20%;
   border-radius: 8px;
-  font-size: 0.6em;
+  font-size: 0.8em;
   background-color: black;
   color: white;
   padding: 8px;
@@ -94,11 +97,6 @@ li a:hover {
 #points ul {
   list-style-type: circle;
   position: fixed;
-}
-
-.title {
-  margin-left: 15px;
-  font-size: 30px;
 }
 
 .post {

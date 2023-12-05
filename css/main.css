@@ -42,6 +42,7 @@ body {
   width: 40%;
   text-align: right;
   margin: 3% 0% 5% 2%;
+  margin-right: 0.5rem;
 }
 
 .sidetext a {
@@ -62,7 +63,7 @@ body {
   cursor: cell;
 }
 
-#button {
+button {
   display: none;
   margin: 20% 25%;
   background-color: black;
@@ -149,7 +150,7 @@ body {
     width: 50%;
   }
 
-  #button {
+button {
     position: fixed;
     display: none;
     margin-top: 55%;

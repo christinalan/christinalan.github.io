@@ -11,14 +11,11 @@ let projects = document.getElementById("projects");
 
 let audioButton = document.getElementById("audio-button");
 
-let sidetrigger = document.getElementById("leftside");
-let links = document.getElementsByClassName("navlink");
-let clicked = false;
 let buttonC = false;
 let audioHover = false;
 
 
-let scene, camera, renderer, dragControls, group, imggroup, controls, container;
+let scene, camera, renderer, dragControls, group, controls, container;
 
 let images = [];
 const MAX_IMAGES = 3
@@ -52,28 +49,6 @@ window.addEventListener("load", () => {
   group = new THREE.Group();
   scene.add(group);
 
-  imggroup = new THREE.Group();
-  scene.add(imggroup);
-
-  sidetrigger.addEventListener("click", () => {
-    clicked = !clicked;
-
-    if (clicked) {
-      links.forEach((link) => {
-        link.style.marginTop = "1rem"
-        link.style.display = "flex";
-        link.style.flexDirection = "row";
-        link.style.lineHeight = "150%";
-        link.style.textTransform = "lowercase";
-        link.style.textDecoration = "none";
-      });
-    } else {
-      links.forEach((link) => {
-        link.style.display = "none";
-      });
-  
-    }
-  });
 
   //creates the materials and geometry objects for the 3D images
   function createImages(texturePath, texturePath1, texturePath2) {
@@ -277,130 +252,7 @@ window.addEventListener("load", () => {
       initializeImageAndPosSound("img/port/sa/sa.png", posArray[2], sound3);
       showImages()
     }
-    // const listener = new THREE.AudioListener();
-    // camera.add(listener);
     
-    // if (!audioHover) {
-    //   audioButton.style.display = "block";
-    //   audioButton.addEventListener("click", () => {
-    //     buttonC = true;
-
-    //     if (buttonC == true) {
-    //       audioButton.style.display = "none";
-    //       //   button.remove();
-
-    //       sound1 = document.getElementById("track1");
-
-    //       const pos1 = new THREE.PositionalAudio(listener);
-    //       pos1.setMediaElementSource(sound1);
-    //       pos1.setRefDistance(50);
-    //       pos1.setDistanceModel("exponential");
-    //       pos1.setDirectionalCone(45, 100, 0);
-
-    //       const phelper1 = new PositionalAudioHelper(pos1, 5);
-    //       pos1.add(phelper1);
-
-    //       sound2 = document.getElementById("track2");
-
-    //       const pos2 = new THREE.PositionalAudio(listener);
-    //       pos2.setMediaElementSource(sound2);
-    //       pos2.setRefDistance(50);
-    //       pos2.setDistanceModel("exponential");
-    //       pos2.setDirectionalCone(90, 100, 0);
-    //       pos2.rotation.set(0, Math.PI / 2, 0);
-
-    //       const phelper2 = new PositionalAudioHelper(pos2, 5);
-    //       pos2.add(phelper2);
-
-    //       sound3 = document.getElementById("track3");
-
-    //       const pos3 = new THREE.PositionalAudio(listener);
-    //       pos3.setMediaElementSource(sound3);
-    //       pos3.setRefDistance(50);
-    //       pos3.setDistanceModel("exponential");
-    //       pos3.setDirectionalCone(30, 180, 0);
-    //       pos3.rotation.set(0, Math.PI, 0);
-
-    //       const phelper3 = new PositionalAudioHelper(pos3, 5);
-    //       pos3.add(phelper3);
-
-    //       const textureLoader = new THREE.TextureLoader();
-    //       const texture = textureLoader.load("img/port/sa/sa4.png");
-    //       const texture1 = textureLoader.load("img/port/sa/sa1.png");
-    //       const texture2 = textureLoader.load("img/port/sa/sa.png");
-
-    //       const geometry = new THREE.BoxGeometry(20, 25, 5);
-    //       geometry.translate(-30, -20, 0);
-    //       const material = new THREE.MeshLambertMaterial({
-    //         color: 0xffffff,
-    //         side: THREE.DoubleSide,
-    //         map: texture,
-    //       });
-    //       const material1 = new THREE.MeshLambertMaterial({
-    //         color: 0xffffff,
-    //         side: THREE.DoubleSide,
-    //         map: texture1,
-    //       });
-    //       const material2 = new THREE.MeshLambertMaterial({
-    //         color: 0xffffff,
-    //         side: THREE.DoubleSide,
-    //         map: texture2,
-    //       });
-
-    //       const image = new THREE.Mesh(geometry, material);
-    //       images.push(image);
-    //       image.add(pos1);
-    //       pos1.position.set(-30, -20, 0);
-    //       sound1.play();
-
-    //       const image2 = new THREE.Mesh(geometry, material1);
-    //       images.push(image2);
-    //       image2.add(pos2);
-    //       pos2.position.set(-30, -20, 0);
-    //       sound2.play();
-
-    //       const image3 = new THREE.Mesh(geometry, material2);
-    //       images.push(image3);
-    //       image3.add(pos3);
-    //       pos3.position.set(-30, -20, 0);
-    //       sound3.play();
-
-    //       while (images.length > 3) {
-    //         images.splice(0, 1);
-    //         images.forEach((image) => {
-    //           image.geometry.dispose();
-    //           image.material.dispose();
-    //           scene.remove(image);
-    //         });
-    //       }
-
-    //       images.forEach(function (image) {
-    //         image.position.set(
-    //           Math.random() * 30,
-    //           Math.random() * 40,
-    //           Math.random() * 30
-    //         );
-    //         scene.add(image);
-    //       });
-    //     }
-    //   });
-
-    //   audioHover = true;
-    // }
-
-    // if (audioHover & buttonC) {
-    //   sound1.play();
-    //   sound2.play();
-    //   sound3.play();
-    //   images.forEach(function (image) {
-    //     image.position.set(
-    //       Math.random() * 30,
-    //       Math.random() * 40,
-    //       Math.random() * 30
-    //     );
-    //     scene.add(image);
-    //   });
-    // }
   });
 
 

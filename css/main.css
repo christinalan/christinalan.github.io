@@ -36,20 +36,18 @@ body {
 
 .sidetext {
   color: white;
-  background-color: transparent;
   font-size: 2.5em;
   float: right;
   width: 40%;
   text-align: right;
-  margin: 3% 0% 5% 2%;
-  margin-right: 0.5rem;
+  margin-top: 1rem;
+  margin-right: 0.2rem;
 }
 
 .sidetext a {
   background-color: transparent;
   display: inline-block;
   transform: skewX(-8deg);
-  /* font-style: oblique; */
   /* text-shadow: 2px 3px 5px rgb(153, 153, 153); */
 }
 
@@ -65,53 +63,26 @@ body {
 
 button {
   display: none;
-  margin: 20% 25%;
+  margin: 15rem 20rem;
   background-color: black;
-  padding: 10px;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: black 2px solid;
 }
 
-.folders {
-  margin: 1.5% 1%;
-  background-color: transparent;
-  color: white;
-  text-transform: uppercase;
-  position: fixed;
-  font-size: 2em;
-}
-
-.folders a {
-  font-size: 1em;
-}
-
-.sideNavText {
-  background-color: transparent;
-  text-transform: uppercase;
-  font-size: 0.6em;
-}
-
-#inst {
-  position: fixed;
-  bottom: 0;
-  left: 25%;
-  margin: 3% 0% 1% 0%;
-  color: rgba(177, 177, 177, 0.6);
-  font-size: 1em;
-}
-
-.navlink {
-  display: none;
-}
-
-#sideNav:hover {
-  cursor: cell;
-  display: inline;
-  color: white;
-}
-
-#radio {
+.hover-word {
   z-index: 10;
   text-decoration: none;
   cursor: cell;
+}
+
+#projects {
+  font-size: 2rem;
+  color: lightgrey;
+}
+
+#projects:hover {
+  color:#DC0114;
 }
 
 .contact {
@@ -130,30 +101,13 @@ button {
 
 @media all and (orientation: portrait) {
   .sidetext {
-    margin: 3% 0% 5% 20%;
-    width: 70%;
-  }
-
-  .folders {
-    margin-left: 3%;
-    font-size: 3em;
-  }
-
-  .sideNavText {
-    font-size: 0.4em;
-  }
-
-  .navlink {
-    background-color: rgb(84, 165, 4);
-    padding: 0px 15px 10px 0px;
-    border-radius: 0.1em;
-    width: 50%;
+    width: 80%;
   }
 
 button {
     position: fixed;
     display: none;
-    margin-top: 55%;
-    margin-left: -1px;
+    margin-top: 60%;
+    margin-left: 0px;
   }
 }

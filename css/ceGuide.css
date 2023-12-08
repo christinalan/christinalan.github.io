@@ -1,0 +1,118 @@
+body {
+  font-family: "Jaldi", sans-serif;
+  height: 2000px;
+  color: white;
+  background-color: black;
+  transition: background-color 1s ease;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+h2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.button_audio {
+  height: 40px;
+  margin-top: 5px;
+  margin-right: 15px;
+  border-radius: 20px;
+  padding: 13px;
+  z-index: 2;
+}
+
+/* .button_micplay {
+  font-size: 15px;
+  padding: 7px;
+} */
+
+.audio_container {
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.roomButtons {
+  display: flex;
+  flex-direction: row;
+  float: left;
+  margin: 50px 20px;
+  padding: 10px;
+}
+
+.lightButtons {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  margin: 250px 90px;
+  padding: 10px;
+}
+
+.fogButtons {
+  display: flex;
+  flex-direction: row;
+  float: left;
+  margin: 1000px 10px;
+  padding: 10px;
+}
+
+.blobButtons {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  margin: 1000px 10px;
+  padding: 10px;
+}
+
+.micButtons {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  margin: 1500px 150px;
+  padding: 10px;
+}
+
+.project_scroll {
+  font-size: 72px;
+}
+
+.embed {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  bottom: 10px;
+  position: fixed;
+}
+
+canvas {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  position: fixed;
+  top: -10px;
+  z-index: -1;
+}
+
+input,
+span {
+  display: flex;
+  flex-direction: row;
+  /* position: fixed; */
+  margin-left: 1150px;
+  padding-left: 100px;
+  font-size: 10px;
+  z-index: 2;
+}
+
+input {
+  appearance: none;
+  background: hsl(214, 2%, 34%);
+}
+
+.blob_video {
+  /* width: 100vw;
+  height: 100vh; */
+  position: absolute;
+  z-index: 0;
+}

@@ -1,0 +1,37 @@
+.marquee {
+ margin: 10px;
+ text-align: center;
+ -moz-animation: scroll 0.5s linear infinite;
+ -webkit-animation: scroll 0.1s linear infinite;
+ animation: scroll 0.1s linear infinite;
+}
+
+header {
+  color: #BDC3C7;
+  font-family: "Oxygen Mono";
+  line-height: 20px;
+}
+
+.scroll-right {
+  font-size: 72px;
+}
+
+.scroll-up {
+  font-size: 200px;
+}
+
+.scroll-down {
+  font-size: 100px;
+}
+
+a:link {
+  color: #BDC3C7;
+}
+
+a:visited {
+  color: #BDC3C7;
+}
+
+a:hover {
+  color: #FFFF00;
+}

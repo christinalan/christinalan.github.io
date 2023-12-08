@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/sound.css" />
+    <title>Sound</title>
+  </head>
+  <body>
+    <div class="title">
+      <button class="button" onclick="window.location.href = '../index.html';">
+        Back
+      </button>
+
+      <div id="overlay">
+        <button class="button" id="button_play">Play</button>
+      </div>
+
+      <button class="button" id="button_mute">Mute</button>
+    </div>
+
+    <div class="links">
+      <h4 id="av">Audio-Visual</h4>
+      <h4 id="releases">Releases</h4>
+      <h4 id="mixes">Select Mixes</h4>
+      <h4 id="live">Live</h4>
+    </div>
+
+    <div id="drag">
+      <div class="notesBox" id="notesBox">
+        <div class="upperBox" id="upperBox">
+          <span id="close" class="close">&times;</span>
+        </div>
+        <div>
+          <a class="avLinks" href="https://soundcloud.com/laenzzz/sets/world_upstream/s-HLJAY8T2qdG?si=c984bef7cc7546c388b1e842fd99420b&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">
+            World Upstream clips
+          </a><br /><br />
+          <a class="avLinks" href="p8.html">P8 Residency</a><br /><br />
+          <a class="avLinks" href="sigidplay.html">Sigid Play</a><br /><br />
+          <a class="avLinks" href="wait.html">nonclub</a><br /><br />
+          <a class="avLinks" href="https://chatnimal.herokuapp.com/"
+            >chatnimal</a
+          ><br /><br />
+          <a class="avLinks" href="fs.html">freesound</a><br /><br />
+        </div>
+        <div>
+          <a
+            class="releasesLinks"
+            href="https://easternmargins.bandcamp.com/album/unsleep"
+            >Unsleep</a
+          ><br /><br />
+          <a class="releasesLinks" href="https://laenz.bandcamp.com/album/iitno"
+            >iitno</a
+          >
+        </div>
+        <div>
+          <a class="mixesLinks" href="https://soundcloud.com/laenzzz/nowadays-opening-for-henzo-and-dj-python?si=c984bef7cc7546c388b1e842fd99420b&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">
+            Nowadays Live
+          </a>
+          <br />
+          <br />
+          <a
+            class="mixesLinks"
+            href="https://soundcloud.com/clubnightclub/laenz"
+            >club night club</a
+          ><br /><br />
+          <a
+            class="mixesLinks"
+            href="https://soundcloud.com/papi-juice/papi-juice-mix-laenz"
+            >papi juice</a
+          ><br /><br />
+          <a
+            class="mixesLinks"
+            href="https://soundcloud.com/laenzzz/sets/looooot"
+            >Lot Residency</a
+          ><br /><br />
+          <a
+            class="mixesLinks"
+            href="https://soundcloud.com/popgunpresents/elseworld-mix-lii-laenz"
+            >elseworld</a
+          >
+        </div>
+
+        <div>
+          <a class="liveLinks" href="https://youtu.be/U6MjY6w45K4?t=1078"
+            >Eaton HK</a
+          ><br /><br />
+          <a class="liveLinks" href="https://youtu.be/_m0EsyZ9URE"
+            >Compilation</a
+          >
+        </div>
+      </div>
+    </div>
+    <div id="bottom" class="bottom">
+      <a href="https://soundcloud.com/laenzzz">SOUNDCLOUD</a> ||
+      <a href="https://laenz.bandcamp.com/">BANDCAMP</a>
+    </div>
+
+    <!-- <div id="overlay">
+      <button id="startButton">Play</button>
+    </div> -->
+
+    <div id="container"></div>
+
+    <audio
+      src="/Audio/soundpage/snatural.mp3"
+      loop
+      style="display: none"
+      id="track1"
+      type="audio/mpeg"
+      preload="auto"
+    ></audio>
+
+    <audio
+      src="/Audio/soundpage/sunnatural.mp3"
+      loop
+      style="display: none"
+      id="track2"
+      type="audio/mpeg"
+      preload="auto"
+    ></audio>
+
+    <!-- <button class="button" id="button_mute">Mute</button> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script type="module" src="/js/sound.js"></script>
+    <script type="module" src="/js/sound3.js"></script>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+* {
+  /* font-family: "Jaldi", sans-serif; */
+  font-family: "Forum", cursive;
+  background-color: black;
+  color: rgb(194, 194, 194);
+}
+
+@viewport {
+  width: device-width;
+}
+
+@media screen and (max-width: 1000px) {
+  #navlist li {
+    clear: both;
+    display: block;
+  }
+  .mainnav {
+    flex-direction: column;
+  }
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  margin-left: 20px;
+  font-size: 1em;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10%;
+  width: 100%;
+  align-items: center;
+  margin-left: 25px;
+  font-size: 20px;
+}
+
+
+.mainnav {
+  display: flex;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.mainnav li a {
+  padding: 10px;
+}
+
+.button {
+  position: relative;
+  margin-left: 20%;
+  border-radius: 8px;
+  font-size: 0.8em;
+  background-color: black;
+  color: white;
+  padding: 8px;
+  height: 30%;
+}
+
+.button2 {
+  float: right;
+  margin-top: 2%;
+  margin-left: 70%;
+  border-radius: 8px;
+  font-size: 0.6em;
+  background-color: black;
+  color: white;
+  padding: 8px;
+  height: 30%;
+}
+
+.navlist {
+  font-size: 1.3em;
+  line-height: 200%;
+  list-style-type: none;
+  margin-top: -0.5%;
+  margin-left: 40px;
+  padding: 0px;
+  z-index: 2;
+  position: relative;
+  text-transform: uppercase;
+}
+
+li a {
+  color: #bdc3c7;
+  z-index: 2;
+  text-transform: lowercase;
+}
+
+li a:hover {
+  color: #ffffff;
+}
+
+#points ul {
+  list-style-type: circle;
+  position: fixed;
+}
+
+.post {
+  margin: 15px;
+  padding-bottom: 20px;
+}
+
+#image img {
+  width: 400px;
+  height: 400px;
+  display: inline-block;
+}
+
+.video {
+  width: 400px;
+  height: 400px;
+}
+
+.lvideo {
+  width: 500px;
+  height: 600px;
+}
+
+.topvideo {
+  min-width: 320px;
+  z-index: 2;
+}
+
+.titlepost {
+  font-size: 25px;
+}
+
+p.description {
+  font-size: 16px;
+  padding: 10px;
+}
+
+#christina {
+  background-color: black;
+  color: white;
+}
+
+.himg {
+  display: flex;
+  flex-direction: row;
+}
+
+.image {
+  width: 640px;
+  height: 410px;
+}

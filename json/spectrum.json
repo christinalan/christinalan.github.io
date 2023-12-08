@@ -1,0 +1,41 @@
+{
+  "@status": "OK",
+  "Criteria": {
+    "SearchCriterion": [
+      {
+        "@field": "frequencyFrom",
+        "@value": "225"
+      },
+      {
+        "@field": "frequencyTo",
+        "@value": "300"
+      }
+    ]
+  },
+  "SpectrumBands": {
+    "@page": "1",
+    "@rowPerPage": "1000",
+    "@totalRows": "3",
+    "@lastUpdate": "Jul 7, 2014",
+    "SpectrumBand": [
+      {
+        "@id": "1",
+        "lowerBand": "225",
+        "upperBand": "235",
+        "bandDesc": "This band is allocated for exclusive Federal Government use. Operation of unlicensed Part 15 Devices is permitted between 225 and 235 MHz."
+      },
+      {
+        "@id": "2",
+        "lowerBand": "235",
+        "upperBand": "267",
+        "bandDesc": "This band is allocated for exclusive Federal Government use. Operation of unlicensed Part 15 Devices is permitted between 235 and 240 MHz."
+      },
+      {
+        "@id": "3",
+        "lowerBand": "267",
+        "upperBand": "322",
+        "bandDesc": "This band is allocated for exclusive Federal Government use. Operation of unlicensed Part 15 Devices is permitted between 285 and 322 MHz."
+      }
+    ]
+  }
+}

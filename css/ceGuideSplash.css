@@ -1,0 +1,66 @@
+body {
+  background-color: black;
+  font-family: "Jaldi", sans-serif;
+  color: white;
+}
+
+.title {
+  color: white;
+  margin-left: 15px;
+  font-size: 30px;
+}
+
+.button {
+  float: right;
+  margin-right: 15px;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+
+.main_container {
+  margin-top: 5%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_t {
+  margin-bottom: 5px;
+  width: 50%;
+}
+
+h3 {
+  margin-top: 10px;
+}
+.ptitle {
+  font-family: monospace;
+  font-size: 40px;
+}
+h5 {
+  font-size: 15px;
+  font-weight: 100;
+  text-align: center;
+}
+
+p {
+  width: 75%;
+  font-family: monospace;
+  line-height: 30px;
+  padding: 5px;
+  text-align: center;
+  justify-content: center;
+}
+
+.change {
+  color: aqua;
+  padding-left: 10px;
+  padding-right: 0px;
+  background-color: black;
+  font-size: 50px;
+  letter-spacing: 25px;
+  /* font-family: monospace; */
+}

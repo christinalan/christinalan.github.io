@@ -1,0 +1,35 @@
+body {
+  color: rgb(238,236,230);
+  font-family: 'Inter Tight', sans-serif;
+}
+
+/* a {
+    color: rgb(238,236,230);
+  }
+  
+  a:hover {
+    color: 030303;
+  } */
+
+
+li {
+    border-bottom: 1px dotted white;
+    padding: 1rem 0;
+}
+
+li:hover {
+    background-color: rgb(117, 117, 117);
+    color: #030303;
+}
+
+/* Styling for the right hand side */
+.link-content {
+/* 
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  text-align: left;
+  max-width: 75vw;
+  font-family: 'Inter Tight', sans-serif;
+  padding: 1rem 0rem; */
+}

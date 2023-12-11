@@ -42,7 +42,7 @@ scene.add( pMesh );
 
 const loader = new FontLoader();
 
-loader.load( 'text/forum_regular.json', function ( font ) {
+loader.load( './text/forum_regular.json', function ( font ) {
 	const textgeometry = new TextGeometry( 'Select Projects', {
 		font: font,
         size: 3,

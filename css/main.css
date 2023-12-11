@@ -6,25 +6,23 @@
 }
 
 * {
-  color: white;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  color: rgba(212, 212, 212);
   /* font-family: "Hammersmith One", sans-serif; */
   font-family: "Forum", cursive;
 }
 
 body {
-  background-color: rgba(0, 0, 0);
-  top: 0;
-  left: 0;
+  background-color: #0d0d0d;
+  margin-top: 0;
+  margin-left: 0;
   position: absolute;
   z-index: 99;
+  max-width: 100vw;
 }
-
-/* canvas {
-  position: fixed;
-  pointer-events: none;
-  z-index: -2;
-  display: block;
-} */
 
 #container {
   top: 0;
@@ -34,21 +32,33 @@ body {
   display: block;
 }
 
+#anim-container {
+  display: flex;
+  align-items: start;
+  float: right;
+  height: 4em;
+}
+
+.anim-project-container {
+  height: 7em;
+  width: 7em;
+}
+
 .sidetext {
-  color: white;
   font-size: 2.5em;
   float: right;
   width: 40%;
+  height: 50%;
   text-align: right;
   margin-top: 1rem;
-  margin-right: 0.2rem;
+  margin-right: 0.5rem;
+  overflow-y: hidden;
 }
 
 .sidetext a {
   background-color: transparent;
   display: inline-block;
-  transform: skewX(-8deg);
-  /* text-shadow: 2px 3px 5px rgb(153, 153, 153); */
+  /* transform: skewX(-8deg); */
 }
 
 .sidetext a:hover {
@@ -74,21 +84,26 @@ button {
   z-index: 10;
   text-decoration: none;
   cursor: cell;
+  transform: skewX(-8deg);
 }
 
 #projects {
-  font-size: 2rem;
+  margin-top: 2em;
+  font-size: 1rem;
   color: lightgrey;
+  display: none;
+  color: white;
 }
 
 #projects:hover {
-  color:#DC0114;
+  color: grey;
 }
 
 .contact {
   position: fixed;
   bottom: 0;
-  margin-bottom: 1%;
+  margin-left: 0.5em;
+  margin-bottom: 0.3em;
   font-size: 1em;
   float: right;
   color: rgba(177, 177, 177, 0.6);
@@ -97,6 +112,36 @@ button {
 .contact a {
   color: rgba(177, 177, 177, 0.6);
   text-decoration: none;
+}
+
+@media (min-width: 520px) {
+  .anim-project-container {
+    margin-left: 6em;
+  }
+}
+
+@media (min-width: 768px) {
+  .anim-project-container {
+    margin-left: 10em;
+  }
+}
+
+@media (min-width: 875px) {
+  .anim-project-container {
+    margin-left: 6em;
+  }
+}
+
+@media(min-width: 1150px) {
+  .anim-project-container {
+    margin-left: 10em;
+  }
+}
+
+@media(min-width: 1300px) {
+  .anim-project-container {
+    margin-left: 13em;
+  }
 }
 
 @media all and (orientation: portrait) {
@@ -108,6 +153,9 @@ button {
     position: fixed;
     display: none;
     margin-top: 60%;
-    margin-left: 0px;
+    margin-left: 1em;
+  }
+  #projects {
+    display: block;
   }
 }

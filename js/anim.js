@@ -282,14 +282,14 @@ window.addEventListener("load", () => {
    disposeImages();
   });
 
-  projects.addEventListener("click", () => {
-    console.log(images);
-    images.forEach((image) => {
-      image.geometry.dispose();
-      image.material.dispose();
-      scene.remove(image);
-    });
-  })
+  // projects.addEventListener("click", () => {
+  //   console.log(images);
+  //   images.forEach((image) => {
+  //     image.geometry.dispose();
+  //     image.material.dispose();
+  //     scene.remove(image);
+  //   });
+  // })
 
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -326,6 +326,7 @@ function render() {
 
 function animate() {
   requestAnimationFrame(animate);
+
 
   render();
 }

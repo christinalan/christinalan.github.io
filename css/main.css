@@ -39,10 +39,17 @@ body {
   height: 4em;
 }
 
+#anim-container canvas {
+  background-color: transparent;
+}
+
 .anim-project-container {
-  background-color: #0d0d0d;;
   height: 7em;
   max-width: 7em;
+}
+
+.anim-project-container a {
+  background-color: transparent;
 }
 
 #loading-text {
@@ -54,6 +61,7 @@ body {
 }
 
 .sidetext {
+  background-color: transparent;
   font-size: 2.5em;
   float: right;
   width: 40%;

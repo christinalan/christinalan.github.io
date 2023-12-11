@@ -42,7 +42,7 @@ scene.add( pMesh );
 
 const loader = new FontLoader();
 
-loader.load( 'http://www.jsonkeeper.com/b/EQZY', function ( font ) {
+loader.load( 'https://www.jsonkeeper.com/b/EQZY', function ( font ) {
 	const textgeometry = new TextGeometry( 'Select Projects', {
 		font: font,
         size: 3,

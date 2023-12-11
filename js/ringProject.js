@@ -3,20 +3,22 @@ import * as THREE from 'three';
 import { FontLoader } from 'https://threejs.org/examples/jsm/loaders/FontLoader.js';
 import { TextGeometry } from 'https://threejs.org/examples/jsm/geometries/TextGeometry.js';
 
-
+let loadingText = document.getElementById('loading-text');
 let anim_container = document.getElementById("anim-container");
-//handling the showing of the text when hovering over the torus
-// anim_container.addEventListener("mouseover", () => {
-//     const projectText = document.getElementById("projects");
-//     projectText.style.display = "block"
-// })
+let isLoading = true;
+
+window.addEventListener("load", () => {
+  loadingText.style.display = "none";
+  isLoading = false;
+
+  init();
+  animate();
+})
 
 //animation for the torus
 
 let pMesh, text, renderer, scene, camera;
 
-init();
-animate();
 
 function init() {
 scene = new THREE.Scene();

@@ -42,7 +42,7 @@ scene.add( pMesh );
 
 const loader = new FontLoader();
 
-loader.load( './text/forum_regular.json', function ( font ) {
+loader.load( 'http://www.jsonkeeper.com/b/EQZY', function ( font ) {
 	const textgeometry = new TextGeometry( 'Select Projects', {
 		font: font,
         size: 3,
@@ -78,9 +78,8 @@ loader.load( './text/forum_regular.json', function ( font ) {
         requestAnimationFrame(animate);
     }
     
-
     animate();
-} );
+});
 
 renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 renderer.setSize(800, 800);
